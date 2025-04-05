@@ -3,7 +3,7 @@ module.exports = {
 "[project]/src/hooks/useImageNavigation.ts [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, d: __dirname } = __turbopack_context__;
+var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "useImageNavigation": (()=>useImageNavigation)
@@ -162,7 +162,7 @@ function useImageNavigation() {
 "[project]/src/hooks/useNavigation.ts [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, d: __dirname } = __turbopack_context__;
+var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "useNavigation": (()=>useNavigation)
@@ -306,7 +306,7 @@ function useNavigation() {
 "[project]/src/components/ui/Homepage/projects/ProjectItems.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, d: __dirname } = __turbopack_context__;
+var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "projects": (()=>projects)
@@ -337,7 +337,7 @@ const projects = [
 "[project]/src/components/ui/Homepage/creatives/CreativeItems.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, d: __dirname } = __turbopack_context__;
+var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "creatives": (()=>creatives)
@@ -388,7 +388,7 @@ const creatives = [
 "[project]/src/hooks/useContentScroll.ts [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, d: __dirname } = __turbopack_context__;
+var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "useContentScroll": (()=>useContentScroll)
@@ -535,7 +535,7 @@ function useContentScroll(isProjectsClicked, isCreativesClicked, isAboutClicked,
 "[project]/src/components/ui/Homepage/creatives/CreativeCard.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, d: __dirname } = __turbopack_context__;
+var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "default": (()=>CreativeCard)
@@ -587,7 +587,7 @@ function CreativeCard({ currentCreativeIndex, backgroundImage, isBlurred }) {
 "[project]/src/components/ui/Homepage/creatives/CreativeInfo.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, d: __dirname } = __turbopack_context__;
+var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "default": (()=>CreativeInfo)
@@ -673,7 +673,7 @@ function CreativeInfo({ currentCreativeIndex, info, onHoverChange }) {
 "[project]/src/components/ui/Homepage/creatives/Creative.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, d: __dirname } = __turbopack_context__;
+var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "Creative": (()=>Creative)
@@ -740,7 +740,7 @@ const Creative = ({ isCreativesClicked, currentCreativeIndex, currentCreative, s
 "[project]/src/components/ui/Homepage/projects/ProjectCard.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, d: __dirname } = __turbopack_context__;
+var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "default": (()=>ProjectCard)
@@ -877,7 +877,7 @@ function ProjectCard({ currentProjectIndex, backgroundImage, isBlurred, onClick,
 "[project]/src/components/ui/Homepage/projects/ProjectInfo.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, d: __dirname } = __turbopack_context__;
+var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "default": (()=>ProjectInfo)
@@ -971,7 +971,7 @@ function ProjectInfo({ currentProjectIndex, info, onClick, onHoverChange }) {
 "[project]/src/lib/utils.ts [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, d: __dirname } = __turbopack_context__;
+var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "cn": (()=>cn)
@@ -987,7 +987,7 @@ function cn(...inputs) {
 "[project]/src/components/ui/core/DetailLayout/DetailLayout.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, d: __dirname } = __turbopack_context__;
+var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)
@@ -1169,7 +1169,7 @@ const __TURBOPACK__default__export__ = DetailLayout;
 "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, d: __dirname } = __turbopack_context__;
+var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "ProjectDetail": (()=>ProjectDetail)
@@ -1429,7 +1429,7 @@ const ProjectDetail = ({ isPushedDown, currentProjectIndex })=>{
 "[project]/src/components/ui/Homepage/projects/Project.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, d: __dirname } = __turbopack_context__;
+var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "Project": (()=>Project)
@@ -1440,11 +1440,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$H
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$projects$2f$ProjectCard$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/Homepage/projects/ProjectCard.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$projects$2f$ProjectInfo$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/Homepage/projects/ProjectInfo.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$projects$2f$ProjectDetail$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx [app-ssr] (ecmascript)");
-(()=>{
-    const e = new Error("Cannot find module 'reanpm i @vercel/speed-insightsct'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 ;
 ;
 ;
@@ -1454,10 +1450,10 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$H
 ;
 const Project = ({ isProjectsClicked, currentProjectIndex, currentProject, isMobileMenuOpen = false, isImagePushedDown, setIsImagePushedDown })=>{
     // State to control detail visibility with animation delay
-    const [detailVisible, setDetailVisible] = useState(false);
-    const [isHovered, setIsHovered] = useState(false);
+    const [detailVisible, setDetailVisible] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [isHovered, setIsHovered] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     // Update detail visibility with slight delay for animation
-    useEffect(()=>{
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         if (isImagePushedDown || isHovered) {
             setDetailVisible(true);
         } else {
@@ -1472,7 +1468,7 @@ const Project = ({ isProjectsClicked, currentProjectIndex, currentProject, isMob
         isHovered
     ]);
     // Directly intercept wheel events to prevent project switching when pushed down
-    useEffect(()=>{
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         if (isImagePushedDown || isHovered) {
             const wheelHandler = (e)=>{
                 // Don't prevent default - we want natural scrolling
@@ -1493,7 +1489,7 @@ const Project = ({ isProjectsClicked, currentProjectIndex, currentProject, isMob
         isHovered
     ]);
     // Set up scrolling when image is pushed down
-    useEffect(()=>{
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         if (isImagePushedDown || isHovered) {
             // Enable scrolling when image is pushed down
             document.body.style.overflow = "auto";
@@ -1586,7 +1582,7 @@ const Project = ({ isProjectsClicked, currentProjectIndex, currentProject, isMob
 "[project]/src/components/ui/core/images/ImageComponent.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, d: __dirname } = __turbopack_context__;
+var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)
@@ -1651,7 +1647,7 @@ const __TURBOPACK__default__export__ = AnimatedImage;
 "[project]/src/components/ui/Homepage/about/AboutImages.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, d: __dirname } = __turbopack_context__;
+var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "AboutImages": (()=>AboutImages)
@@ -1799,7 +1795,7 @@ const AboutImages = ({ isAboutClicked, isExiting, firstImgVisible, secondImgVisi
 "[project]/src/components/magicui/morphing-text.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, d: __dirname } = __turbopack_context__;
+var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "MorphingText": (()=>MorphingText)
@@ -1969,7 +1965,7 @@ const MorphingText = ({ text, visible, morphTime = 8 })=>{
 "[project]/src/components/ui/Homepage/projects/ProjectName.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, d: __dirname } = __turbopack_context__;
+var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "default": (()=>ProjectName)
@@ -2144,7 +2140,7 @@ function ProjectName({ names, currentIndex, onNameClick, setCurrentProjectIndex,
 "[project]/src/components/ui/Homepage/creatives/CreativeName.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, d: __dirname } = __turbopack_context__;
+var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "default": (()=>CreativeName)
@@ -2273,7 +2269,7 @@ function CreativeName({ names, currentIndex, onNameClick, setCurrentCreativeInde
 "[project]/src/components/ui/Homepage/header/LogoText.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, d: __dirname } = __turbopack_context__;
+var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "LogoText": (()=>LogoText)
@@ -2373,7 +2369,7 @@ const LogoText = ({ isAboutClicked })=>{
 "[project]/src/components/ui/Homepage/header/Logo.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, d: __dirname } = __turbopack_context__;
+var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "Logo": (()=>Logo)
@@ -2456,7 +2452,7 @@ const Logo = ({ handleLogoClick, isProjectsClicked, isCreativesClicked, isAboutC
 "[project]/src/components/ui/Homepage/header/LogoTitle.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, d: __dirname } = __turbopack_context__;
+var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "LogoTitle": (()=>LogoTitle)
@@ -2639,7 +2635,7 @@ const LogoTitle = ({ isProjectsClicked, isCreativesClicked, isAboutClicked, curr
 "[project]/src/components/ui/navbar/NavBarItem.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, d: __dirname } = __turbopack_context__;
+var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "default": (()=>NavBarItem)
@@ -2696,7 +2692,7 @@ function NavBarItem({ name, handleButtonClick, isAboutClicked, isCreativesClicke
 "[project]/src/components/ui/navbar/NavbarMobileMenu.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, d: __dirname } = __turbopack_context__;
+var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)
@@ -2942,7 +2938,7 @@ const __TURBOPACK__default__export__ = NavbarMobileMenu;
 "[project]/src/components/ui/Homepage/header/Navigation.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, d: __dirname } = __turbopack_context__;
+var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "Navigation": (()=>Navigation)
@@ -3131,7 +3127,7 @@ const Navigation = ({ justifyProp, isProjectsClicked, isAboutClicked, isCreative
 "[project]/src/components/ui/Homepage/layout/MainLayout.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, d: __dirname } = __turbopack_context__;
+var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "MainLayout": (()=>MainLayout)
@@ -3235,7 +3231,7 @@ const MainLayout = ({ isAboutClicked, isProjectsClicked, isCreativesClicked, isE
 "[project]/src/components/ui/Homepage/Hero/Hero.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, d: __dirname } = __turbopack_context__;
+var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "default": (()=>Hero)
