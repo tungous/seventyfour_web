@@ -1,0 +1,7 @@
+- work projects by default on the home page
+	- when clicked on work, the scrolls down + the nav bar moves up (nav bar is fixed to the top)
+	- when scrolling down through projects, the project title moves in the middle until it hits the bottom of the div image/background + it morphs out/fades out
+	- footer?
+- logic with about button
+	- projects will fade out+about with the images+black background fades in
+	- when scrolling up/down (nastavit nejaky limit např. musí scrollnout min. 20px) about container fades out -> projects fade in

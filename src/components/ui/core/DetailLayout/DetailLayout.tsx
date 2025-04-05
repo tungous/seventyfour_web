@@ -1,0 +1,195 @@
+import { cn } from "@/lib/utils";
+import React from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
+
+interface DetailLayoutProps {
+  children: React.ReactNode;
+  currentProjectIndex: number;
+  isPushedDown?: boolean;
+  variant:
+    | "Project1"
+    | "Project2"
+    | "Project3"
+    | "Nostalgia"
+    | "Project5"
+    | "Project6";
+  className?: string;
+}
+
+interface ProjectContentProps {
+  children: React.ReactNode;
+  className?: string;
+  variant: DetailLayoutProps["variant"];
+}
+
+interface MediaProps {
+  src: string;
+  alt?: string;
+  className?: string;
+  fill?: boolean;
+  sizes?: string;
+  priority?: boolean;
+}
+
+interface TextProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+const variants = {
+  Project1: "grid grid-cols-1 gap-4",
+  Project2: "grid grid-cols-2 gap-8",
+  Project3: "flex flex-col space-y-6",
+  Nostalgia: "grid grid-cols-3 gap-6",
+  Project5: "flex flex-row space-x-8",
+  Project6: "grid grid-cols-2 gap-12",
+};
+
+const DetailLayout = ({
+  children,
+  isPushedDown,
+  variant,
+}: DetailLayoutProps) => {
+  return (
+    <motion.div
+      initial={{
+        y: 0,
+        opacity: 0,
+        filter: "blur(100px) brightness(2)",
+      }}
+      animate={{
+        y: isPushedDown ? -150 : 0,
+        opacity: isPushedDown ? 1 : 0,
+        filter: isPushedDown
+          ? "blur(0px) brightness(1)"
+          : "blur(100px) brightness(1)",
+      }}
+      exit={{
+        y: 0,
+        opacity: 0,
+        filter: isPushedDown
+          ? "blur(10px) brightness(1)"
+          : "blur(100px) brightness(1)",
+      }}
+      transition={{
+        duration: 0.7,
+        y: { duration: 1, ease: "easeInOut" },
+      }}
+      className="absolute w-full"
+      style={{ zIndex: 2 }}
+    >
+      {/* Gradient overlay */}
+      <div
+        className="absolute w-full z-2"
+        style={{
+          top: "calc(100vh - 200px)",
+          height: "200px",
+          background:
+            "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.6) 75%, rgba(0,0,0,0.8) 85%, rgba(0,0,0,1) 100%)",
+          pointerEvents: "none",
+          opacity: isPushedDown ? 1 : 0,
+          transition: "opacity 0.8s ease-in-out",
+        }}
+      />
+
+      {/* Main content container */}
+      <div
+        className="absolute top-[calc(100vh)] flex flex-col justify-start items-center w-full px-5 z-2 min-h-screen pb-32 bg-black tracking-tight"
+        id="scrollable-project-details"
+      >
+        {React.Children.map(children, (child) =>
+          React.isValidElement<ProjectContentProps>(child)
+            ? React.cloneElement(child, { variant })
+            : child
+        )}
+      </div>
+    </motion.div>
+  );
+};
+
+// Project content component
+const ProjectContent = ({
+  children,
+  className,
+  variant,
+}: ProjectContentProps) => {
+  return (
+    <motion.div
+      key={variant}
+      className={cn(variants[variant], className)}
+      style={{ textShadow: "0px 0px 6px rgba(255, 255, 255, 1)" }}
+      initial={{
+        y: 0,
+        opacity: 0,
+        filter: "blur(100px) brightness(2)",
+      }}
+      animate={{
+        y: 0,
+        opacity: 1,
+        filter: "blur(0px) brightness(1)",
+      }}
+      exit={{
+        y: 0,
+        opacity: 0,
+        filter: "blur(100px) brightness(1)",
+      }}
+      transition={{
+        duration: 1.3,
+        delay: 0.2,
+        ease: "easeOut",
+      }}
+    >
+      {children}
+    </motion.div>
+  );
+};
+
+// Image component
+const DetailImage = ({
+  src,
+  alt = "",
+  className,
+  fill = true,
+  sizes = "(max-width: 768px) 600px, 1200px",
+  priority = true,
+}: MediaProps) => {
+  return (
+    <div
+      className={cn("relative aspect-[16/9] w-full overflow-hidden", className)}
+    >
+      <Image
+        src={src}
+        alt={alt}
+        fill={fill}
+        sizes={sizes}
+        className="object-cover"
+        priority={priority}
+      />
+    </div>
+  );
+};
+
+// Video component
+const Video = ({ src, className }: MediaProps) => {
+  return (
+    <div
+      className={cn("relative aspect-[16/9] w-full overflow-hidden", className)}
+    >
+      <video src={src} className="w-full h-full object-cover" controls muted />
+    </div>
+  );
+};
+
+// Text component
+const Text = ({ children, className }: TextProps) => {
+  return <div className={cn(className)}>{children}</div>;
+};
+
+// Attach components as static properties
+DetailLayout.ProjectContent = ProjectContent;
+DetailLayout.Image = DetailImage;
+DetailLayout.Video = Video;
+DetailLayout.Text = Text;
+
+export default DetailLayout;
