@@ -11,7 +11,7 @@ interface DetailLayoutProps {
     | "Project1"
     | "Project2"
     | "Project3"
-    | "Nostalgia"
+    | "Project4"
     | "Project5"
     | "Project6";
   className?: string;
@@ -38,12 +38,12 @@ interface TextProps {
 }
 
 const variants = {
-  Project1: "grid grid-cols-1 gap-4",
-  Project2: "grid grid-cols-2 gap-8",
-  Project3: "flex flex-col space-y-6",
-  Nostalgia: "grid grid-cols-3 gap-6",
-  Project5: "flex flex-row space-x-8",
-  Project6: "grid grid-cols-2 gap-12",
+  Project1: "grid grid-cols-1 grid-rows-1 gap-4 w-full",
+  Project2: "grid grid-cols-2 gap-8 w-full",
+  Project3: "flex flex-col space-y-6 w-full",
+  Project4: "grid grid-cols-1 grid-rows-1 gap-4 w-full",
+  Project5: "flex flex-row space-x-8 w-full",
+  Project6: "grid grid-cols-2 gap-12 w-full",
 };
 
 const DetailLayout = ({
@@ -95,7 +95,7 @@ const DetailLayout = ({
 
       {/* Main content container */}
       <div
-        className="absolute top-[calc(100vh)] flex flex-col justify-start items-center w-full px-5 z-2 min-h-screen pb-32 bg-black tracking-tight"
+        className="absolute top-[calc(100vh)] flex flex-col justify-start items-center w-full z-2 min-h-screen pt-20 pb-32 bg-black tracking-tight"
         id="scrollable-project-details"
       >
         {React.Children.map(children, (child) =>
@@ -151,7 +151,7 @@ const DetailImage = ({
   alt = "",
   className,
   fill = true,
-  sizes = "(max-width: 768px) 600px, 1200px",
+  sizes = "100vw",
   priority = true,
 }: MediaProps) => {
   return (
@@ -172,6 +172,32 @@ const DetailImage = ({
 
 // Video component
 const Video = ({ src, className }: MediaProps) => {
+  // Check if the source is a Vimeo URL
+  const isVimeoUrl = typeof src === "string" && src.includes("vimeo.com");
+
+  if (isVimeoUrl) {
+    // Extract the Vimeo ID from the URL
+    const vimeoId = src.split("/").pop();
+
+    return (
+      <div
+        className={cn(
+          "relative aspect-[16/9] w-full overflow-hidden",
+          className
+        )}
+      >
+        <iframe
+          src={`https://player.vimeo.com/video/${vimeoId}?autoplay=0&loop=1&title=0&byline=0&portrait=0`}
+          className="w-full h-full absolute top-0 left-0"
+          frameBorder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      </div>
+    );
+  }
+
+  // Regular video file
   return (
     <div
       className={cn("relative aspect-[16/9] w-full overflow-hidden", className)}

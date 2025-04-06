@@ -33,10 +33,10 @@ const projectData = [
   },
   {
     id: 4,
-    title: "Nostalgia",
+    title: "Project 4",
     description:
       "A journey through time, blending past and present in perfect harmony.",
-    variant: "Nostalgia" as const,
+    variant: "Project4" as const,
   },
   {
     id: 5,
@@ -67,30 +67,62 @@ export const ProjectDetail: React.FC<ProjectDetailScrollProps> = ({
       variant={project.variant}
     >
       <DetailLayout.ProjectContent variant={project.variant}>
-        <DetailLayout.Text>
-          <h1 className="text-4xl font-bold">{project.title}</h1>
-          <p className="text-xl">{project.description}</p>
-        </DetailLayout.Text>
+        {/* <DetailLayout.Text>
+          <h1 className="text-xs px-4 uppercase font-bold">{project.title}</h1>
+          <p className="text-xs px-4 uppercase">{project.description}</p>
+        </DetailLayout.Text> */}
 
         {/* Project-specific content based on variant */}
         {project.variant === "Project1" && (
           <>
-            <DetailLayout.Image src="/bazo.jpg" alt="Project 1" />
-            <DetailLayout.Text>
-              <h2 className="text-2xl font-semibold">Key Features</h2>
-              <ul className="list-disc list-inside space-y-2">
-                {project.features?.map((feature, index) => (
-                  <li key={index}>{feature}</li>
-                ))}
-              </ul>
-            </DetailLayout.Text>
+            <div className="relative w-full mb-10">
+              <DetailLayout.Image src="/bazo.jpg" alt="Project 1" />
+              <div className="absolute inset-0 pointer-events-none">
+                {/* Gradient overlay at the top */}
+                <div className="absolute top-0 left-0 right-0 h-52 bg-gradient-to-b from-black to-transparent"></div>
+                {/* Gradient overlay at the bottom */}
+                <div className="absolute bottom-0 left-0 right-0 h-52 bg-gradient-to-t from-black to-transparent"></div>
+              </div>
+              <div className="absolute inset-0 flex flex-col justify-center items-center p-8  text-xs uppercase font-bold text-left mix-blend-difference">
+                <div className="max-w-md ">
+                  <p className="w-full"
+                  style={{ textShadow: "0px 0px 2px rgba(255,255,255,1)" }}>
+                    {project.title}
+                    <br />
+                    {project.description}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="relative w-full">
+              <DetailLayout.Image src="/nostalgia.gif" alt="Project 1" />
+              <div className="absolute inset-0 pt-10 pointer-events-none">
+                {/* Gradient overlay at the top */}
+                <div className="absolute top-0 left-0 right-0 h-52 bg-gradient-to-b from-black to-transparent"></div>
+                {/* Gradient overlay at the bottom */}
+                <div className="absolute bottom-0 left-0 right-0 h-52 bg-gradient-to-t from-black to-transparent"></div>
+              </div>
+            </div>
           </>
         )}
 
         {project.variant === "Project2" && (
           <>
-            <DetailLayout.Image src="/bazo.jpg" alt="Project 2" />
-            <DetailLayout.Image src="/cinematic1.jpg" alt="Project 2" />
+            <div className="relative w-full">
+              <DetailLayout.Image src="/nostalgia.gif" alt="Project 2" />
+              <div className="absolute inset-0 pt-10 pointer-events-none">
+                {/* Gradient overlay at the top */}
+                <div className="absolute top-0 left-0 right-0 h-22 bg-gradient-to-b from-black to-transparent"></div>
+                {/* Gradient overlay at the bottom */}
+                <div className="absolute bottom-0 left-0 right-0 h-22 bg-gradient-to-t from-black to-transparent"></div>
+              </div>
+            </div>
+            <div className="relative w-full">
+              <DetailLayout.Video
+                src="https://vimeo.com/958547140"
+                alt="Project 2"
+              />
+            </div>
           </>
         )}
 
@@ -102,17 +134,53 @@ export const ProjectDetail: React.FC<ProjectDetailScrollProps> = ({
           </>
         )}
 
-        {project.variant === "Nostalgia" && (
+        {project.variant === "Project4" && (
           <>
-            <DetailLayout.Image src="/home2.jpeg" alt="Nostalgia" />
-            <DetailLayout.Image src="/home3.jpeg" alt="Nostalgia" />
-            <DetailLayout.Image src="/home4.jpg" alt="Nostalgia" />
+            <div className="relative w-full mb-10">
+              <DetailLayout.Image
+                src="/seventyfour_begin_1.jpg"
+                alt="Project 1"
+              />
+              <div className="absolute inset-0 pointer-events-none">
+                {/* Gradient overlay at the top */}
+                <div className="absolute top-0 left-0 right-0 h-52 bg-gradient-to-b from-black to-transparent"></div>
+                {/* Gradient overlay at the bottom */}
+                <div className="absolute bottom-0 left-0 right-0 h-52 bg-gradient-to-t from-black to-transparent"></div>
+              </div>
+              <div className="absolute inset-0 flex flex-col justify-center items-center p-8 mix-blend-difference text-xs uppercase font-bold text-left">
+                <div className="max-w-md">
+                  <p
+                    className="w-full"
+                    style={{ textShadow: "0px 0px 2px rgba(255,255,255,1)" }}
+                  >
+                    DIRECTOR, DP, EDITOR: T. TUNG MAI
+                    <br />
+                    DESIGNER: LEO PHAM
+                    <br />
+                    SOUND: TOMAS NGUYEN
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="relative w-full mb-10">
+              <DetailLayout.Video
+                src="https://vimeo.com/957811693"
+                alt="Project 1"
+              />
+              <div className="absolute inset-0 pointer-events-none">
+                {/* Gradient overlay at the top */}
+                <div className="absolute top-0 left-0 right-0 h-52 bg-gradient-to-b from-black to-transparent"></div>
+                {/* Gradient overlay at the bottom */}
+                <div className="absolute bottom-0 left-0 right-0 h-52 bg-gradient-to-t from-black to-transparent"></div>
+              </div>
+            </div>
           </>
         )}
 
         {project.variant === "Project5" && (
           <>
             <DetailLayout.Image src="/viet.jpg" alt="Project 5" />
+            <DetailLayout.Video src="/viet2.jpg" alt="Project 5" />
             <DetailLayout.Image src="/tung.jpg" alt="Project 5" />
           </>
         )}

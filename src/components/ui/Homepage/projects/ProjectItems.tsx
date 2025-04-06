@@ -16,13 +16,13 @@ export const projects: projectType[] = [
     backgroundImage: "/cinematic2.jpg",
   },
   {
-    name: "Project 3",
-    info: "Made with love",
-    backgroundImage: "/cinematic3.jpg",
+    name: "Seventyfour: Silver",
+    info: "Jewelry Project",
+    backgroundImage: "/seventyfour_silver.jpg",
   },
   {
-    name: "NOSTALGIA",
-    info: "[Nostalgia is strange](https://example.com)\nA feeling of warmth\nAnd distant memories",
-    backgroundImage: "/nostalgia.gif",
+    name: "Seventyfour: Begin",
+    info: "Establishment of Seventyfour\nMAY 2024",
+    backgroundImage: "/74-begin-gif.gif",
   },
 ];
