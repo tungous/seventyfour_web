@@ -79,14 +79,16 @@ export const ProjectDetail: React.FC<ProjectDetailScrollProps> = ({
               <DetailLayout.Image src="/bazo.jpg" alt="Project 1" />
               <div className="absolute inset-0 pointer-events-none">
                 {/* Gradient overlay at the top */}
-                <div className="absolute top-0 left-0 right-0 h-52 bg-gradient-to-b from-black to-transparent"></div>
+                <div className="absolute top-0 left-0 right-0 lg:h-52 bg-gradient-to-b from-black to-transparent"></div>
                 {/* Gradient overlay at the bottom */}
-                <div className="absolute bottom-0 left-0 right-0 h-52 bg-gradient-to-t from-black to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 lg:h-52 bg-gradient-to-t from-black to-transparent"></div>
               </div>
-              <div className="absolute inset-0 flex flex-col justify-center items-center p-8  text-xs uppercase font-bold text-left mix-blend-difference">
+              <div className="absolute inset-0 flex flex-col justify-center items-center p-8  lg:text-xs text-[8px] uppercase font-bold text-left mix-blend-difference">
                 <div className="max-w-md ">
-                  <p className="w-full"
-                  style={{ textShadow: "0px 0px 2px rgba(255,255,255,1)" }}>
+                  <p
+                    className="w-full"
+                    style={{ textShadow: "0px 0px 2px rgba(255,255,255,1)" }}
+                  >
                     {project.title}
                     <br />
                     {project.description}
@@ -98,9 +100,9 @@ export const ProjectDetail: React.FC<ProjectDetailScrollProps> = ({
               <DetailLayout.Image src="/nostalgia.gif" alt="Project 1" />
               <div className="absolute inset-0 pt-10 pointer-events-none">
                 {/* Gradient overlay at the top */}
-                <div className="absolute top-0 left-0 right-0 h-52 bg-gradient-to-b from-black to-transparent"></div>
+                <div className="absolute top-0 left-0 right-0 lg:h-32 h-12 bg-gradient-to-b from-black to-transparent"></div>
                 {/* Gradient overlay at the bottom */}
-                <div className="absolute bottom-0 left-0 right-0 h-52 bg-gradient-to-t from-black to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 lg:h-32 h-12 bg-gradient-to-t from-black to-transparent"></div>
               </div>
             </div>
           </>
@@ -112,9 +114,9 @@ export const ProjectDetail: React.FC<ProjectDetailScrollProps> = ({
               <DetailLayout.Image src="/nostalgia.gif" alt="Project 2" />
               <div className="absolute inset-0 pt-10 pointer-events-none">
                 {/* Gradient overlay at the top */}
-                <div className="absolute top-0 left-0 right-0 h-22 bg-gradient-to-b from-black to-transparent"></div>
+                <div className="absolute top-0 left-0 right-0 lg:h-22 h-6 bg-gradient-to-b from-black to-transparent"></div>
                 {/* Gradient overlay at the bottom */}
-                <div className="absolute bottom-0 left-0 right-0 h-22 bg-gradient-to-t from-black to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 lg:h-22 h-6 bg-gradient-to-t from-black to-transparent"></div>
               </div>
             </div>
             <div className="relative w-full">
@@ -122,6 +124,12 @@ export const ProjectDetail: React.FC<ProjectDetailScrollProps> = ({
                 src="https://vimeo.com/958547140"
                 alt="Project 2"
               />
+              <div className="absolute inset-0 pt-10 pointer-events-none">
+                {/* Gradient overlay at the top */}
+                <div className="absolute top-0 left-0 right-0 lg:h-22 h-6 bg-gradient-to-b from-black to-transparent"></div>
+                {/* Gradient overlay at the bottom */}
+                <div className="absolute bottom-0 left-0 right-0 lg:h-22 h-6 bg-gradient-to-t from-black to-transparent"></div>
+              </div>
             </div>
           </>
         )}
@@ -143,11 +151,11 @@ export const ProjectDetail: React.FC<ProjectDetailScrollProps> = ({
               />
               <div className="absolute inset-0 pointer-events-none">
                 {/* Gradient overlay at the top */}
-                <div className="absolute top-0 left-0 right-0 h-52 bg-gradient-to-b from-black to-transparent"></div>
+                <div className="absolute top-0 left-0 right-0 lg:h-32 h-12 bg-gradient-to-b from-black to-transparent"></div>
                 {/* Gradient overlay at the bottom */}
-                <div className="absolute bottom-0 left-0 right-0 h-52 bg-gradient-to-t from-black to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 lg:h-32 h-12 bg-gradient-to-t from-black to-transparent"></div>
               </div>
-              <div className="absolute inset-0 flex flex-col justify-center items-center p-8 mix-blend-difference text-xs uppercase font-bold text-left">
+              <div className="absolute inset-0 flex flex-col justify-center items-center p-8 mix-blend-difference lg:text-xs text-[8px] uppercase font-bold text-left">
                 <div className="max-w-md">
                   <p
                     className="w-full"
@@ -169,9 +177,9 @@ export const ProjectDetail: React.FC<ProjectDetailScrollProps> = ({
               />
               <div className="absolute inset-0 pointer-events-none">
                 {/* Gradient overlay at the top */}
-                <div className="absolute top-0 left-0 right-0 h-52 bg-gradient-to-b from-black to-transparent"></div>
+                <div className="absolute top-0 left-0 right-0 lg:h-32 h-12 bg-gradient-to-b from-black to-transparent"></div>
                 {/* Gradient overlay at the bottom */}
-                <div className="absolute bottom-0 left-0 right-0 h-52 bg-gradient-to-t from-black to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 lg:h-32 h-12 bg-gradient-to-t from-black to-transparent"></div>
               </div>
             </div>
           </>
