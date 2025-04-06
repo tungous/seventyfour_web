@@ -727,7 +727,7 @@ function CreativeInfo({ currentCreativeIndex, info, onHoverChange }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$motion$2f$dist$2f$es$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
         initial: {
             opacity: 0,
-            fontWeight: 00,
+            fontWeight: 700,
             filter: "blur(10px) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0))"
         },
         animate: {
@@ -737,7 +737,7 @@ function CreativeInfo({ currentCreativeIndex, info, onHoverChange }) {
         },
         exit: {
             opacity: 0,
-            fontWeight: 400,
+            fontWeight: 700,
             filter: "blur(10px) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0))"
         },
         transition: {
@@ -1181,7 +1181,7 @@ const DetailLayout = ({ children, isPushedDown, variant })=>{
         },
         className: "absolute w-full",
         style: {
-            zIndex: 2
+            zIndex: 3
         },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2601,7 +2601,7 @@ function CreativeName({ names, currentIndex, onNameClick, setCurrentCreativeInde
                 },
                 initial: {
                     opacity: 0,
-                    fontWeight: 400,
+                    fontWeight: 700,
                     filter: "blur(10px) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0))"
                 },
                 animate: {
@@ -2611,7 +2611,7 @@ function CreativeName({ names, currentIndex, onNameClick, setCurrentCreativeInde
                 },
                 exit: {
                     opacity: 0,
-                    fontWeight: 400,
+                    fontWeight: 700,
                     filter: "blur(10px) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0))"
                 },
                 transition: {
@@ -2724,7 +2724,7 @@ const LogoText = ({ isAboutClicked })=>{
         children: isVisible && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$motion$2f$dist$2f$es$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].span, {
             initial: {
                 opacity: 0,
-                fontWeight: 400,
+                fontWeight: 700,
                 filter: isAboutClicked ? "blur(10px) drop-shadow(0px 0px 0px rgba(0, 0, 0, 1))" : "blur(10px) drop-shadow(0px 0px 0px rgba(0, 0, 0, 1))"
             },
             animate: {
@@ -2734,7 +2734,7 @@ const LogoText = ({ isAboutClicked })=>{
             },
             exit: {
                 opacity: 0,
-                fontWeight: 400,
+                fontWeight: 700,
                 filter: isAboutClicked ? "blur(10px) drop-shadow(0px 0px 0px rgba(0, 0, 0, 1))" : "blur(10px) drop-shadow(0px 0px 0px rgba(0, 0, 0, 1))"
             },
             transition: {

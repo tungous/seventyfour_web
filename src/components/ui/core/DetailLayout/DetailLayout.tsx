@@ -77,7 +77,7 @@ const DetailLayout = ({
         y: { duration: 1, ease: "easeInOut" },
       }}
       className="absolute w-full"
-      style={{ zIndex: 2 }}
+      style={{ zIndex: 3 }}
     >
       {/* Gradient overlay */}
       <div
