@@ -1,4 +1,4 @@
-(globalThis.TURBOPACK = globalThis.TURBOPACK || []).push(["static/chunks/src_4a49c7a2._.js", {
+(globalThis.TURBOPACK = globalThis.TURBOPACK || []).push(["static/chunks/src_01b84c9a._.js", {
 
 "[project]/src/hooks/useImageNavigation.ts [app-client] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
@@ -2386,340 +2386,6 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
     __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
 }
 }}),
-"[project]/src/components/ui/Homepage/projects/ProjectName.tsx [app-client] (ecmascript)": ((__turbopack_context__) => {
-"use strict";
-
-var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
-{
-__turbopack_context__.s({
-    "default": (()=>ProjectName)
-});
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$motion$2f$dist$2f$es$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/motion/dist/es/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$motion$2f$dist$2f$es$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/motion/dist/es/framer-motion/dist/es/components/AnimatePresence/index.mjs [app-client] (ecmascript)");
-;
-var _s = __turbopack_context__.k.signature();
-;
-;
-function ProjectName({ names, currentIndex, onNameClick, setCurrentProjectIndex, isPushedDown = false }) {
-    _s();
-    const listRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
-    const containerRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
-    const [safeIndex, setSafeIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
-    const previousIndexRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(-1);
-    // Sync with parent index when it changes
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
-        "ProjectName.useEffect": ()=>{
-            if (names.length > 0) {
-                let newIndex = 0;
-                if (!Number.isNaN(currentIndex) && Number.isFinite(currentIndex)) {
-                    newIndex = Math.max(0, Math.min(currentIndex, names.length - 1));
-                }
-                previousIndexRef.current = newIndex;
-                setSafeIndex(newIndex);
-            }
-        }
-    }["ProjectName.useEffect"], [
-        currentIndex,
-        names.length
-    ]);
-    // Scroll to center the active item when safeIndex changes
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
-        "ProjectName.useEffect": ()=>{
-            if (listRef.current && names.length > 0) {
-                try {
-                    const selector = `li:nth-child(${safeIndex + 1})`;
-                    const activeElement = listRef.current.querySelector(selector);
-                    if (activeElement) {
-                        setTimeout({
-                            "ProjectName.useEffect": ()=>{
-                                activeElement.scrollIntoView({
-                                    behavior: "smooth",
-                                    block: "center"
-                                });
-                            }
-                        }["ProjectName.useEffect"], 50);
-                    }
-                } catch  {
-                // Silent error handling
-                }
-            }
-        }
-    }["ProjectName.useEffect"], [
-        safeIndex,
-        names.length
-    ]);
-    // Simple easing function that performs better on Safari
-    const simpleEaseOut = (t)=>{
-        // Simple quadratic ease-out function
-        return 1 - (1 - t) * (1 - t);
-    };
-    const handleNameClick = (index)=>{
-        previousIndexRef.current = index;
-        setSafeIndex(index);
-        setCurrentProjectIndex(index);
-        // Safari-optimized smooth scroll implementation
-        const startPosition = window.scrollY;
-        const startTime = performance.now();
-        const animateScroll = (currentTime)=>{
-            const elapsed = currentTime - startTime;
-            const duration = 600; // Shorter duration for better performance
-            const progress = Math.min(elapsed / duration, 1);
-            // Using our simpler easing function instead of Framer Motion's easeInOut
-            const easeProgress = simpleEaseOut(progress);
-            window.scrollTo(0, startPosition * (1 - easeProgress));
-            if (progress < 1) {
-                requestAnimationFrame(animateScroll);
-            }
-        };
-        requestAnimationFrame(animateScroll);
-        if (onNameClick) {
-            onNameClick(index);
-        }
-    };
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "relative flex items-center justify-center h-full",
-        children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute left-0 right-0 bg-transparent z-10 pointer-events-none"
-            }, void 0, false, {
-                fileName: "[project]/src/components/ui/Homepage/projects/ProjectName.tsx",
-                lineNumber: 99,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$motion$2f$dist$2f$es$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                ref: containerRef,
-                className: `inline-block ${isPushedDown ? "" : "max-h-[63vh] overflow-hidden"}`,
-                style: {
-                    textShadow: "0px 0px 2px rgba(255, 255, 255, 1), 0px 0px 2px rgba(255, 255, 255, 1)",
-                    scrollbarWidth: "none",
-                    msOverflowStyle: "none"
-                },
-                initial: {
-                    opacity: 0,
-                    fontWeight: 400,
-                    filter: "blur(10px) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0))"
-                },
-                animate: {
-                    opacity: 1,
-                    fontWeight: 700,
-                    filter: "blur(0px) drop-shadow(0px 0px 6px rgba(0, 0, 0, 1))"
-                },
-                exit: {
-                    opacity: 0,
-                    fontWeight: 400,
-                    filter: "blur(10px) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0))"
-                },
-                transition: {
-                    duration: 0.7
-                },
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$motion$2f$dist$2f$es$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AnimatePresence"], {
-                    mode: "wait",
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$motion$2f$dist$2f$es$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].ul, {
-                        initial: {
-                            opacity: 0,
-                            filter: "blur(10px)"
-                        },
-                        animate: {
-                            opacity: 1,
-                            filter: "blur(0px)",
-                            transition: {
-                                duration: 0.7
-                            }
-                        },
-                        exit: {
-                            opacity: 0,
-                            filter: "blur(10px)",
-                            transition: {
-                                duration: 0
-                            }
-                        },
-                        className: "text-white list-none py-[30vh] text-left lg:w-[200px]",
-                        ref: listRef,
-                        children: names.map((name, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                className: `project-name-item lg:py-2 py-1 transition-all duration-300 ease-in-out px-1.5 ${index === safeIndex ? "font-bold opacity-100 active" : "font-normal opacity-60"} cursor-pointer hover:opacity-90`,
-                                onClick: ()=>handleNameClick(index),
-                                children: name
-                            }, index, false, {
-                                fileName: "[project]/src/components/ui/Homepage/projects/ProjectName.tsx",
-                                lineNumber: 149,
-                                columnNumber: 17
-                            }, this))
-                    }, "name-list", false, {
-                        fileName: "[project]/src/components/ui/Homepage/projects/ProjectName.tsx",
-                        lineNumber: 132,
-                        columnNumber: 13
-                    }, this)
-                }, void 0, false, {
-                    fileName: "[project]/src/components/ui/Homepage/projects/ProjectName.tsx",
-                    lineNumber: 130,
-                    columnNumber: 9
-                }, this)
-            }, `project-title-${names.join("-")}`, false, {
-                fileName: "[project]/src/components/ui/Homepage/projects/ProjectName.tsx",
-                lineNumber: 101,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "[project]/src/components/ui/Homepage/projects/ProjectName.tsx",
-        lineNumber: 97,
-        columnNumber: 5
-    }, this);
-}
-_s(ProjectName, "kj96Nh6ng1sZF1x3xDN/MYyeJ+M=");
-_c = ProjectName;
-var _c;
-__turbopack_context__.k.register(_c, "ProjectName");
-if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
-    __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
-}
-}}),
-"[project]/src/components/ui/Homepage/creatives/CreativeName.tsx [app-client] (ecmascript)": ((__turbopack_context__) => {
-"use strict";
-
-var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
-{
-__turbopack_context__.s({
-    "default": (()=>CreativeName)
-});
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$motion$2f$dist$2f$es$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/motion/dist/es/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
-;
-var _s = __turbopack_context__.k.signature();
-;
-;
-function CreativeName({ names, currentIndex, onNameClick, setCurrentCreativeIndex }) {
-    _s();
-    const listRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
-    const containerRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
-    const [safeIndex, setSafeIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
-    const previousIndexRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(-1);
-    // Sync with parent index when it changes
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
-        "CreativeName.useEffect": ()=>{
-            if (names.length > 0) {
-                let newIndex = 0;
-                if (!Number.isNaN(currentIndex) && Number.isFinite(currentIndex)) {
-                    newIndex = Math.max(0, Math.min(currentIndex, names.length - 1));
-                }
-                previousIndexRef.current = newIndex;
-                setSafeIndex(newIndex);
-            }
-        }
-    }["CreativeName.useEffect"], [
-        currentIndex,
-        names.length
-    ]);
-    // Scroll to center the active item when safeIndex changes
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
-        "CreativeName.useEffect": ()=>{
-            if (listRef.current && names.length > 0) {
-                try {
-                    const selector = `li:nth-child(${safeIndex + 1})`;
-                    const activeElement = listRef.current.querySelector(selector);
-                    if (activeElement) {
-                        setTimeout({
-                            "CreativeName.useEffect": ()=>{
-                                activeElement.scrollIntoView({
-                                    behavior: "smooth",
-                                    block: "center"
-                                });
-                            }
-                        }["CreativeName.useEffect"], 50);
-                    }
-                } catch  {
-                // Silent error handling
-                }
-            }
-        }
-    }["CreativeName.useEffect"], [
-        safeIndex,
-        names.length
-    ]);
-    const handleNameClick = (index)=>{
-        previousIndexRef.current = index;
-        setSafeIndex(index);
-        setCurrentCreativeIndex(index);
-        if (onNameClick) {
-            onNameClick(index);
-        }
-    };
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "relative flex items-center justify-center h-full",
-        children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute left-0 right-0  bg-transparent z-10 pointer-events-none"
-            }, void 0, false, {
-                fileName: "[project]/src/components/ui/Homepage/creatives/CreativeName.tsx",
-                lineNumber: 69,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$motion$2f$dist$2f$es$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                ref: containerRef,
-                className: "inline-block max-h-[63vh] overflow-hidden",
-                style: {
-                    textShadow: "0px 0px 2px rgba(255, 255, 255, 1), 0px 0px 2px rgba(255, 255, 255, 1)",
-                    scrollbarWidth: "none",
-                    msOverflowStyle: "none"
-                },
-                initial: {
-                    opacity: 0,
-                    fontWeight: 400,
-                    filter: "blur(10px) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0))"
-                },
-                animate: {
-                    opacity: 1,
-                    fontWeight: 700,
-                    filter: "blur(0px) drop-shadow(0px 0px 6px rgba(0, 0, 0, 1))"
-                },
-                exit: {
-                    opacity: 0,
-                    fontWeight: 400,
-                    filter: "blur(10px) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0))"
-                },
-                transition: {
-                    duration: 0.7
-                },
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                    className: "text-white list-none py-[30vh] px-0 m-0 text-left w-[200px] ",
-                    ref: listRef,
-                    children: names.map((name, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                            className: `lg:py-2 py-1 transition-all duration-300 ease-in-out pl-1.5 ${index === safeIndex ? "font-bold opacity-100" : "font-normal opacity-60"} cursor-pointer hover:opacity-90`,
-                            onClick: ()=>handleNameClick(index),
-                            children: name
-                        }, index, false, {
-                            fileName: "[project]/src/components/ui/Homepage/creatives/CreativeName.tsx",
-                            lineNumber: 103,
-                            columnNumber: 13
-                        }, this))
-                }, void 0, false, {
-                    fileName: "[project]/src/components/ui/Homepage/creatives/CreativeName.tsx",
-                    lineNumber: 98,
-                    columnNumber: 9
-                }, this)
-            }, `project-title-${names.join("-")}`, false, {
-                fileName: "[project]/src/components/ui/Homepage/creatives/CreativeName.tsx",
-                lineNumber: 71,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "[project]/src/components/ui/Homepage/creatives/CreativeName.tsx",
-        lineNumber: 67,
-        columnNumber: 5
-    }, this);
-}
-_s(CreativeName, "kj96Nh6ng1sZF1x3xDN/MYyeJ+M=");
-_c = CreativeName;
-var _c;
-__turbopack_context__.k.register(_c, "CreativeName");
-if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
-    __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
-}
-}}),
 "[project]/src/components/ui/Homepage/header/LogoText.tsx [app-client] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
@@ -2953,18 +2619,10 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$motion$2f$dist$2f$es$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/motion/dist/es/framer-motion/dist/es/components/AnimatePresence/index.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$magicui$2f$morphing$2d$text$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/magicui/morphing-text.tsx [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$projects$2f$ProjectName$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/Homepage/projects/ProjectName.tsx [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$creatives$2f$CreativeName$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/Homepage/creatives/CreativeName.tsx [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$creatives$2f$CreativeItems$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/Homepage/creatives/CreativeItems.tsx [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$projects$2f$ProjectItems$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/Homepage/projects/ProjectItems.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$header$2f$LogoText$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/Homepage/header/LogoText.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$header$2f$Logo$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/Homepage/header/Logo.tsx [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
-;
-;
-;
-;
 ;
 ;
 ;
@@ -3088,28 +2746,13 @@ const LogoTitle = ({ isProjectsClicked, isCreativesClicked, isAboutClicked, curr
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$motion$2f$dist$2f$es$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AnimatePresence"], {
                             mode: "wait",
                             children: !isMobileMenuOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
-                                children: isProjectsClicked ? showListContent && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$projects$2f$ProjectName$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                    names: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$projects$2f$ProjectItems$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["projects"].map((project)=>project.name),
-                                    currentIndex: currentProjectIndex,
-                                    setCurrentProjectIndex: setCurrentProjectIndex
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/ui/Homepage/header/LogoTitle.tsx",
-                                    lineNumber: 143,
-                                    columnNumber: 23
-                                }, this) : isCreativesClicked ? showListContent && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$creatives$2f$CreativeName$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                    names: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$creatives$2f$CreativeItems$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["creatives"].map((creative)=>creative.name),
-                                    currentIndex: currentCreativeIndex,
-                                    setCurrentCreativeIndex: setCurrentCreativeIndex
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/ui/Homepage/header/LogoTitle.tsx",
-                                    lineNumber: 151,
-                                    columnNumber: 23
-                                }, this) : showLogoText && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$header$2f$LogoText$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["LogoText"], {
+                                children: // Only show LogoText when showLogoText is true
+                                showLogoText && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$header$2f$LogoText$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["LogoText"], {
                                     isAboutClicked: isAboutClicked
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/ui/Homepage/header/LogoTitle.tsx",
-                                    lineNumber: 159,
-                                    columnNumber: 23
+                                    lineNumber: 143,
+                                    columnNumber: 35
                                 }, this)
                             }, void 0, false)
                         }, void 0, false, {
@@ -3122,7 +2765,7 @@ const LogoTitle = ({ isProjectsClicked, isCreativesClicked, isAboutClicked, curr
                             visible: showMorphingText
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/Homepage/header/LogoTitle.tsx",
-                            lineNumber: 166,
+                            lineNumber: 150,
                             columnNumber: 13
                         }, this)
                     ]
@@ -3678,6 +3321,464 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
     __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
 }
 }}),
+"[project]/src/components/ui/Homepage/projects/ProjectName.tsx [app-client] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
+
+var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
+{
+__turbopack_context__.s({
+    "default": (()=>ProjectName)
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$motion$2f$dist$2f$es$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/motion/dist/es/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$motion$2f$dist$2f$es$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/motion/dist/es/framer-motion/dist/es/components/AnimatePresence/index.mjs [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
+;
+;
+function ProjectName({ names, currentIndex, onNameClick, setCurrentProjectIndex, isPushedDown = false }) {
+    _s();
+    const listRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const containerRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const [safeIndex, setSafeIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
+    const previousIndexRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(-1);
+    // Sync with parent index when it changes
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "ProjectName.useEffect": ()=>{
+            if (names.length > 0) {
+                let newIndex = 0;
+                if (!Number.isNaN(currentIndex) && Number.isFinite(currentIndex)) {
+                    newIndex = Math.max(0, Math.min(currentIndex, names.length - 1));
+                }
+                previousIndexRef.current = newIndex;
+                setSafeIndex(newIndex);
+            }
+        }
+    }["ProjectName.useEffect"], [
+        currentIndex,
+        names.length
+    ]);
+    // Scroll to center the active item when safeIndex changes
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "ProjectName.useEffect": ()=>{
+            if (listRef.current && names.length > 0) {
+                try {
+                    const selector = `li:nth-child(${safeIndex + 1})`;
+                    const activeElement = listRef.current.querySelector(selector);
+                    if (activeElement) {
+                        const listHeight = listRef.current.clientHeight;
+                        const itemHeight = activeElement.offsetHeight;
+                        const itemTop = activeElement.offsetTop;
+                        const containerHeight = containerRef.current?.clientHeight || window.innerHeight;
+                        // Calculate scroll position to center the item
+                        const scrollTop = itemTop - containerHeight / 2 + itemHeight / 2;
+                        listRef.current.scrollTop = scrollTop;
+                    }
+                } catch  {
+                // Silent error handling
+                }
+            }
+        }
+    }["ProjectName.useEffect"], [
+        safeIndex,
+        names.length
+    ]);
+    // Simple easing function that performs better on Safari
+    const simpleEaseOut = (t)=>{
+        // Simple quadratic ease-out function
+        return 1 - (1 - t) * (1 - t);
+    };
+    const handleNameClick = (index)=>{
+        previousIndexRef.current = index;
+        setSafeIndex(index);
+        setCurrentProjectIndex(index);
+        // Safari-optimized smooth scroll implementation
+        const startPosition = window.scrollY;
+        const startTime = performance.now();
+        const animateScroll = (currentTime)=>{
+            const elapsed = currentTime - startTime;
+            const duration = 600; // Shorter duration for better performance
+            const progress = Math.min(elapsed / duration, 1);
+            // Using our simpler easing function instead of Framer Motion's easeInOut
+            const easeProgress = simpleEaseOut(progress);
+            window.scrollTo(0, startPosition * (1 - easeProgress));
+            if (progress < 1) {
+                requestAnimationFrame(animateScroll);
+            }
+        };
+        requestAnimationFrame(animateScroll);
+        if (onNameClick) {
+            onNameClick(index);
+        }
+    };
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "relative flex items-center justify-center h-full",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "absolute left-0 right-0 bg-transparent z-10 pointer-events-none"
+            }, void 0, false, {
+                fileName: "[project]/src/components/ui/Homepage/projects/ProjectName.tsx",
+                lineNumber: 103,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$motion$2f$dist$2f$es$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                ref: containerRef,
+                className: `inline-block flex items-center justify-center h-full ${isPushedDown ? "" : "max-h-[63vh] overflow-hidden"}`,
+                style: {
+                    textShadow: "0px 0px 2px rgba(255, 255, 255, 1), 0px 0px 2px rgba(255, 255, 255, 1)",
+                    scrollbarWidth: "none",
+                    msOverflowStyle: "none"
+                },
+                initial: {
+                    opacity: 0,
+                    fontWeight: 400,
+                    filter: "blur(10px) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0))"
+                },
+                animate: {
+                    opacity: 1,
+                    fontWeight: 700,
+                    filter: "blur(0px) drop-shadow(0px 0px 6px rgba(0, 0, 0, 1))"
+                },
+                exit: {
+                    opacity: 0,
+                    fontWeight: 400,
+                    filter: "blur(10px) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0))"
+                },
+                transition: {
+                    duration: 0.7
+                },
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$motion$2f$dist$2f$es$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AnimatePresence"], {
+                    mode: "wait",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$motion$2f$dist$2f$es$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].ul, {
+                        initial: {
+                            opacity: 0,
+                            filter: "blur(10px)"
+                        },
+                        animate: {
+                            opacity: 1,
+                            filter: "blur(0px)",
+                            transition: {
+                                duration: 0.7
+                            }
+                        },
+                        exit: {
+                            opacity: 0,
+                            filter: "blur(10px)",
+                            transition: {
+                                duration: 0
+                            }
+                        },
+                        className: "text-white list-none text-left lg:w-[200px] flex flex-col min-h-[50vh] justify-center",
+                        ref: listRef,
+                        children: names.map((name, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                className: `project-name-item lg:py-2 py-1 transition-all duration-300 ease-in-out px-1.5 ${index === safeIndex ? "font-bold opacity-100 active" : "font-normal opacity-60"} cursor-pointer hover:opacity-90`,
+                                onClick: ()=>handleNameClick(index),
+                                children: name
+                            }, index, false, {
+                                fileName: "[project]/src/components/ui/Homepage/projects/ProjectName.tsx",
+                                lineNumber: 153,
+                                columnNumber: 17
+                            }, this))
+                    }, "name-list", false, {
+                        fileName: "[project]/src/components/ui/Homepage/projects/ProjectName.tsx",
+                        lineNumber: 136,
+                        columnNumber: 13
+                    }, this)
+                }, void 0, false, {
+                    fileName: "[project]/src/components/ui/Homepage/projects/ProjectName.tsx",
+                    lineNumber: 134,
+                    columnNumber: 9
+                }, this)
+            }, `project-title-${names.join("-")}`, false, {
+                fileName: "[project]/src/components/ui/Homepage/projects/ProjectName.tsx",
+                lineNumber: 105,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/src/components/ui/Homepage/projects/ProjectName.tsx",
+        lineNumber: 101,
+        columnNumber: 5
+    }, this);
+}
+_s(ProjectName, "kj96Nh6ng1sZF1x3xDN/MYyeJ+M=");
+_c = ProjectName;
+var _c;
+__turbopack_context__.k.register(_c, "ProjectName");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
+}
+}}),
+"[project]/src/components/ui/Homepage/creatives/CreativeName.tsx [app-client] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
+
+var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
+{
+__turbopack_context__.s({
+    "default": (()=>CreativeName)
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$motion$2f$dist$2f$es$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/motion/dist/es/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
+;
+;
+function CreativeName({ names, currentIndex, onNameClick, setCurrentCreativeIndex }) {
+    _s();
+    const listRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const containerRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const [safeIndex, setSafeIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
+    const previousIndexRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(-1);
+    // Sync with parent index when it changes
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "CreativeName.useEffect": ()=>{
+            if (names.length > 0) {
+                let newIndex = 0;
+                if (!Number.isNaN(currentIndex) && Number.isFinite(currentIndex)) {
+                    newIndex = Math.max(0, Math.min(currentIndex, names.length - 1));
+                }
+                previousIndexRef.current = newIndex;
+                setSafeIndex(newIndex);
+            }
+        }
+    }["CreativeName.useEffect"], [
+        currentIndex,
+        names.length
+    ]);
+    // Scroll to center the active item when safeIndex changes
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "CreativeName.useEffect": ()=>{
+            if (listRef.current && names.length > 0) {
+                try {
+                    const selector = `li:nth-child(${safeIndex + 1})`;
+                    const activeElement = listRef.current.querySelector(selector);
+                    if (activeElement) {
+                        setTimeout({
+                            "CreativeName.useEffect": ()=>{
+                                activeElement.scrollIntoView({
+                                    behavior: "smooth",
+                                    block: "center"
+                                });
+                            }
+                        }["CreativeName.useEffect"], 50);
+                    }
+                } catch  {
+                // Silent error handling
+                }
+            }
+        }
+    }["CreativeName.useEffect"], [
+        safeIndex,
+        names.length
+    ]);
+    const handleNameClick = (index)=>{
+        previousIndexRef.current = index;
+        setSafeIndex(index);
+        setCurrentCreativeIndex(index);
+        if (onNameClick) {
+            onNameClick(index);
+        }
+    };
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "relative flex items-center justify-center h-full",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "absolute left-0 right-0  bg-transparent z-10 pointer-events-none"
+            }, void 0, false, {
+                fileName: "[project]/src/components/ui/Homepage/creatives/CreativeName.tsx",
+                lineNumber: 69,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$motion$2f$dist$2f$es$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                ref: containerRef,
+                className: "inline-block max-h-[63vh] overflow-hidden",
+                style: {
+                    textShadow: "0px 0px 2px rgba(255, 255, 255, 1), 0px 0px 2px rgba(255, 255, 255, 1)",
+                    scrollbarWidth: "none",
+                    msOverflowStyle: "none"
+                },
+                initial: {
+                    opacity: 0,
+                    fontWeight: 400,
+                    filter: "blur(10px) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0))"
+                },
+                animate: {
+                    opacity: 1,
+                    fontWeight: 700,
+                    filter: "blur(0px) drop-shadow(0px 0px 6px rgba(0, 0, 0, 1))"
+                },
+                exit: {
+                    opacity: 0,
+                    fontWeight: 400,
+                    filter: "blur(10px) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0))"
+                },
+                transition: {
+                    duration: 0.7
+                },
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                    className: "text-white list-none py-[30vh] px-0 m-0 text-left w-[200px] ",
+                    ref: listRef,
+                    children: names.map((name, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                            className: `lg:py-2 py-1 transition-all duration-300 ease-in-out pl-1.5 ${index === safeIndex ? "font-bold opacity-100" : "font-normal opacity-60"} cursor-pointer hover:opacity-90`,
+                            onClick: ()=>handleNameClick(index),
+                            children: name
+                        }, index, false, {
+                            fileName: "[project]/src/components/ui/Homepage/creatives/CreativeName.tsx",
+                            lineNumber: 103,
+                            columnNumber: 13
+                        }, this))
+                }, void 0, false, {
+                    fileName: "[project]/src/components/ui/Homepage/creatives/CreativeName.tsx",
+                    lineNumber: 98,
+                    columnNumber: 9
+                }, this)
+            }, `project-title-${names.join("-")}`, false, {
+                fileName: "[project]/src/components/ui/Homepage/creatives/CreativeName.tsx",
+                lineNumber: 71,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/src/components/ui/Homepage/creatives/CreativeName.tsx",
+        lineNumber: 67,
+        columnNumber: 5
+    }, this);
+}
+_s(CreativeName, "kj96Nh6ng1sZF1x3xDN/MYyeJ+M=");
+_c = CreativeName;
+var _c;
+__turbopack_context__.k.register(_c, "CreativeName");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
+}
+}}),
+"[project]/src/components/ui/Homepage/header/List.tsx [app-client] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
+
+var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
+{
+__turbopack_context__.s({
+    "List": (()=>List)
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$motion$2f$dist$2f$es$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/motion/dist/es/framer-motion/dist/es/components/AnimatePresence/index.mjs [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$projects$2f$ProjectName$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/Homepage/projects/ProjectName.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$creatives$2f$CreativeName$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/Homepage/creatives/CreativeName.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$creatives$2f$CreativeItems$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/Homepage/creatives/CreativeItems.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$projects$2f$ProjectItems$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/Homepage/projects/ProjectItems.tsx [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
+;
+;
+;
+;
+;
+;
+const List = ({ isProjectsClicked, isCreativesClicked, isAboutClicked, currentProjectIndex, currentCreativeIndex, handleLogoClick, setCurrentCreativeIndex, setCurrentProjectIndex, isMobileMenuOpen = false })=>{
+    _s();
+    const [showListContent, setShowListContent] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    // Handle the delayed appearance of project/creative lists
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "List.useEffect": ()=>{
+            let listTimeoutId = null;
+            if (isProjectsClicked || isCreativesClicked) {
+                // Reset state first
+                setShowListContent(false);
+                // Clear any existing timeouts
+                if (listTimeoutId) clearTimeout(listTimeoutId);
+                // Set timeout to show lists after logo animation completes
+                listTimeoutId = setTimeout({
+                    "List.useEffect": ()=>{
+                        setShowListContent(true);
+                    }
+                }["List.useEffect"], 800); // Increased to ensure it appears after logo and other animations
+            } else {
+                // Reset when neither is clicked
+                setShowListContent(false);
+            }
+            // Cleanup function
+            return ({
+                "List.useEffect": ()=>{
+                    if (listTimeoutId) clearTimeout(listTimeoutId);
+                }
+            })["List.useEffect"];
+        }
+    }["List.useEffect"], [
+        isProjectsClicked,
+        isCreativesClicked
+    ]);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: `float-left lg:pl-16 z-50 items-center ${isAboutClicked ? "text-white" : "text-black"} pl-2`,
+        style: {
+            transform: "translateZ(0)"
+        },
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "flex-row flex items-center",
+            style: {
+                transform: "translateZ(0)",
+                willChange: "contents",
+                position: "relative",
+                height: "auto"
+            },
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: `${isAboutClicked ? "text-white" : "text-black"} lg:pl-1 lg:text-xs text-[10px] uppercase tracking-tight flex flex-row lg:ml-0 ml-0 items-center`,
+                style: {
+                    height: "auto",
+                    position: "relative"
+                },
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$motion$2f$dist$2f$es$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AnimatePresence"], {
+                    mode: "wait",
+                    children: !isMobileMenuOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
+                        children: isProjectsClicked ? showListContent && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$projects$2f$ProjectName$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                            names: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$projects$2f$ProjectItems$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["projects"].map((project)=>project.name),
+                            currentIndex: currentProjectIndex,
+                            setCurrentProjectIndex: setCurrentProjectIndex
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/ui/Homepage/header/List.tsx",
+                            lineNumber: 97,
+                            columnNumber: 23
+                        }, this) : isCreativesClicked ? showListContent && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$creatives$2f$CreativeName$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                            names: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$creatives$2f$CreativeItems$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["creatives"].map((creative)=>creative.name),
+                            currentIndex: currentCreativeIndex,
+                            setCurrentCreativeIndex: setCurrentCreativeIndex
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/ui/Homepage/header/List.tsx",
+                            lineNumber: 105,
+                            columnNumber: 23
+                        }, this) : null
+                    }, void 0, false)
+                }, void 0, false, {
+                    fileName: "[project]/src/components/ui/Homepage/header/List.tsx",
+                    lineNumber: 92,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/src/components/ui/Homepage/header/List.tsx",
+                lineNumber: 86,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "[project]/src/components/ui/Homepage/header/List.tsx",
+            lineNumber: 77,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/src/components/ui/Homepage/header/List.tsx",
+        lineNumber: 71,
+        columnNumber: 5
+    }, this);
+};
+_s(List, "koYz0ySedwNJydX+VogCmHUrwTc=");
+_c = List;
+var _c;
+__turbopack_context__.k.register(_c, "List");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
+}
+}}),
 "[project]/src/components/ui/Homepage/layout/MainLayout.tsx [app-client] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
@@ -3691,6 +3792,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$motion$2f$di
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$about$2f$AboutImages$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/Homepage/about/AboutImages.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$header$2f$LogoTitle$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/Homepage/header/LogoTitle.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$header$2f$Navigation$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/Homepage/header/Navigation.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$header$2f$List$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/Homepage/header/List.tsx [app-client] (ecmascript)");
+;
 ;
 ;
 ;
@@ -3718,7 +3821,7 @@ const MainLayout = ({ isAboutClicked, isProjectsClicked, isCreativesClicked, isE
                 className: `fixed min-h-screen w-full z-1 ${isAboutClicked ? "about-active" : ""} ${isMobileMenuOpen ? "menu-active" : ""}`
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/Homepage/layout/MainLayout.tsx",
-                lineNumber: 66,
+                lineNumber: 67,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$about$2f$AboutImages$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AboutImages"], {
@@ -3733,56 +3836,79 @@ const MainLayout = ({ isAboutClicked, isProjectsClicked, isCreativesClicked, isE
                 onHoverChange: onHoverChange
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/Homepage/layout/MainLayout.tsx",
-                lineNumber: 79,
+                lineNumber: 80,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: `block w-full fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-2 items-center`,
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "block",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$header$2f$LogoTitle$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["LogoTitle"], {
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "block",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$header$2f$LogoTitle$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["LogoTitle"], {
+                                setCurrentCreativeIndex: setCurrentCreativeIndex,
+                                setCurrentProjectIndex: setCurrentProjectIndex,
+                                isProjectsClicked: isProjectsClicked,
+                                isCreativesClicked: isCreativesClicked,
+                                isAboutClicked: isAboutClicked,
+                                currentProject: currentProject,
+                                currentProjectIndex: currentProjectIndex,
+                                currentCreative: currentCreative,
+                                currentCreativeIndex: currentCreativeIndex,
+                                handleLogoClick: handleLogoClick,
+                                isMobileMenuOpen: isMobileMenuOpen,
+                                isPushedDown: isPushedDown
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/ui/Homepage/layout/MainLayout.tsx",
+                                lineNumber: 97,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$header$2f$Navigation$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Navigation"], {
+                                justifyProp: justifyProp,
+                                isProjectsClicked: isProjectsClicked,
+                                isAboutClicked: isAboutClicked,
+                                isCreativesClicked: isCreativesClicked,
+                                handleAboutClick: handleAboutClick,
+                                handleCreativesClick: handleCreativesClick,
+                                handleProjectsClick: handleProjectsClick,
+                                handleMenuClick: handleMenuClick,
+                                handleLogoClick: handleLogoClick
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/ui/Homepage/layout/MainLayout.tsx",
+                                lineNumber: 112,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/components/ui/Homepage/layout/MainLayout.tsx",
+                        lineNumber: 96,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "block",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$header$2f$List$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["List"], {
+                            isProjectsClicked: isProjectsClicked,
+                            isCreativesClicked: isCreativesClicked,
+                            isAboutClicked: isAboutClicked,
+                            currentProjectIndex: currentProjectIndex,
+                            currentCreativeIndex: currentCreativeIndex,
                             setCurrentCreativeIndex: setCurrentCreativeIndex,
                             setCurrentProjectIndex: setCurrentProjectIndex,
-                            isProjectsClicked: isProjectsClicked,
-                            isCreativesClicked: isCreativesClicked,
-                            isAboutClicked: isAboutClicked,
-                            currentProject: currentProject,
-                            currentProjectIndex: currentProjectIndex,
-                            currentCreative: currentCreative,
-                            currentCreativeIndex: currentCreativeIndex,
-                            handleLogoClick: handleLogoClick,
-                            isMobileMenuOpen: isMobileMenuOpen,
-                            isPushedDown: isPushedDown
+                            isMobileMenuOpen: isMobileMenuOpen
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/Homepage/layout/MainLayout.tsx",
-                            lineNumber: 96,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$header$2f$Navigation$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Navigation"], {
-                            justifyProp: justifyProp,
-                            isProjectsClicked: isProjectsClicked,
-                            isAboutClicked: isAboutClicked,
-                            isCreativesClicked: isCreativesClicked,
-                            handleAboutClick: handleAboutClick,
-                            handleCreativesClick: handleCreativesClick,
-                            handleProjectsClick: handleProjectsClick,
-                            handleMenuClick: handleMenuClick,
-                            handleLogoClick: handleLogoClick
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/ui/Homepage/layout/MainLayout.tsx",
-                            lineNumber: 111,
-                            columnNumber: 11
+                            lineNumber: 125,
+                            columnNumber: 5
                         }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/src/components/ui/Homepage/layout/MainLayout.tsx",
-                    lineNumber: 95,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/ui/Homepage/layout/MainLayout.tsx",
+                        lineNumber: 124,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
                 fileName: "[project]/src/components/ui/Homepage/layout/MainLayout.tsx",
-                lineNumber: 91,
+                lineNumber: 92,
                 columnNumber: 7
             }, this)
         ]
@@ -3969,4 +4095,4 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 }}),
 }]);
 
-//# sourceMappingURL=src_4a49c7a2._.js.map
+//# sourceMappingURL=src_01b84c9a._.js.map

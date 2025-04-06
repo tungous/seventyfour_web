@@ -1759,219 +1759,6 @@ const Project = ({ isProjectsClicked, currentProjectIndex, currentProject, isMob
     }, this);
 };
 }}),
-"[project]/src/components/ui/core/images/ImageComponent.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
-"use strict";
-
-var { g: global, __dirname } = __turbopack_context__;
-{
-__turbopack_context__.s({
-    "default": (()=>__TURBOPACK__default__export__)
-});
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs [app-ssr] (ecmascript)");
-;
-;
-;
-const AnimatedImage = ({ isVisible, isExiting, randomX, randomY, imageNumber, onHoverChange, imageSrc, delay = 0, className = "absolute w-1/5 z-30", maxWidth = "25vw" })=>{
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AnimatePresence"], {
-        children: isVisible ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-            initial: {
-                opacity: 0,
-                filter: "blur(10px) brightness(4)",
-                x: randomX,
-                y: randomY
-            },
-            animate: {
-                opacity: 1,
-                filter: "blur(0px) brightness(1)"
-            },
-            exit: {
-                opacity: 0,
-                filter: "blur(10px) brightness(4)"
-            },
-            transition: {
-                duration: isExiting ? 0.7 : 0.8,
-                delay: isExiting ? 0 : delay
-            },
-            className: className,
-            style: {
-                maxWidth
-            },
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                src: imageSrc,
-                alt: "Sample image",
-                width: 2000,
-                height: 2000,
-                className: "object-cover",
-                onMouseEnter: ()=>onHoverChange(imageNumber)
-            }, void 0, false, {
-                fileName: "[project]/src/components/ui/core/images/ImageComponent.tsx",
-                lineNumber: 55,
-                columnNumber: 11
-            }, this)
-        }, void 0, false, {
-            fileName: "[project]/src/components/ui/core/images/ImageComponent.tsx",
-            lineNumber: 33,
-            columnNumber: 9
-        }, this) : null
-    }, void 0, false, {
-        fileName: "[project]/src/components/ui/core/images/ImageComponent.tsx",
-        lineNumber: 31,
-        columnNumber: 5
-    }, this);
-};
-const __TURBOPACK__default__export__ = AnimatedImage;
-}}),
-"[project]/src/components/ui/Homepage/about/AboutImages.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
-"use strict";
-
-var { g: global, __dirname } = __turbopack_context__;
-{
-__turbopack_context__.s({
-    "AboutImages": (()=>AboutImages)
-});
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$core$2f$images$2f$ImageComponent$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/core/images/ImageComponent.tsx [app-ssr] (ecmascript)");
-;
-;
-;
-const AboutImages = ({ isAboutClicked, isExiting, firstImgVisible, secondImgVisible, thirdImgVisible, firstImageDelay, randomX, randomY, onHoverChange })=>{
-    // Mobile-specific state
-    const [isMobile, setIsMobile] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
-    const [currentMobileImage, setCurrentMobileImage] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(1);
-    const [mobileRandomX, setMobileRandomX] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
-    const [mobileRandomY, setMobileRandomY] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
-    // Check if device is mobile
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        const checkMobile = ()=>{
-            setIsMobile(window.innerWidth < 768);
-        };
-        checkMobile();
-        window.addEventListener("resize", checkMobile);
-        return ()=>window.removeEventListener("resize", checkMobile);
-    }, []);
-    // Generate random positions for mobile
-    const generateMobileRandomPosition = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useCallback"])(()=>{
-        const currentImageNum = currentMobileImage || 1;
-        // Approximate image width based on the current image
-        const estimatedImgWidth = currentImageNum === 3 ? window.innerWidth * 0.6 : window.innerWidth * 0.5;
-        const estimatedImgHeight = estimatedImgWidth * 0.75;
-        // Calculate maximum possible position values
-        const maxX = Math.max(window.innerWidth - estimatedImgWidth, 0);
-        // Set usable vertical space
-        const navbarHeight = 80;
-        const usableHeight = window.innerHeight - navbarHeight;
-        // Define a restricted vertical area where images can appear
-        // Make images appear in the top 70% of the screen only
-        const topOffset = 100; // How high above the standard content the images can go
-        const minY = Math.min(topOffset, usableHeight * 0.3); // Allow images to go higher up
-        // Restrict maxY to be no more than 60% down the screen
-        // This prevents images from appearing too far down
-        const restrictedMaxY = Math.min(usableHeight * 0.6 - estimatedImgHeight, usableHeight - estimatedImgHeight);
-        const maxY = Math.max(restrictedMaxY, 0);
-        // Generate random positions within boundaries
-        const paddingX = 10;
-        const randomXPos = Math.random() * Math.max(maxX - paddingX, 0);
-        // For Y position, use the restricted range from top to middle area
-        const randomYPos = Math.random() * (maxY + minY) - minY;
-        setMobileRandomX(randomXPos);
-        setMobileRandomY(randomYPos);
-    }, [
-        currentMobileImage
-    ]);
-    // Auto-rotate images on mobile
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        if (!isMobile || !isAboutClicked || isExiting) return;
-        // Initial random position
-        generateMobileRandomPosition();
-        const interval = setInterval(()=>{
-            setCurrentMobileImage((prev)=>prev === 3 ? 1 : prev + 1);
-            // Generate new random position each time image changes
-            generateMobileRandomPosition();
-        }, 3000);
-        return ()=>clearInterval(interval);
-    }, [
-        isMobile,
-        isAboutClicked,
-        isExiting,
-        generateMobileRandomPosition
-    ]);
-    // Get visibility for mobile images
-    const getMobileVisibility = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useCallback"])((imageNum)=>{
-        if (!isMobile) return false;
-        return isAboutClicked && currentMobileImage === imageNum;
-    }, [
-        isMobile,
-        isAboutClicked,
-        currentMobileImage
-    ]);
-    // Debug log
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        if (isMobile) {
-            console.log(`Mobile state: isAboutClicked=${isAboutClicked}, currentImage=${currentMobileImage}, randomX=${mobileRandomX}, randomY=${mobileRandomY}`);
-        }
-    }, [
-        isMobile,
-        isAboutClicked,
-        currentMobileImage,
-        mobileRandomX,
-        mobileRandomY
-    ]);
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
-        children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$core$2f$images$2f$ImageComponent$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                isVisible: isMobile ? getMobileVisibility(1) || isExiting && firstImgVisible : isAboutClicked && firstImgVisible || isExiting && firstImgVisible,
-                isExiting: isExiting,
-                randomX: isMobile ? mobileRandomX : randomX,
-                randomY: isMobile ? mobileRandomY : randomY,
-                imageNumber: 1,
-                onHoverChange: isMobile ? ()=>{} : onHoverChange,
-                imageSrc: "/home2.jpeg",
-                delay: firstImageDelay ? 0 : 1,
-                className: "absolute w-1/5 z-30",
-                maxWidth: isMobile ? "50vw" : "25vw"
-            }, void 0, false, {
-                fileName: "[project]/src/components/ui/Homepage/about/AboutImages.tsx",
-                lineNumber: 126,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$core$2f$images$2f$ImageComponent$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                isVisible: isMobile ? getMobileVisibility(2) || isExiting && secondImgVisible : isAboutClicked && secondImgVisible || isExiting && secondImgVisible,
-                isExiting: isExiting,
-                randomX: isMobile ? mobileRandomX : randomX,
-                randomY: isMobile ? mobileRandomY : randomY,
-                imageNumber: 2,
-                onHoverChange: isMobile ? ()=>{} : onHoverChange,
-                imageSrc: "/home3.jpeg",
-                className: "absolute w-1/5 z-30",
-                maxWidth: isMobile ? "50vw" : "25vw"
-            }, void 0, false, {
-                fileName: "[project]/src/components/ui/Homepage/about/AboutImages.tsx",
-                lineNumber: 144,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$core$2f$images$2f$ImageComponent$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                isVisible: isMobile ? getMobileVisibility(3) || isExiting && thirdImgVisible : isAboutClicked && thirdImgVisible || isExiting && thirdImgVisible,
-                isExiting: isExiting,
-                randomX: isMobile ? mobileRandomX : randomX,
-                randomY: isMobile ? mobileRandomY : randomY,
-                imageNumber: 3,
-                onHoverChange: isMobile ? ()=>{} : onHoverChange,
-                imageSrc: "/home.jpeg",
-                className: "absolute w-1/3 z-39",
-                maxWidth: isMobile ? "60vw" : "30vw"
-            }, void 0, false, {
-                fileName: "[project]/src/components/ui/Homepage/about/AboutImages.tsx",
-                lineNumber: 161,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true);
-};
-}}),
 "[project]/src/components/magicui/morphing-text.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
@@ -2722,7 +2509,7 @@ const LogoTitle = ({ isProjectsClicked, isCreativesClicked, isAboutClicked, curr
         isCreativesClicked
     ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: `float-left lg:pl-16 z-50 items-center ${isAboutClicked ? "text-white" : "text-black"} pl-2`,
+        className: `flex flex-row w-1/2 lg:pl-16 z-50 ${isAboutClicked ? "text-white" : "text-black"} pl-2`,
         style: {
             transform: "translateZ(0)"
         },
@@ -2747,7 +2534,7 @@ const LogoTitle = ({ isProjectsClicked, isCreativesClicked, isAboutClicked, curr
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: `${isAboutClicked ? "text-white" : "text-black"} lg:pl-1 lg:text-xs text-[10px] uppercase tracking-tight flex flex-row lg:ml-0 ml-0 items-center`,
+                    className: `${isAboutClicked ? "text-white" : "text-black"} lg:p-1 lg:text-xs text-[10px] uppercase tracking-tight flex flex-row lg:ml-0 ml-0 items-center`,
                     style: {
                         height: "auto",
                         position: "relative"
@@ -3184,7 +2971,7 @@ const Navigation = ({ justifyProp, isProjectsClicked, isAboutClicked, isCreative
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: `float-right w-1/2 flex flex-row text-black lg:pr-16 z-50 items-center  ${isAboutClicked || isProjectsClicked || isCreativesClicked || isMobileMenuOpen ? "drop-shadow(0px 0px 10px rgba(0, 0, 0, 1)) text-white" : "text-black"} ${justifyProp}`,
+                className: `text-black flex lg:flex-row flex-col lg:pr-16 z-50 lg:w-[50vw] right-[0] fixed ${isAboutClicked || isProjectsClicked || isCreativesClicked || isMobileMenuOpen ? "drop-shadow(0px 0px 10px rgba(0, 0, 0, 1)) text-white" : "text-black"} ${justifyProp}`,
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$motion$2f$dist$2f$es$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AnimatePresence"], {
                         children: !isProjectsClicked && !isCreativesClicked && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$navbar$2f$NavBarItem$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -3314,10 +3101,8 @@ __turbopack_context__.s({
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$motion$2f$dist$2f$es$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/motion/dist/es/framer-motion/dist/es/render/components/motion/proxy.mjs [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$about$2f$AboutImages$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/Homepage/about/AboutImages.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$header$2f$LogoTitle$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/Homepage/header/LogoTitle.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$header$2f$Navigation$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/Homepage/header/Navigation.tsx [app-ssr] (ecmascript)");
-;
 ;
 ;
 ;
@@ -3347,25 +3132,9 @@ const MainLayout = ({ isAboutClicked, isProjectsClicked, isCreativesClicked, isE
                 lineNumber: 66,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$about$2f$AboutImages$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AboutImages"], {
-                isAboutClicked: isAboutClicked,
-                isExiting: isExiting,
-                firstImgVisible: firstImgVisible,
-                secondImgVisible: secondImgVisible,
-                thirdImgVisible: thirdImgVisible,
-                firstImageDelay: firstImageDelay,
-                randomX: randomX,
-                randomY: randomY,
-                onHoverChange: onHoverChange
-            }, void 0, false, {
-                fileName: "[project]/src/components/ui/Homepage/layout/MainLayout.tsx",
-                lineNumber: 79,
-                columnNumber: 7
-            }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: `block w-full fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-2 items-center`,
+                className: `fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 block items-center z-2`,
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "block",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$header$2f$LogoTitle$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["LogoTitle"], {
                             setCurrentCreativeIndex: setCurrentCreativeIndex,
@@ -3382,7 +3151,7 @@ const MainLayout = ({ isAboutClicked, isProjectsClicked, isCreativesClicked, isE
                             isPushedDown: isPushedDown
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/Homepage/layout/MainLayout.tsx",
-                            lineNumber: 96,
+                            lineNumber: 85,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$header$2f$Navigation$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Navigation"], {
@@ -3397,18 +3166,18 @@ const MainLayout = ({ isAboutClicked, isProjectsClicked, isCreativesClicked, isE
                             handleLogoClick: handleLogoClick
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/Homepage/layout/MainLayout.tsx",
-                            lineNumber: 111,
+                            lineNumber: 100,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/ui/Homepage/layout/MainLayout.tsx",
-                    lineNumber: 95,
+                    lineNumber: 84,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/Homepage/layout/MainLayout.tsx",
-                lineNumber: 91,
+                lineNumber: 80,
                 columnNumber: 7
             }, this)
         ]
@@ -3567,4 +3336,4 @@ function Hero() {
 
 };
 
-//# sourceMappingURL=src_4780e78b._.js.map
+//# sourceMappingURL=src_001264ec._.js.map

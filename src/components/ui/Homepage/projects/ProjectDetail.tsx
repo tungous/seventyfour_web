@@ -75,14 +75,8 @@ export const ProjectDetail: React.FC<ProjectDetailScrollProps> = ({
         {/* Project-specific content based on variant */}
         {project.variant === "Project1" && (
           <>
-            <div className="relative w-full mb-10">
+            <div className="relative w-full">
               <DetailLayout.Image src="/bazo.jpg" alt="Project 1" />
-              <div className="absolute inset-0 pointer-events-none">
-                {/* Gradient overlay at the top */}
-                <div className="absolute top-0 left-0 right-0 lg:h-52 bg-gradient-to-b from-black to-transparent"></div>
-                {/* Gradient overlay at the bottom */}
-                <div className="absolute bottom-0 left-0 right-0 lg:h-52 bg-gradient-to-t from-black to-transparent"></div>
-              </div>
               <div className="absolute inset-0 flex flex-col justify-center items-center p-8  lg:text-xs text-[8px] uppercase font-bold text-left mix-blend-difference">
                 <div className="max-w-md ">
                   <p
@@ -98,12 +92,6 @@ export const ProjectDetail: React.FC<ProjectDetailScrollProps> = ({
             </div>
             <div className="relative w-full">
               <DetailLayout.Image src="/nostalgia.gif" alt="Project 1" />
-              <div className="absolute inset-0 pt-10 pointer-events-none">
-                {/* Gradient overlay at the top */}
-                <div className="absolute top-0 left-0 right-0 lg:h-32 h-12 bg-gradient-to-b from-black to-transparent"></div>
-                {/* Gradient overlay at the bottom */}
-                <div className="absolute bottom-0 left-0 right-0 lg:h-32 h-12 bg-gradient-to-t from-black to-transparent"></div>
-              </div>
             </div>
           </>
         )}
@@ -149,12 +137,6 @@ export const ProjectDetail: React.FC<ProjectDetailScrollProps> = ({
                 src="/seventyfour_begin_1.jpg"
                 alt="Project 1"
               />
-              <div className="absolute inset-0 pointer-events-none">
-                {/* Gradient overlay at the top */}
-                <div className="absolute top-0 left-0 right-0 lg:h-32 h-12 bg-gradient-to-b from-black to-transparent"></div>
-                {/* Gradient overlay at the bottom */}
-                <div className="absolute bottom-0 left-0 right-0 lg:h-32 h-12 bg-gradient-to-t from-black to-transparent"></div>
-              </div>
               <div className="absolute inset-0 flex flex-col justify-center items-center p-8 mix-blend-difference lg:text-xs text-[8px] uppercase font-bold text-left">
                 <div className="max-w-md">
                   <p
@@ -175,12 +157,6 @@ export const ProjectDetail: React.FC<ProjectDetailScrollProps> = ({
                 src="https://vimeo.com/957811693"
                 alt="Project 1"
               />
-              <div className="absolute inset-0 pointer-events-none">
-                {/* Gradient overlay at the top */}
-                <div className="absolute top-0 left-0 right-0 lg:h-32 h-12 bg-gradient-to-b from-black to-transparent"></div>
-                {/* Gradient overlay at the bottom */}
-                <div className="absolute bottom-0 left-0 right-0 lg:h-32 h-12 bg-gradient-to-t from-black to-transparent"></div>
-              </div>
             </div>
           </>
         )}

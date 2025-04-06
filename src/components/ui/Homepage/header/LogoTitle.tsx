@@ -108,7 +108,7 @@ export const LogoTitle: React.FC<LogoTitleProps> = ({
 
   return (
     <div
-      className={`flex flex-row w-1/2 lg:pl-16 z-50 ${
+      className={`float-left lg:pl-16 z-50 items-center ${
         isAboutClicked ? "text-white" : "text-black"
       } pl-2`}
       style={{ transform: "translateZ(0)" }}
@@ -132,7 +132,7 @@ export const LogoTitle: React.FC<LogoTitleProps> = ({
         <div
           className={`${
             isAboutClicked ? "text-white" : "text-black"
-          } lg:p-1 lg:text-xs text-[10px] uppercase tracking-tight flex flex-row lg:ml-0 ml-0 items-center`}
+          } lg:pl-1 lg:text-xs text-[10px] uppercase tracking-tight flex flex-row lg:ml-0 ml-0 items-center`}
           style={{ height: "auto", position: "relative" }}
         >
           <AnimatePresence mode="wait">

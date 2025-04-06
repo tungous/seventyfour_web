@@ -76,48 +76,50 @@ export const MainLayout: React.FC<MainLayoutProps> = ({
           isAboutClicked ? "about-active" : ""
         } ${isMobileMenuOpen ? "menu-active" : ""}`}
       />
+      <AboutImages
+        isAboutClicked={isAboutClicked}
+        isExiting={isExiting}
+        firstImgVisible={firstImgVisible}
+        secondImgVisible={secondImgVisible}
+        thirdImgVisible={thirdImgVisible}
+        firstImageDelay={firstImageDelay}
+        randomX={randomX}
+        randomY={randomY}
+        onHoverChange={onHoverChange}
+      />
 
       <div
-        className={`fixed top-0 left-0 flex-row flex items-center w-full h-screen z-2`}
+        className={`block w-full fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-2 items-center`}
       >
-        <AboutImages
-          isAboutClicked={isAboutClicked}
-          isExiting={isExiting}
-          firstImgVisible={firstImgVisible}
-          secondImgVisible={secondImgVisible}
-          thirdImgVisible={thirdImgVisible}
-          firstImageDelay={firstImageDelay}
-          randomX={randomX}
-          randomY={randomY}
-          onHoverChange={onHoverChange}
-        />
+        
+        <div className="block">
+          <LogoTitle
+            setCurrentCreativeIndex={setCurrentCreativeIndex}
+            setCurrentProjectIndex={setCurrentProjectIndex}
+            isProjectsClicked={isProjectsClicked}
+            isCreativesClicked={isCreativesClicked}
+            isAboutClicked={isAboutClicked}
+            currentProject={currentProject}
+            currentProjectIndex={currentProjectIndex}
+            currentCreative={currentCreative}
+            currentCreativeIndex={currentCreativeIndex}
+            handleLogoClick={handleLogoClick}
+            isMobileMenuOpen={isMobileMenuOpen}
+            isPushedDown={isPushedDown}
+          />
 
-        <LogoTitle
-          setCurrentCreativeIndex={setCurrentCreativeIndex}
-          setCurrentProjectIndex={setCurrentProjectIndex}
-          isProjectsClicked={isProjectsClicked}
-          isCreativesClicked={isCreativesClicked}
-          isAboutClicked={isAboutClicked}
-          currentProject={currentProject}
-          currentProjectIndex={currentProjectIndex}
-          currentCreative={currentCreative}
-          currentCreativeIndex={currentCreativeIndex}
-          handleLogoClick={handleLogoClick}
-          isMobileMenuOpen={isMobileMenuOpen}
-          isPushedDown={isPushedDown}
-        />
-
-        <Navigation
-          justifyProp={justifyProp}
-          isProjectsClicked={isProjectsClicked}
-          isAboutClicked={isAboutClicked}
-          isCreativesClicked={isCreativesClicked}
-          handleAboutClick={handleAboutClick}
-          handleCreativesClick={handleCreativesClick}
-          handleProjectsClick={handleProjectsClick}
-          handleMenuClick={handleMenuClick}
-          handleLogoClick={handleLogoClick}
-        />
+          <Navigation
+            justifyProp={justifyProp}
+            isProjectsClicked={isProjectsClicked}
+            isAboutClicked={isAboutClicked}
+            isCreativesClicked={isCreativesClicked}
+            handleAboutClick={handleAboutClick}
+            handleCreativesClick={handleCreativesClick}
+            handleProjectsClick={handleProjectsClick}
+            handleMenuClick={handleMenuClick}
+            handleLogoClick={handleLogoClick}
+          />
+        </div>
       </div>
     </>
   );

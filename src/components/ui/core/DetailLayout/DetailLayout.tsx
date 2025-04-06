@@ -157,6 +157,7 @@ const DetailImage = ({
   return (
     <div
       className={cn("relative aspect-[16/9] w-full overflow-hidden", className)}
+      style={{ position: "relative" }}
     >
       <Image
         src={src}
@@ -165,6 +166,17 @@ const DetailImage = ({
         sizes={sizes}
         className="object-cover"
         priority={priority}
+      />
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          boxShadow: "inset 0 0px 15px 15px black",
+          pointerEvents: "none",
+        }}
       />
     </div>
   );
@@ -185,14 +197,21 @@ const Video = ({ src, className }: MediaProps) => {
           "relative aspect-[16/9] w-full overflow-hidden",
           className
         )}
+        style={{
+          boxShadow: "inset 0 0px 15px 15px black"
+        }}
       >
         <iframe
           src={`https://player.vimeo.com/video/${vimeoId}?autoplay=0&loop=1&title=0&byline=0&portrait=0`}
           className="w-full h-full absolute top-0 left-0"
-          frameBorder="0"
           allow="autoplay; fullscreen; picture-in-picture"
           allowFullScreen
         ></iframe>
+        <div
+        style={{
+          boxShadow: "inset 0 0px 15px 15px black"
+        }}
+      />
       </div>
     );
   }
