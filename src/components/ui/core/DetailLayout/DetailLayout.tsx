@@ -166,6 +166,17 @@ const DetailImage = ({
         className="object-cover"
         priority={priority}
       />
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          boxShadow: "inset 0 0px 15px 15px black",
+          pointerEvents: "none",
+        }}
+      />
     </div>
   );
 };

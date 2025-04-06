@@ -43,7 +43,7 @@ export default function CreativeInfo({
     <motion.div
       initial={{
         opacity: 0,
-        fontWeight: 400,
+        fontWeight: 700,
         filter: "blur(10px) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0))",
       }}
       animate={{
@@ -53,7 +53,7 @@ export default function CreativeInfo({
       }}
       exit={{
         opacity: 0,
-        fontWeight: 400,
+        fontWeight: 700,
         filter: "blur(10px) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0))",
       }}
       transition={{ duration: 0.7 }}

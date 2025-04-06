@@ -48,7 +48,7 @@ export const LogoText = ({ isAboutClicked }: { isAboutClicked: boolean }) => {
           key={`title-${renderKey}-${isAboutClicked ? "about" : "default"}`}
           initial={{
             opacity: 0,
-            fontWeight: 400,
+            fontWeight: 700,
             filter: isAboutClicked
               ? "blur(10px) drop-shadow(0px 0px 0px rgba(0, 0, 0, 1))"
               : "blur(10px) drop-shadow(0px 0px 0px rgba(0, 0, 0, 1))",
@@ -62,7 +62,7 @@ export const LogoText = ({ isAboutClicked }: { isAboutClicked: boolean }) => {
           }}
           exit={{
             opacity: 0,
-            fontWeight: 400,
+            fontWeight: 700,
             filter: isAboutClicked
               ? "blur(10px) drop-shadow(0px 0px 0px rgba(0, 0, 0, 1))"
               : "blur(10px) drop-shadow(0px 0px 0px rgba(0, 0, 0, 1))",
