@@ -146,8 +146,58 @@ export const ProjectDetail: React.FC<ProjectDetailScrollProps> = ({
                 src="https://vimeo.com/957811693"
                 alt="Project 1"
               />
-
             </div>
+            <div className="relative w-full mb-10">
+              <DetailLayout.Image
+                src="/seventyfour-begin-21.jpg"
+                alt="Project 1"
+              />
+
+              <div className="absolute inset-0 flex flex-col justify-center items-center lg:px-16 px-2 mix-blend-difference lg:text-xs text-[8px] uppercase font-bold text-left">
+                <div className="flex flex-col">
+                  <p
+                    className="text-justify"
+                    style={{ textShadow: "0px 0px 2px rgba(255,255,255,1)" }}
+                  >
+                    DIRECTOR, DP, EDITOR: T. TUNG MAI
+                    <br />
+                    DESIGNER: LEO PHAM
+                    <br />
+                    SOUND: TOMAS NGUYEN
+                    <br />
+                    <br />
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Aperiam nihil laboriosam nam sequi dolores nobis atque
+                    minima id optio. Cumque labore laudantium aliquid vel iusto
+                    quo deleniti, repellat ratione assumenda quasi quaerat,
+                    rerum exercitationem? Adipisci, assumenda eius sapiente
+                    impedit ratione dolorum quae ipsam minima nemo doloremque
+                    labore aspernatur consequuntur alias exercitationem. Quas
+                    quod mollitia hic adipisci consequatur iste aperiam id
+                    praesentium quasi quisquam.
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/* <div className=" inset-0 flex flex-row justify-center items-center px-16 mix-blend-difference lg:text-xs text-[8px] uppercase font-bold">
+              <div className="flex flex-col">
+                <p
+                  className="text-justify"
+                  style={{ textShadow: "0px 0px 2px rgba(255,255,255,1)" }}
+                >
+                  DIRECTOR, DP, EDITOR: T. TUNG MAI
+                  <br />
+                  DESIGNER: LEO PHAM
+                  <br />
+                  SOUND: TOMAS NGUYEN
+                  <br />
+                  <br />
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Aperiam nihil laboriosam nam sequi dolores nobis atque minima
+                  id optio.
+                </p>
+              </div>
+            </div> */}
           </>
         )}
 

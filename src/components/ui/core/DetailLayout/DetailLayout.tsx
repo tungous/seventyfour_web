@@ -95,7 +95,7 @@ const DetailLayout = ({
 
       {/* Main content container */}
       <div
-        className="absolute top-[calc(100vh)] flex flex-col justify-start items-center w-full z-2 min-h-screen pt-20 pb-32 bg-black tracking-tight"
+        className="absolute top-[calc(100vh)] flex flex-col justify-start items-center w-full z-2 min-h-screen pt-20 pb-60 bg-black tracking-tight"
         id="scrollable-project-details"
       >
         {React.Children.map(children, (child) =>

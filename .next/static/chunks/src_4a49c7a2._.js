@@ -1200,7 +1200,7 @@ const DetailLayout = ({ children, isPushedDown, variant })=>{
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute top-[calc(100vh)] flex flex-col justify-start items-center w-full z-2 min-h-screen pt-20 pb-32 bg-black tracking-tight",
+                className: "absolute top-[calc(100vh)] flex flex-col justify-start items-center w-full z-2 min-h-screen pt-20 pb-60 bg-black tracking-tight",
                 id: "scrollable-project-details",
                 children: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].Children.map(children, (child)=>/*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].isValidElement(child) ? /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].cloneElement(child, {
                         variant
@@ -1635,6 +1635,73 @@ const ProjectDetail = ({ isPushedDown, currentProjectIndex })=>{
                             fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
                             lineNumber: 144,
                             columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "relative w-full mb-10",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$core$2f$DetailLayout$2f$DetailLayout$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].Image, {
+                                    src: "/seventyfour-begin-21.jpg",
+                                    alt: "Project 1"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
+                                    lineNumber: 151,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "absolute inset-0 flex flex-col justify-center items-center lg:px-16 px-2 mix-blend-difference lg:text-xs text-[8px] uppercase font-bold text-left",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex flex-col",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                            className: "text-justify",
+                                            style: {
+                                                textShadow: "0px 0px 2px rgba(255,255,255,1)"
+                                            },
+                                            children: [
+                                                "DIRECTOR, DP, EDITOR: T. TUNG MAI",
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                                                    fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
+                                                    lineNumber: 163,
+                                                    columnNumber: 21
+                                                }, this),
+                                                "DESIGNER: LEO PHAM",
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                                                    fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
+                                                    lineNumber: 165,
+                                                    columnNumber: 21
+                                                }, this),
+                                                "SOUND: TOMAS NGUYEN",
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                                                    fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
+                                                    lineNumber: 167,
+                                                    columnNumber: 21
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                                                    fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
+                                                    lineNumber: 168,
+                                                    columnNumber: 21
+                                                }, this),
+                                                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam nihil laboriosam nam sequi dolores nobis atque minima id optio. Cumque labore laudantium aliquid vel iusto quo deleniti, repellat ratione assumenda quasi quaerat, rerum exercitationem? Adipisci, assumenda eius sapiente impedit ratione dolorum quae ipsam minima nemo doloremque labore aspernatur consequuntur alias exercitationem. Quas quod mollitia hic adipisci consequatur iste aperiam id praesentium quasi quisquam."
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
+                                            lineNumber: 158,
+                                            columnNumber: 19
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
+                                        lineNumber: 157,
+                                        columnNumber: 17
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
+                                    lineNumber: 156,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
+                            lineNumber: 150,
+                            columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true),
@@ -1645,7 +1712,7 @@ const ProjectDetail = ({ isPushedDown, currentProjectIndex })=>{
                             alt: "Project 5"
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                            lineNumber: 156,
+                            lineNumber: 206,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$core$2f$DetailLayout$2f$DetailLayout$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].Video, {
@@ -1653,7 +1720,7 @@ const ProjectDetail = ({ isPushedDown, currentProjectIndex })=>{
                             alt: "Project 5"
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                            lineNumber: 157,
+                            lineNumber: 207,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$core$2f$DetailLayout$2f$DetailLayout$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].Image, {
@@ -1661,7 +1728,7 @@ const ProjectDetail = ({ isPushedDown, currentProjectIndex })=>{
                             alt: "Project 5"
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                            lineNumber: 158,
+                            lineNumber: 208,
                             columnNumber: 13
                         }, this)
                     ]
@@ -1673,7 +1740,7 @@ const ProjectDetail = ({ isPushedDown, currentProjectIndex })=>{
                             alt: "Project 6"
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                            lineNumber: 164,
+                            lineNumber: 214,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$core$2f$DetailLayout$2f$DetailLayout$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].Image, {
@@ -1681,7 +1748,7 @@ const ProjectDetail = ({ isPushedDown, currentProjectIndex })=>{
                             alt: "Project 6"
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                            lineNumber: 165,
+                            lineNumber: 215,
                             columnNumber: 13
                         }, this)
                     ]
@@ -3625,12 +3692,14 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$motion$2f$di
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$about$2f$AboutImages$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/Homepage/about/AboutImages.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$header$2f$LogoTitle$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/Homepage/header/LogoTitle.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$header$2f$Navigation$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/Homepage/header/Navigation.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/utils.ts [app-client] (ecmascript)");
 ;
 ;
 ;
 ;
 ;
-const MainLayout = ({ isAboutClicked, isProjectsClicked, isCreativesClicked, isExiting, firstImgVisible, secondImgVisible, thirdImgVisible, firstImageDelay, randomX, randomY, onHoverChange, justifyProp, currentProject, currentProjectIndex, currentCreative, currentCreativeIndex, handleLogoClick, handleAboutClick, handleCreativesClick, handleProjectsClick, setCurrentCreativeIndex, setCurrentProjectIndex, handleMenuClick, isMobileMenuOpen, isPushedDown })=>{
+;
+const MainLayout = ({ isAboutClicked, isProjectsClicked, isCreativesClicked, isExiting, firstImgVisible, secondImgVisible, thirdImgVisible, firstImageDelay, randomX, randomY, onHoverChange, justifyProp, currentProject, currentProjectIndex, currentCreative, currentCreativeIndex, handleLogoClick, handleAboutClick, handleCreativesClick, handleProjectsClick, setCurrentCreativeIndex, setCurrentProjectIndex, handleMenuClick, isMobileMenuOpen, isPushedDown, isHeaderVisible, isNearBottom, isHeaderAnimatingOut })=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$motion$2f$dist$2f$es$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -3652,11 +3721,14 @@ const MainLayout = ({ isAboutClicked, isProjectsClicked, isCreativesClicked, isE
                 className: `fixed min-h-screen w-full z-1 ${isAboutClicked ? "about-active" : ""} ${isMobileMenuOpen ? "menu-active" : ""}`
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/Homepage/layout/MainLayout.tsx",
-                lineNumber: 66,
+                lineNumber: 73,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: `fixed top-0 left-0 flex-row flex items-center w-full h-screen z-2`,
+                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("fixed top-0 left-0 flex-row flex items-center w-full h-screen", isHeaderVisible || isHeaderAnimatingOut ? "z-4" : "z-2"),
+                style: {
+                    pointerEvents: "none"
+                },
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$about$2f$AboutImages$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AboutImages"], {
                         isAboutClicked: isAboutClicked,
@@ -3670,46 +3742,74 @@ const MainLayout = ({ isAboutClicked, isProjectsClicked, isCreativesClicked, isE
                         onHoverChange: onHoverChange
                     }, void 0, false, {
                         fileName: "[project]/src/components/ui/Homepage/layout/MainLayout.tsx",
-                        lineNumber: 83,
+                        lineNumber: 94,
                         columnNumber: 9
                     }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$header$2f$LogoTitle$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["LogoTitle"], {
-                        setCurrentCreativeIndex: setCurrentCreativeIndex,
-                        setCurrentProjectIndex: setCurrentProjectIndex,
-                        isProjectsClicked: isProjectsClicked,
-                        isCreativesClicked: isCreativesClicked,
-                        isAboutClicked: isAboutClicked,
-                        currentProject: currentProject,
-                        currentProjectIndex: currentProjectIndex,
-                        currentCreative: currentCreative,
-                        currentCreativeIndex: currentCreativeIndex,
-                        handleLogoClick: handleLogoClick,
-                        isMobileMenuOpen: isMobileMenuOpen,
-                        isPushedDown: isPushedDown
-                    }, void 0, false, {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$motion$2f$dist$2f$es$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                        className: "flex flex-row w-full items-center justify-between",
+                        initial: {
+                            opacity: 1,
+                            filter: "blur(30px)"
+                        },
+                        animate: {
+                            opacity: isHeaderVisible ? 1 : 0,
+                            filter: isHeaderVisible ? "blur(0px)" : "blur(10px)"
+                        },
+                        exit: {
+                            opacity: 1,
+                            filter: "blur(30px)"
+                        },
+                        transition: {
+                            duration: 0.7,
+                            ease: "easeInOut"
+                        },
+                        style: {
+                            pointerEvents: isHeaderVisible ? "auto" : "none"
+                        },
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$header$2f$LogoTitle$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["LogoTitle"], {
+                                setCurrentCreativeIndex: setCurrentCreativeIndex,
+                                setCurrentProjectIndex: setCurrentProjectIndex,
+                                isProjectsClicked: isProjectsClicked,
+                                isCreativesClicked: isCreativesClicked,
+                                isAboutClicked: isAboutClicked,
+                                currentProject: currentProject,
+                                currentProjectIndex: currentProjectIndex,
+                                currentCreative: currentCreative,
+                                currentCreativeIndex: currentCreativeIndex,
+                                handleLogoClick: handleLogoClick,
+                                isMobileMenuOpen: isMobileMenuOpen,
+                                isPushedDown: isPushedDown
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/ui/Homepage/layout/MainLayout.tsx",
+                                lineNumber: 117,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$header$2f$Navigation$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Navigation"], {
+                                justifyProp: justifyProp,
+                                isProjectsClicked: isProjectsClicked,
+                                isAboutClicked: isAboutClicked,
+                                isCreativesClicked: isCreativesClicked,
+                                handleAboutClick: handleAboutClick,
+                                handleCreativesClick: handleCreativesClick,
+                                handleProjectsClick: handleProjectsClick,
+                                handleMenuClick: handleMenuClick,
+                                handleLogoClick: handleLogoClick
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/ui/Homepage/layout/MainLayout.tsx",
+                                lineNumber: 132,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
                         fileName: "[project]/src/components/ui/Homepage/layout/MainLayout.tsx",
-                        lineNumber: 95,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$header$2f$Navigation$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Navigation"], {
-                        justifyProp: justifyProp,
-                        isProjectsClicked: isProjectsClicked,
-                        isAboutClicked: isAboutClicked,
-                        isCreativesClicked: isCreativesClicked,
-                        handleAboutClick: handleAboutClick,
-                        handleCreativesClick: handleCreativesClick,
-                        handleProjectsClick: handleProjectsClick,
-                        handleMenuClick: handleMenuClick,
-                        handleLogoClick: handleLogoClick
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/ui/Homepage/layout/MainLayout.tsx",
-                        lineNumber: 110,
+                        lineNumber: 106,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/ui/Homepage/layout/MainLayout.tsx",
-                lineNumber: 80,
+                lineNumber: 87,
                 columnNumber: 7
             }, this)
         ]
@@ -3751,6 +3851,10 @@ var _s = __turbopack_context__.k.signature();
 function Hero() {
     _s();
     const [isMobileMenuOpen, setIsMobileMenuOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [isHeaderVisible, setIsHeaderVisible] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
+    const [isNearBottom, setIsNearBottom] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [isHeaderAnimatingOut, setIsHeaderAnimatingOut] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const animationDuration = 700;
     const navigation = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useNavigation$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useNavigation"])();
     const { isAboutClicked, isCreativesClicked, isProjectsClicked, justifyProp, handleLogoClick, handleAboutClick, handleCreativesClick, handleProjectsClick } = navigation;
     const images = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useImageNavigation$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useImageNavigation"])();
@@ -3816,6 +3920,74 @@ function Hero() {
     }["Hero.useEffect"], [
         isMobileMenuOpen
     ]);
+    // Effect to handle header visibility on scroll when a project is clicked
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "Hero.useEffect": ()=>{
+            if (!isProjectsClicked) {
+                setIsHeaderVisible(true);
+                setIsHeaderAnimatingOut(false);
+                return;
+            }
+            let lastScrollY = window.scrollY;
+            let ticking = false;
+            let animationTimeoutId = null;
+            const handleScroll = {
+                "Hero.useEffect.handleScroll": ()=>{
+                    const currentScrollY = window.scrollY;
+                    const windowHeight = window.innerHeight;
+                    const scrollHeight = document.documentElement.scrollHeight;
+                    const isAtTop = currentScrollY <= 100;
+                    const isAtBottom = currentScrollY + windowHeight >= scrollHeight - 200;
+                    const shouldBeVisible = isAtTop || isAtBottom;
+                    setIsNearBottom(isAtBottom);
+                    if (!ticking) {
+                        window.requestAnimationFrame({
+                            "Hero.useEffect.handleScroll": ()=>{
+                                if (shouldBeVisible && animationTimeoutId) {
+                                    clearTimeout(animationTimeoutId);
+                                    animationTimeoutId = null;
+                                    setIsHeaderAnimatingOut(false);
+                                }
+                                if (isHeaderVisible !== shouldBeVisible) {
+                                    if (!shouldBeVisible) {
+                                        setIsHeaderVisible(false);
+                                        setIsHeaderAnimatingOut(true);
+                                        animationTimeoutId = setTimeout({
+                                            "Hero.useEffect.handleScroll": ()=>{
+                                                setIsHeaderAnimatingOut(false);
+                                                animationTimeoutId = null;
+                                            }
+                                        }["Hero.useEffect.handleScroll"], animationDuration);
+                                    } else {
+                                        setIsHeaderVisible(true);
+                                        setIsHeaderAnimatingOut(false);
+                                    }
+                                }
+                                lastScrollY = currentScrollY;
+                                ticking = false;
+                            }
+                        }["Hero.useEffect.handleScroll"]);
+                        ticking = true;
+                    }
+                }
+            }["Hero.useEffect.handleScroll"];
+            // Initial check
+            handleScroll();
+            window.addEventListener("scroll", handleScroll);
+            // Cleanup
+            return ({
+                "Hero.useEffect": ()=>{
+                    window.removeEventListener("scroll", handleScroll);
+                    if (animationTimeoutId) {
+                        clearTimeout(animationTimeoutId);
+                    }
+                }
+            })["Hero.useEffect"];
+        }
+    }["Hero.useEffect"], [
+        isProjectsClicked,
+        isHeaderVisible
+    ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: `h-screen ${isMobileMenuOpen ? "overflow-hidden" : ""}`,
         children: [
@@ -3827,7 +3999,7 @@ function Hero() {
                 isMobileMenuOpen: isMobileMenuOpen
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/Homepage/Hero/Hero.tsx",
-                lineNumber: 114,
+                lineNumber: 183,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$projects$2f$Project$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Project"], {
@@ -3839,7 +4011,7 @@ function Hero() {
                 setIsImagePushedDown: setIsImagePushedDown
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/Homepage/Hero/Hero.tsx",
-                lineNumber: 122,
+                lineNumber: 191,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$layout$2f$MainLayout$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["MainLayout"], {
@@ -3867,20 +4039,23 @@ function Hero() {
                 handleProjectsClick: handleProjectsClick,
                 handleMenuClick: handleMenuClick,
                 isMobileMenuOpen: isMobileMenuOpen,
-                isPushedDown: isImagePushedDown
+                isPushedDown: isImagePushedDown,
+                isHeaderVisible: isHeaderVisible,
+                isNearBottom: isNearBottom,
+                isHeaderAnimatingOut: isHeaderAnimatingOut
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/Homepage/Hero/Hero.tsx",
-                lineNumber: 131,
+                lineNumber: 200,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/ui/Homepage/Hero/Hero.tsx",
-        lineNumber: 113,
+        lineNumber: 182,
         columnNumber: 5
     }, this);
 }
-_s(Hero, "NF/eOtorihmCDGM21TGJyQIX1pU=", false, function() {
+_s(Hero, "whkWBAOoeHj77ziF2LfoHCmFx+I=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useNavigation$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useNavigation"],
         __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useImageNavigation$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useImageNavigation"],

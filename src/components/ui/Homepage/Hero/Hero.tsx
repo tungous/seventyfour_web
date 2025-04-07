@@ -10,6 +10,10 @@ import { MainLayout } from "@/components/ui/Homepage/layout/MainLayout";
 
 export default function Hero() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+  const [isNearBottom, setIsNearBottom] = useState(false);
+  const [isHeaderAnimatingOut, setIsHeaderAnimatingOut] = useState(false);
+  const animationDuration = 700;
 
   const navigation = useNavigation();
   const {
@@ -109,6 +113,71 @@ export default function Hero() {
     };
   }, [isMobileMenuOpen]);
 
+  // Effect to handle header visibility on scroll when a project is clicked
+  useEffect(() => {
+    if (!isProjectsClicked) {
+      setIsHeaderVisible(true);
+      setIsHeaderAnimatingOut(false);
+      return;
+    }
+
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    let animationTimeoutId: NodeJS.Timeout | null = null;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const scrollHeight = document.documentElement.scrollHeight;
+      const isAtTop = currentScrollY <= 100;
+      const isAtBottom = currentScrollY + windowHeight >= scrollHeight - 200;
+      const shouldBeVisible = isAtTop || isAtBottom;
+
+      setIsNearBottom(isAtBottom);
+
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (shouldBeVisible && animationTimeoutId) {
+            clearTimeout(animationTimeoutId);
+            animationTimeoutId = null;
+            setIsHeaderAnimatingOut(false);
+          }
+
+          if (isHeaderVisible !== shouldBeVisible) {
+            if (!shouldBeVisible) {
+              setIsHeaderVisible(false);
+              setIsHeaderAnimatingOut(true);
+              animationTimeoutId = setTimeout(() => {
+                setIsHeaderAnimatingOut(false);
+                animationTimeoutId = null;
+              }, animationDuration);
+            } else {
+              setIsHeaderVisible(true);
+              setIsHeaderAnimatingOut(false);
+            }
+          }
+
+          lastScrollY = currentScrollY;
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    // Initial check
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (animationTimeoutId) {
+        clearTimeout(animationTimeoutId);
+      }
+    };
+  }, [isProjectsClicked, isHeaderVisible]);
+
   return (
     <div className={`h-screen ${isMobileMenuOpen ? "overflow-hidden" : ""}`}>
       <Creative
@@ -154,6 +223,9 @@ export default function Hero() {
         handleMenuClick={handleMenuClick}
         isMobileMenuOpen={isMobileMenuOpen}
         isPushedDown={isImagePushedDown}
+        isHeaderVisible={isHeaderVisible}
+        isNearBottom={isNearBottom}
+        isHeaderAnimatingOut={isHeaderAnimatingOut}
       />
     </div>
   );

@@ -5,6 +5,7 @@ import { LogoTitle } from "@/components/ui/Homepage/header/LogoTitle";
 import { Navigation } from "@/components/ui/Homepage/header/Navigation";
 import { projectType } from "@/components/ui/Homepage/projects/ProjectItems";
 import { creativeType } from "@/components/ui/Homepage/creatives/CreativeItems";
+import { cn } from "@/lib/utils";
 
 interface MainLayoutProps {
   isAboutClicked: boolean;
@@ -32,6 +33,9 @@ interface MainLayoutProps {
   handleMenuClick: () => void;
   isMobileMenuOpen: boolean;
   isPushedDown?: boolean;
+  isHeaderVisible: boolean;
+  isNearBottom: boolean;
+  isHeaderAnimatingOut: boolean;
 }
 
 export const MainLayout: React.FC<MainLayoutProps> = ({
@@ -60,6 +64,9 @@ export const MainLayout: React.FC<MainLayoutProps> = ({
   handleMenuClick,
   isMobileMenuOpen,
   isPushedDown,
+  isHeaderVisible,
+  isNearBottom,
+  isHeaderAnimatingOut,
 }) => {
   return (
     <>
@@ -78,7 +85,11 @@ export const MainLayout: React.FC<MainLayoutProps> = ({
       />
 
       <div
-        className={`fixed top-0 left-0 flex-row flex items-center w-full h-screen z-2`}
+        className={cn(
+          "fixed top-0 left-0 flex-row flex items-center w-full h-screen",
+          isHeaderVisible || isHeaderAnimatingOut ? "z-4" : "z-2"
+        )}
+        style={{ pointerEvents: "none" }}
       >
         <AboutImages
           isAboutClicked={isAboutClicked}
@@ -92,32 +103,44 @@ export const MainLayout: React.FC<MainLayoutProps> = ({
           onHoverChange={onHoverChange}
         />
 
-        <LogoTitle
-          setCurrentCreativeIndex={setCurrentCreativeIndex}
-          setCurrentProjectIndex={setCurrentProjectIndex}
-          isProjectsClicked={isProjectsClicked}
-          isCreativesClicked={isCreativesClicked}
-          isAboutClicked={isAboutClicked}
-          currentProject={currentProject}
-          currentProjectIndex={currentProjectIndex}
-          currentCreative={currentCreative}
-          currentCreativeIndex={currentCreativeIndex}
-          handleLogoClick={handleLogoClick}
-          isMobileMenuOpen={isMobileMenuOpen}
-          isPushedDown={isPushedDown}
-        />
+        <motion.div
+          className="flex flex-row w-full items-center justify-between"
+          initial={{ opacity: 1, filter: "blur(30px)" }}
+          animate={{
+            opacity: isHeaderVisible ? 1 : 0,
+            filter: isHeaderVisible ? "blur(0px)" : "blur(10px)",
+          }}
+          exit={{ opacity: 1, filter: "blur(30px)" }}
+          transition={{ duration: 0.7, ease: "easeInOut" }}
+          style={{ pointerEvents: isHeaderVisible ? "auto" : "none" }}
+        >
+          <LogoTitle
+            setCurrentCreativeIndex={setCurrentCreativeIndex}
+            setCurrentProjectIndex={setCurrentProjectIndex}
+            isProjectsClicked={isProjectsClicked}
+            isCreativesClicked={isCreativesClicked}
+            isAboutClicked={isAboutClicked}
+            currentProject={currentProject}
+            currentProjectIndex={currentProjectIndex}
+            currentCreative={currentCreative}
+            currentCreativeIndex={currentCreativeIndex}
+            handleLogoClick={handleLogoClick}
+            isMobileMenuOpen={isMobileMenuOpen}
+            isPushedDown={isPushedDown}
+          />
 
-        <Navigation
-          justifyProp={justifyProp}
-          isProjectsClicked={isProjectsClicked}
-          isAboutClicked={isAboutClicked}
-          isCreativesClicked={isCreativesClicked}
-          handleAboutClick={handleAboutClick}
-          handleCreativesClick={handleCreativesClick}
-          handleProjectsClick={handleProjectsClick}
-          handleMenuClick={handleMenuClick}
-          handleLogoClick={handleLogoClick}
-        />
+          <Navigation
+            justifyProp={justifyProp}
+            isProjectsClicked={isProjectsClicked}
+            isAboutClicked={isAboutClicked}
+            isCreativesClicked={isCreativesClicked}
+            handleAboutClick={handleAboutClick}
+            handleCreativesClick={handleCreativesClick}
+            handleProjectsClick={handleProjectsClick}
+            handleMenuClick={handleMenuClick}
+            handleLogoClick={handleLogoClick}
+          />
+        </motion.div>
       </div>
     </>
   );
