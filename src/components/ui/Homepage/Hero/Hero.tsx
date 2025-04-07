@@ -121,7 +121,6 @@ export default function Hero() {
       return;
     }
 
-    let lastScrollY = window.scrollY;
     let ticking = false;
     let animationTimeoutId: NodeJS.Timeout | null = null;
 
@@ -224,7 +223,6 @@ export default function Hero() {
         isMobileMenuOpen={isMobileMenuOpen}
         isPushedDown={isImagePushedDown}
         isHeaderVisible={isHeaderVisible}
-        isNearBottom={isNearBottom}
         isHeaderAnimatingOut={isHeaderAnimatingOut}
       />
     </div>

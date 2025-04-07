@@ -3699,7 +3699,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$
 ;
 ;
 ;
-const MainLayout = ({ isAboutClicked, isProjectsClicked, isCreativesClicked, isExiting, firstImgVisible, secondImgVisible, thirdImgVisible, firstImageDelay, randomX, randomY, onHoverChange, justifyProp, currentProject, currentProjectIndex, currentCreative, currentCreativeIndex, handleLogoClick, handleAboutClick, handleCreativesClick, handleProjectsClick, setCurrentCreativeIndex, setCurrentProjectIndex, handleMenuClick, isMobileMenuOpen, isPushedDown, isHeaderVisible, isNearBottom, isHeaderAnimatingOut })=>{
+const MainLayout = ({ isAboutClicked, isProjectsClicked, isCreativesClicked, isExiting, firstImgVisible, secondImgVisible, thirdImgVisible, firstImageDelay, randomX, randomY, onHoverChange, justifyProp, currentProject, currentProjectIndex, currentCreative, currentCreativeIndex, handleLogoClick, handleAboutClick, handleCreativesClick, handleProjectsClick, setCurrentCreativeIndex, setCurrentProjectIndex, handleMenuClick, isMobileMenuOpen, isPushedDown, isHeaderVisible, isHeaderAnimatingOut })=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$motion$2f$dist$2f$es$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -3721,7 +3721,7 @@ const MainLayout = ({ isAboutClicked, isProjectsClicked, isCreativesClicked, isE
                 className: `fixed min-h-screen w-full z-1 ${isAboutClicked ? "about-active" : ""} ${isMobileMenuOpen ? "menu-active" : ""}`
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/Homepage/layout/MainLayout.tsx",
-                lineNumber: 73,
+                lineNumber: 71,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3742,7 +3742,7 @@ const MainLayout = ({ isAboutClicked, isProjectsClicked, isCreativesClicked, isE
                         onHoverChange: onHoverChange
                     }, void 0, false, {
                         fileName: "[project]/src/components/ui/Homepage/layout/MainLayout.tsx",
-                        lineNumber: 94,
+                        lineNumber: 92,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$motion$2f$dist$2f$es$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -3782,7 +3782,7 @@ const MainLayout = ({ isAboutClicked, isProjectsClicked, isCreativesClicked, isE
                                 isPushedDown: isPushedDown
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ui/Homepage/layout/MainLayout.tsx",
-                                lineNumber: 117,
+                                lineNumber: 115,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$header$2f$Navigation$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Navigation"], {
@@ -3797,19 +3797,19 @@ const MainLayout = ({ isAboutClicked, isProjectsClicked, isCreativesClicked, isE
                                 handleLogoClick: handleLogoClick
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ui/Homepage/layout/MainLayout.tsx",
-                                lineNumber: 132,
+                                lineNumber: 130,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/ui/Homepage/layout/MainLayout.tsx",
-                        lineNumber: 106,
+                        lineNumber: 104,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/ui/Homepage/layout/MainLayout.tsx",
-                lineNumber: 87,
+                lineNumber: 85,
                 columnNumber: 7
             }, this)
         ]
@@ -3928,7 +3928,6 @@ function Hero() {
                 setIsHeaderAnimatingOut(false);
                 return;
             }
-            let lastScrollY = window.scrollY;
             let ticking = false;
             let animationTimeoutId = null;
             const handleScroll = {
@@ -3999,7 +3998,7 @@ function Hero() {
                 isMobileMenuOpen: isMobileMenuOpen
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/Homepage/Hero/Hero.tsx",
-                lineNumber: 183,
+                lineNumber: 182,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$projects$2f$Project$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Project"], {
@@ -4011,7 +4010,7 @@ function Hero() {
                 setIsImagePushedDown: setIsImagePushedDown
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/Homepage/Hero/Hero.tsx",
-                lineNumber: 191,
+                lineNumber: 190,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$layout$2f$MainLayout$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["MainLayout"], {
@@ -4041,17 +4040,16 @@ function Hero() {
                 isMobileMenuOpen: isMobileMenuOpen,
                 isPushedDown: isImagePushedDown,
                 isHeaderVisible: isHeaderVisible,
-                isNearBottom: isNearBottom,
                 isHeaderAnimatingOut: isHeaderAnimatingOut
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/Homepage/Hero/Hero.tsx",
-                lineNumber: 200,
+                lineNumber: 199,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/ui/Homepage/Hero/Hero.tsx",
-        lineNumber: 182,
+        lineNumber: 181,
         columnNumber: 5
     }, this);
 }

@@ -34,7 +34,6 @@ interface MainLayoutProps {
   isMobileMenuOpen: boolean;
   isPushedDown?: boolean;
   isHeaderVisible: boolean;
-  isNearBottom: boolean;
   isHeaderAnimatingOut: boolean;
 }
 
@@ -65,7 +64,6 @@ export const MainLayout: React.FC<MainLayoutProps> = ({
   isMobileMenuOpen,
   isPushedDown,
   isHeaderVisible,
-  isNearBottom,
   isHeaderAnimatingOut,
 }) => {
   return (
