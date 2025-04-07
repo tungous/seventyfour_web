@@ -1,5 +1,6 @@
 import React from "react";
 import DetailLayout from "@/components/ui/core/DetailLayout/DetailLayout";
+import Footer from "@/components/ui/core/Footer";
 
 interface ProjectDetailScrollProps {
   visible: boolean;
@@ -11,9 +12,13 @@ interface ProjectDetailScrollProps {
 const projectData = [
   {
     id: 1,
-    title: "Project 1",
+    title: "KOLAUDACKA",
     description:
       "A beautiful and innovative project showcasing modern design principles.",
+    creative1: "PHOTOGRAPHER: MINH VIET PHAM",
+    creative2: "CREATIVE DIRECTOR: MINH VIET PHAM, BAZO, DAVID PHAM",
+    creative3: "DJ: AIIZA BAZO, AIIZA PHAMINHO (DAVID PHAM)",
+    location: "LOCATION: KAPLANOVA 2252/8, PRAHA 4",
     variant: "Project1" as const,
     features: ["Feature 1", "Feature 2", "Feature 3"],
   },
@@ -22,6 +27,8 @@ const projectData = [
     title: "Project 2",
     description:
       "An exploration of interactive experiences and user engagement.",
+    creative1: "PHOTOGRAPHER: ADAM KUZELKA",
+    location: "LOCATION: KAPLANOVA 2252/8, PRAHA 4",
     variant: "Project2" as const,
   },
   {
@@ -33,9 +40,12 @@ const projectData = [
   },
   {
     id: 4,
-    title: "Project 4",
+    title: "SEVENTYFOUR: BEGIN",
     description:
       "A journey through time, blending past and present in perfect harmony.",
+    creative1: "DIRECTOR, DP, EDITOR: T. TUNG MAI",
+    creative2: "DESIGNER: LEO PHAM",
+    creative3: "SOUND: TOMAS NGUYEN",
     variant: "Project4" as const,
   },
   {
@@ -216,6 +226,20 @@ export const ProjectDetail: React.FC<ProjectDetailScrollProps> = ({
           </>
         )}
       </DetailLayout.ProjectContent>
+      {/* Gradient overlay */}
+      <div
+        className="absolute w-full z-2"
+        style={{
+          bottom: 600,
+          height: "200px",
+          background:
+            "linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.6) 75%, rgba(0,0,0,0.8) 85%, rgba(0,0,0,1) 100%)",
+          pointerEvents: "none",
+          opacity: isPushedDown ? 1 : 0,
+          transition: "opacity 0.8s ease-in-out",
+        }}
+      />
+      <Footer project={project} />
     </DetailLayout>
   );
 };

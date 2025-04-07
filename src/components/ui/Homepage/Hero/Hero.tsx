@@ -4,6 +4,7 @@ import { useImageNavigation } from "@/hooks/useImageNavigation";
 import { useNavigation } from "@/hooks/useNavigation";
 import { useContentScroll } from "@/hooks/useContentScroll";
 import { useEffect, useRef, useState } from "react";
+import Lenis from "lenis";
 import { Creative } from "@/components/ui/Homepage/creatives/Creative";
 import { Project } from "@/components/ui/Homepage/projects/Project";
 import { MainLayout } from "@/components/ui/Homepage/layout/MainLayout";
@@ -111,6 +112,22 @@ export default function Hero() {
       document.body.style.overflow = "unset";
     };
   }, [isMobileMenuOpen]);
+
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    lenis.on("scroll", (e) => {
+      console.log("Lenis scroll event:", e);
+    });
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    return () => lenis.destroy();
+  }, []);
 
   // Effect to handle header visibility on scroll when a project is clicked
   useEffect(() => {

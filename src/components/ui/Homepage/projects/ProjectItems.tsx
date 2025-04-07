@@ -6,9 +6,9 @@ export interface projectType {
 
 export const projects: projectType[] = [
   {
-    name: "Project 1",
-    info: "Made with love",
-    backgroundImage: "/cinematic1.jpg",
+    name: "KOLAUDACKA",
+    info: "PHOTOS ",
+    backgroundImage: "/aiiza.jpg",
   },
   {
     name: "Project 2",

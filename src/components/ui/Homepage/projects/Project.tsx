@@ -57,40 +57,6 @@ export const Project = ({
     }
   }, [isImagePushedDown, isHovered]);
 
-  // Set up scrolling when image is pushed down
-  useEffect(() => {
-    if (isImagePushedDown || isHovered) {
-      // Enable scrolling when image is pushed down
-      document.body.style.overflow = "auto";
-      document.body.style.overflowX = "hidden";
-    } else {
-      // Simple linear scroll animation that works reliably on Safari
-      const startPosition = window.scrollY;
-      const startTime = performance.now();
-      const duration = 400; // Shorter duration for better reliability
-
-      const animateScroll = (currentTime: number) => {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-
-        window.scrollTo(0, startPosition * (1 - progress));
-
-        if (progress < 1) {
-          requestAnimationFrame(animateScroll);
-        } else {
-          // Disable scrolling after animation completes
-          document.body.style.overflow = "hidden";
-        }
-      };
-
-      requestAnimationFrame(animateScroll);
-    }
-
-    return () => {
-      document.body.style.overflow = "hidden";
-    };
-  }, [isImagePushedDown, isHovered]);
-
   return (
     <div>
       <AnimatePresence mode="wait">

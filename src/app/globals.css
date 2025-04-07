@@ -128,9 +128,7 @@
     @apply bg-background text-foreground;
   }
 
-  html {
-    @apply: scroll-smooth;
-  }
+
 }
 
 /* Scrollbar styles */
@@ -157,10 +155,7 @@
   scrollbar-color: rgba(255, 255, 255, 0.5) rgba(0, 0, 0, 0.2);
 }
 
-/* Fix scroll behavior */
-html {
-  scroll-behavior: smooth;
-}
+
 
 /* Hide scrollbar when About section or Mobile Menu is active */
 body {
@@ -179,7 +174,7 @@ body {
     -ms-overflow-style: none !important;
 
     /* Prevent scrolling */
-    overflow: hidden !important;
+    /* overflow: hidden !important; */
   }
 }
 
