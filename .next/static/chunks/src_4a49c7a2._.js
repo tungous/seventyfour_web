@@ -3852,7 +3852,6 @@ function Hero() {
     _s();
     const [isMobileMenuOpen, setIsMobileMenuOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [isHeaderVisible, setIsHeaderVisible] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
-    const [isNearBottom, setIsNearBottom] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [isHeaderAnimatingOut, setIsHeaderAnimatingOut] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const animationDuration = 700;
     const navigation = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useNavigation$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useNavigation"])();
@@ -3938,7 +3937,6 @@ function Hero() {
                     const isAtTop = currentScrollY <= 100;
                     const isAtBottom = currentScrollY + windowHeight >= scrollHeight - 200;
                     const shouldBeVisible = isAtTop || isAtBottom;
-                    setIsNearBottom(isAtBottom);
                     if (!ticking) {
                         window.requestAnimationFrame({
                             "Hero.useEffect.handleScroll": ()=>{
@@ -3962,7 +3960,6 @@ function Hero() {
                                         setIsHeaderAnimatingOut(false);
                                     }
                                 }
-                                lastScrollY = currentScrollY;
                                 ticking = false;
                             }
                         }["Hero.useEffect.handleScroll"]);
@@ -3998,7 +3995,7 @@ function Hero() {
                 isMobileMenuOpen: isMobileMenuOpen
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/Homepage/Hero/Hero.tsx",
-                lineNumber: 182,
+                lineNumber: 178,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$projects$2f$Project$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Project"], {
@@ -4010,7 +4007,7 @@ function Hero() {
                 setIsImagePushedDown: setIsImagePushedDown
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/Homepage/Hero/Hero.tsx",
-                lineNumber: 190,
+                lineNumber: 186,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Homepage$2f$layout$2f$MainLayout$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["MainLayout"], {
@@ -4043,17 +4040,17 @@ function Hero() {
                 isHeaderAnimatingOut: isHeaderAnimatingOut
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/Homepage/Hero/Hero.tsx",
-                lineNumber: 199,
+                lineNumber: 195,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/ui/Homepage/Hero/Hero.tsx",
-        lineNumber: 181,
+        lineNumber: 177,
         columnNumber: 5
     }, this);
 }
-_s(Hero, "whkWBAOoeHj77ziF2LfoHCmFx+I=", false, function() {
+_s(Hero, "l9ka8DNbfm/wd5TEcLHUcN0Q0uw=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useNavigation$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useNavigation"],
         __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useImageNavigation$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useImageNavigation"],

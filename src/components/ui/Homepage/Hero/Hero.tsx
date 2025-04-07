@@ -11,7 +11,6 @@ import { MainLayout } from "@/components/ui/Homepage/layout/MainLayout";
 export default function Hero() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
-  const [isNearBottom, setIsNearBottom] = useState(false);
   const [isHeaderAnimatingOut, setIsHeaderAnimatingOut] = useState(false);
   const animationDuration = 700;
 
@@ -132,8 +131,6 @@ export default function Hero() {
       const isAtBottom = currentScrollY + windowHeight >= scrollHeight - 200;
       const shouldBeVisible = isAtTop || isAtBottom;
 
-      setIsNearBottom(isAtBottom);
-
       if (!ticking) {
         window.requestAnimationFrame(() => {
           if (shouldBeVisible && animationTimeoutId) {
@@ -156,7 +153,6 @@ export default function Hero() {
             }
           }
 
-          lastScrollY = currentScrollY;
           ticking = false;
         });
         ticking = true;
