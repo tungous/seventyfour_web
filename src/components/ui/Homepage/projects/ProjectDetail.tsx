@@ -1,6 +1,5 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from "react";
 import DetailLayout from "@/components/ui/core/DetailLayout/DetailLayout";
 import Footer from "@/components/ui/core/Footer";
 import { gsap } from "gsap";
