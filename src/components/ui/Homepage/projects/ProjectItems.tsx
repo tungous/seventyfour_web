@@ -8,7 +8,7 @@ export const projects: projectType[] = [
   {
     name: "KOLAUDACKA",
     info: "PHOTOS ",
-    backgroundImage: "/aiiza.jpg",
+    backgroundImage: "/aizza.jpg",
   },
   {
     name: "Project 2",

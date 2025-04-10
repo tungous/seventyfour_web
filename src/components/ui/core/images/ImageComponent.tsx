@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+
+// Helper function to get a random number in a range
+const getRandomSize = (min: number, max: number): number => {
+  return Math.random() * (max - min) + min;
+};
 
 interface AnimatedImageProps {
   isVisible: boolean;
@@ -12,7 +17,8 @@ interface AnimatedImageProps {
   imageSrc: string;
   delay?: number;
   className?: string;
-  maxWidth?: string;
+  minVw?: number;
+  maxVw?: number;
 }
 
 const AnimatedImage: React.FC<AnimatedImageProps> = ({
@@ -24,9 +30,24 @@ const AnimatedImage: React.FC<AnimatedImageProps> = ({
   onHoverChange,
   imageSrc,
   delay = 0,
-  className = "absolute w-1/5 z-30",
-  maxWidth = "25vw",
+  className = "absolute z-1",
+  minVw,
+  maxVw,
 }) => {
+  const [randomizedMaxWidth, setRandomizedMaxWidth] = useState<string>("auto");
+
+  useEffect(() => {
+    if (
+      isVisible &&
+      typeof minVw === "number" &&
+      typeof maxVw === "number" &&
+      minVw < maxVw
+    ) {
+      const randomSize = getRandomSize(minVw, maxVw);
+      setRandomizedMaxWidth(`${randomSize}vw`);
+    }
+  }, [isVisible, minVw, maxVw]);
+
   return (
     <AnimatePresence>
       {isVisible ? (
@@ -50,14 +71,14 @@ const AnimatedImage: React.FC<AnimatedImageProps> = ({
             delay: isExiting ? 0 : delay,
           }}
           className={className}
-          style={{ maxWidth }}
+          style={{ maxWidth: randomizedMaxWidth }}
         >
           <Image
             src={imageSrc}
             alt="Sample image"
             width={2000}
             height={2000}
-            className="object-cover"
+            className="object-cover w-full h-full"
             onMouseEnter={() => onHoverChange(imageNumber)}
           />
         </motion.div>

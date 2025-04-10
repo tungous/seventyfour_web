@@ -4,6 +4,11 @@ import ProjectCard from "./ProjectCard";
 import ProjectInfo from "./ProjectInfo";
 import { ProjectDetail } from "./ProjectDetail";
 import { useEffect, useState } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from "gsap";
+
+// Register plugin if not done globally
+gsap.registerPlugin(ScrollTrigger);
 
 interface ProjectProps {
   isProjectsClicked: boolean;
@@ -44,8 +49,7 @@ export const Project = ({
   useEffect(() => {
     if (isImagePushedDown || isHovered) {
       const wheelHandler = (e: WheelEvent) => {
-        // Don't prevent default - we want natural scrolling
-        // But we need to stop propagation to prevent other handlers from changing projects
+
         e.stopPropagation();
       };
 
@@ -56,6 +60,12 @@ export const Project = ({
       };
     }
   }, [isImagePushedDown, isHovered]);
+
+  const handleDetailAnimationComplete = () => {
+    // Ensure ScrollTrigger is refreshed after the detail animation completes
+    console.log("Detail animation complete, refreshing ScrollTrigger...");
+    ScrollTrigger.refresh();
+  };
 
   return (
     <div>
@@ -88,6 +98,7 @@ export const Project = ({
             visible={true}
             currentProjectIndex={currentProjectIndex}
             isPushedDown={isImagePushedDown || isHovered}
+            onAnimationComplete={handleDetailAnimationComplete}
           />
         )}
       </AnimatePresence>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "motion/react";
 import { AboutImages } from "@/components/ui/Homepage/about/AboutImages";
 import { LogoTitle } from "@/components/ui/Homepage/header/LogoTitle";
@@ -6,6 +6,7 @@ import { Navigation } from "@/components/ui/Homepage/header/Navigation";
 import { projectType } from "@/components/ui/Homepage/projects/ProjectItems";
 import { creativeType } from "@/components/ui/Homepage/creatives/CreativeItems";
 import { cn } from "@/lib/utils";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 interface MainLayoutProps {
   isAboutClicked: boolean;
@@ -66,6 +67,14 @@ export const MainLayout: React.FC<MainLayoutProps> = ({
   isHeaderVisible,
   isHeaderAnimatingOut,
 }) => {
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      console.log("Refreshing ScrollTrigger due to project index change...");
+      ScrollTrigger.refresh();
+    }, 0);
+
+    return () => clearTimeout(timeoutId);
+  }, [currentProjectIndex]);
   return (
     <>
       <motion.div
@@ -81,14 +90,7 @@ export const MainLayout: React.FC<MainLayoutProps> = ({
           isAboutClicked ? "about-active" : ""
         } ${isMobileMenuOpen ? "menu-active" : ""}`}
       />
-
-      <div
-        className={cn(
-          "fixed top-0 left-0 flex-row flex items-center w-full h-screen",
-          isHeaderVisible || isHeaderAnimatingOut ? "z-4" : "z-2"
-        )}
-        style={{ pointerEvents: "none" }}
-      >
+      <div className="w-full h-screen z-1">
         <AboutImages
           isAboutClicked={isAboutClicked}
           isExiting={isExiting}
@@ -100,7 +102,16 @@ export const MainLayout: React.FC<MainLayoutProps> = ({
           randomY={randomY}
           onHoverChange={onHoverChange}
         />
+      </div>
+       
 
+      <div
+        className={cn(
+          "fixed top-0 left-0 flex-row flex items-center w-full h-screen",
+          isHeaderVisible || isHeaderAnimatingOut ? "z-4" : "z-2"
+        )}
+        style={{ pointerEvents: "none" }}
+      >
         <motion.div
           className="flex flex-row w-full items-center justify-between"
           initial={{ opacity: 1, filter: "blur(30px)" }}

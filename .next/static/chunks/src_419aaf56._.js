@@ -1394,7 +1394,7 @@ function Footer({ project }) {
                 className: "h-[800px] sticky top-[calc(100vh-700px)]  flex flex-col justify-end text-left uppercase font-bold",
                 style: {
                     textShadow: "0px 0px 6px rgba(0, 0, 0, 1)",
-                    filter: "drop-shadow(0px 0px 3px rgba(0, 0, 0, 1))"
+                    filter: "drop-shadow(0px 0px 0px rgba(0, 0, 0, 1))"
                 },
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -1402,7 +1402,7 @@ function Footer({ project }) {
                         children: project.title
                     }, void 0, false, {
                         fileName: "[project]/src/components/ui/core/Footer.jsx",
-                        lineNumber: 21,
+                        lineNumber: 22,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1410,7 +1410,7 @@ function Footer({ project }) {
                         children: project.creative1
                     }, void 0, false, {
                         fileName: "[project]/src/components/ui/core/Footer.jsx",
-                        lineNumber: 22,
+                        lineNumber: 23,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1418,7 +1418,7 @@ function Footer({ project }) {
                         children: project.creative2
                     }, void 0, false, {
                         fileName: "[project]/src/components/ui/core/Footer.jsx",
-                        lineNumber: 23,
+                        lineNumber: 24,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1426,23 +1426,23 @@ function Footer({ project }) {
                         children: project.creative3
                     }, void 0, false, {
                         fileName: "[project]/src/components/ui/core/Footer.jsx",
-                        lineNumber: 24,
+                        lineNumber: 25,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/ui/core/Footer.jsx",
-                lineNumber: 14,
+                lineNumber: 15,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/components/ui/core/Footer.jsx",
-            lineNumber: 13,
+            lineNumber: 14,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/ui/core/Footer.jsx",
-        lineNumber: 9,
+        lineNumber: 10,
         columnNumber: 5
     }, this);
 }

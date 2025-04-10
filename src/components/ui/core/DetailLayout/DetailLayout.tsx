@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -15,6 +15,7 @@ interface DetailLayoutProps {
     | "Project5"
     | "Project6";
   className?: string;
+  onAnimationComplete?: () => void;
 }
 
 interface ProjectContentProps {
@@ -39,7 +40,7 @@ interface TextProps {
 
 const variants = {
   Project1: "grid grid-cols-1 grid-rows-1 gap-4 w-full",
-  Project2: "grid grid-cols-2 gap-8 w-full",
+  Project2: "grid grid-cols-1 grid-rows-1 gap-8 w-full",
   Project3: "flex flex-col space-y-6 w-full",
   Project4: "grid grid-cols-1 grid-rows-1 gap-4 w-full",
   Project5: "flex flex-row space-x-8 w-full",
@@ -50,6 +51,7 @@ const DetailLayout = ({
   children,
   isPushedDown,
   variant,
+  onAnimationComplete,
 }: DetailLayoutProps) => {
   return (
     <motion.div
@@ -76,6 +78,7 @@ const DetailLayout = ({
         duration: 0.7,
         y: { duration: 1, ease: "easeInOut" },
       }}
+      onAnimationComplete={onAnimationComplete}
       className="absolute w-full"
       style={{ zIndex: 3 }}
     >
@@ -95,7 +98,7 @@ const DetailLayout = ({
 
       {/* Main content container */}
       <div
-        className="absolute top-[calc(100vh)] flex flex-col justify-start items-center w-full z-2 min-h-screen pt-20 bg-black tracking-tight"
+        className="relative  top-[calc(100vh)] flex flex-col justify-start items-center w-full z-2 min-h-screen pt-5 bg-black tracking-tight"
         id="scrollable-project-details"
       >
         {React.Children.map(children, (child) =>
@@ -103,13 +106,24 @@ const DetailLayout = ({
             ? React.cloneElement(child, { variant })
             : child
         )}
-      </div>
 
+        {/* Moved Gradient overlay */}
+        <div
+          className="absolute lg:bottom-150 bottom-50 left-0 w-full z-1 lg:h-[200px] h-[100px]"
+          style={{
+            background:
+              "linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.6) 75%, rgba(0,0,0,0.8) 85%, rgba(0,0,0,1) 100%)",
+            pointerEvents: "none",
+            opacity: isPushedDown ? 1 : 0,
+            transition: "opacity 0.8s ease-in-out",
+          }}
+        />
+      </div>
     </motion.div>
   );
 };
 
-// Project content component
+// Project content component - Revert to original
 const ProjectContent = ({
   children,
   className,
@@ -167,28 +181,21 @@ const DetailImage = ({
         className="object-cover"
         priority={priority}
       />
-      <div
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          boxShadow: "inset 0 0px 15px 15px black",
-          pointerEvents: "none",
-        }}
-      />
+      <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0px_6px_6px_black] lg:shadow-[inset_0_0px_15px_15px_black]" />
     </div>
   );
 };
 
-// Video component
+// Video component - Modified for Lazy Loading on Click
 const Video = ({ src, className }: MediaProps) => {
-  // Check if the source is a Vimeo URL
+  const [loadVideo, setLoadVideo] = useState(false);
   const isVimeoUrl = typeof src === "string" && src.includes("vimeo.com");
 
+  const handleLoadVideo = () => {
+    setLoadVideo(true);
+  };
+
   if (isVimeoUrl) {
-    // Extract the Vimeo ID from the URL
     const vimeoId = src.split("/").pop();
 
     return (
@@ -197,6 +204,8 @@ const Video = ({ src, className }: MediaProps) => {
           "relative aspect-[16/9] w-full overflow-hidden",
           className
         )}
+        style={{ willChange: "transform" }}
+        onClick={!loadVideo ? handleLoadVideo : undefined}
       >
         <iframe
           src={`https://player.vimeo.com/video/${vimeoId}?autoplay=0&loop=1&title=0&byline=0&portrait=0`}
@@ -213,6 +222,7 @@ const Video = ({ src, className }: MediaProps) => {
   return (
     <div
       className={cn("relative aspect-[16/9] w-full overflow-hidden", className)}
+      style={{ willChange: "transform" }}
     >
       <video src={src} className="w-full h-full object-cover" controls muted />
     </div>

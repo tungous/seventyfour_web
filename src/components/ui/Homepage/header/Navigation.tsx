@@ -77,7 +77,7 @@ export const Navigation: React.FC<NavigationProps> = ({
   return (
     <>
       <div
-        className={`text-black flex lg:flex-row flex-col lg:pr-16 z-50 lg:w-[50vw] right-[0] fixed ${
+        className={` text-black flex lg:flex-row flex-col lg:pr-16 z-50 lg:w-[50vw] right-[0] fixed ${
           isAboutClicked ||
           isProjectsClicked ||
           isCreativesClicked ||
@@ -173,7 +173,6 @@ export const Navigation: React.FC<NavigationProps> = ({
           )}
         </AnimatePresence>
       </div>
-
       <NavbarMobileMenu
         isOpen={isMobileMenuOpen}
         onClose={toggleMobileMenu}

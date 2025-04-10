@@ -8,8 +8,13 @@ import Lenis from "lenis";
 import { Creative } from "@/components/ui/Homepage/creatives/Creative";
 import { Project } from "@/components/ui/Homepage/projects/Project";
 import { MainLayout } from "@/components/ui/Homepage/layout/MainLayout";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function Hero() {
+  gsap.registerPlugin(useGSAP, ScrollTrigger);
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [isHeaderAnimatingOut, setIsHeaderAnimatingOut] = useState(false);
@@ -99,35 +104,39 @@ export default function Hero() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  // Add effect to manage body scroll
+  useGSAP(() => {
+    // Instantiate Lenis
+    const lenis = new Lenis();
+
+    // Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
+    lenis.on("scroll", ScrollTrigger.update);
+
+    // Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
+    // This ensures Lenis's smooth scroll animation updates on each GSAP tick
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000); // Convert time from seconds to milliseconds
+    });
+
+    // Disable lag smoothing in GSAP to prevent any delay in scroll animations
+    gsap.ticker.lagSmoothing(0);
+  }); // No dependencies needed for this basic setup
+
+  // Effect to manage body scroll (KEEP this as it handles mobile menu overlay too)
   useEffect(() => {
-    if (isMobileMenuOpen) {
-      document.body.style.overflow = "hidden";
+    if (isImagePushedDown) {
+      document.body.style.overflow = "auto"; // Allow scroll for project details
+    } else if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden"; // Lock scroll for mobile menu only if details aren't shown
     } else {
-      document.body.style.overflow = "unset";
+      // Default state when neither mobile menu nor details are active
+      document.body.style.overflow = "hidden"; // Assuming main page shouldn't scroll
     }
 
-    // Cleanup
+    // Cleanup resets to a general default
     return () => {
       document.body.style.overflow = "unset";
     };
-  }, [isMobileMenuOpen]);
-
-  useEffect(() => {
-    const lenis = new Lenis();
-
-    lenis.on("scroll", (e) => {
-      console.log("Lenis scroll event:", e);
-    });
-
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-
-    return () => lenis.destroy();
-  }, []);
+  }, [isMobileMenuOpen, isImagePushedDown]);
 
   // Effect to handle header visibility on scroll when a project is clicked
   useEffect(() => {
@@ -191,7 +200,11 @@ export default function Hero() {
   }, [isProjectsClicked, isHeaderVisible]);
 
   return (
-    <div className={`h-screen ${isMobileMenuOpen ? "overflow-hidden" : ""}`}>
+    <div
+      className={`h-screen ${
+        isMobileMenuOpen && !isImagePushedDown ? "overflow-hidden" : ""
+      }`}
+    >
       <Creative
         isCreativesClicked={isCreativesClicked}
         currentCreativeIndex={currentCreativeIndex}

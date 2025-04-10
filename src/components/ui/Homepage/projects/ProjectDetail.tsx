@@ -1,11 +1,19 @@
-import React from "react";
+"use client";
+
+import React, { useRef, useState, useEffect } from "react";
 import DetailLayout from "@/components/ui/core/DetailLayout/DetailLayout";
 import Footer from "@/components/ui/core/Footer";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// Register ScrollTrigger if not done globally
+gsap.registerPlugin(ScrollTrigger);
 
 interface ProjectDetailScrollProps {
   visible: boolean;
   currentProjectIndex: number;
   isPushedDown?: boolean;
+  onAnimationComplete?: () => void;
 }
 
 // Project data mapping
@@ -67,14 +75,17 @@ const projectData = [
 export const ProjectDetail: React.FC<ProjectDetailScrollProps> = ({
   isPushedDown,
   currentProjectIndex,
+  onAnimationComplete,
 }) => {
   const project = projectData[currentProjectIndex % projectData.length];
+  const footerRef = useRef<HTMLDivElement>(null);
 
   return (
     <DetailLayout
       currentProjectIndex={currentProjectIndex}
       isPushedDown={isPushedDown}
       variant={project.variant}
+      onAnimationComplete={onAnimationComplete}
     >
       <DetailLayout.ProjectContent variant={project.variant}>
         {/* <DetailLayout.Text>
@@ -85,9 +96,9 @@ export const ProjectDetail: React.FC<ProjectDetailScrollProps> = ({
         {/* Project-specific content based on variant */}
         {project.variant === "Project1" && (
           <>
-            <div className="relative w-full mb-10">
+            <div className="relative w-full ">
               <DetailLayout.Image src="/bazo.jpg" alt="Project 1" />
-              <div className="absolute inset-0 flex flex-col justify-center items-center p-8  lg:text-xs text-[8px] uppercase font-bold text-left mix-blend-difference">
+              <div className="absolute inset-0 flex flex-col justify-center items-center p-8 lg:text-xs text-[8px] uppercase font-bold text-left mix-blend-difference">
                 <div className="max-w-md ">
                   <p
                     className="w-full"
@@ -99,6 +110,9 @@ export const ProjectDetail: React.FC<ProjectDetailScrollProps> = ({
                   </p>
                 </div>
               </div>
+            </div>
+            <div className="relative w-full">
+              <DetailLayout.Image src="/nostalgia.gif" alt="Project 1" />
             </div>
             <div className="relative w-full">
               <DetailLayout.Image src="/nostalgia.gif" alt="Project 1" />
@@ -117,6 +131,9 @@ export const ProjectDetail: React.FC<ProjectDetailScrollProps> = ({
                 alt="Project 2"
               />
             </div>
+            <div className="relative w-full">
+              <DetailLayout.Image src="/nostalgia.gif" alt="Project 2" />
+            </div>
           </>
         )}
 
@@ -124,6 +141,8 @@ export const ProjectDetail: React.FC<ProjectDetailScrollProps> = ({
           <>
             <DetailLayout.Image src="/cinematic2.jpg" alt="Project 3" />
             <DetailLayout.Image src="/cinematic3.jpg" alt="Project 3" />
+            <DetailLayout.Image src="/home.jpeg" alt="Project 3" />
+            <DetailLayout.Image src="/home.jpeg" alt="Project 3" />
             <DetailLayout.Image src="/home.jpeg" alt="Project 3" />
           </>
         )}
@@ -227,19 +246,9 @@ export const ProjectDetail: React.FC<ProjectDetailScrollProps> = ({
         )}
       </DetailLayout.ProjectContent>
       {/* Gradient overlay */}
-      <div
-        className="absolute w-full z-2"
-        style={{
-          bottom: 600,
-          height: "200px",
-          background:
-            "linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.6) 75%, rgba(0,0,0,0.8) 85%, rgba(0,0,0,1) 100%)",
-          pointerEvents: "none",
-          opacity: isPushedDown ? 1 : 0,
-          transition: "opacity 0.8s ease-in-out",
-        }}
-      />
-      <Footer project={project} />
+
+      {/* Remove motion.div wrapper, pass ref directly */}
+      <Footer project={project} footerRef={footerRef} />
     </DetailLayout>
   );
 };

@@ -42,12 +42,15 @@ export const AboutImages: React.FC<AboutImagesProps> = ({
   }, []);
 
   // Generate random positions for mobile
+  // NOTE: This might need adjustment if the randomized sizes affect positioning significantly.
+  // For now, keep using estimated fixed sizes for position calculation.
   const generateMobileRandomPosition = useCallback(() => {
     const currentImageNum = currentMobileImage || 1;
 
-    // Approximate image width based on the current image
-    const estimatedImgWidth =
-      currentImageNum === 3 ? window.innerWidth * 0.6 : window.innerWidth * 0.5;
+    // Approximate image width based on the current image (using fixed estimates for simplicity)
+    // Use average random mobile size (55vw) for estimation if needed, or keep fixed.
+    const estimatedVw = currentImageNum === 3 ? 60 : 50; // Using fixed estimates
+    const estimatedImgWidth = window.innerWidth * (estimatedVw / 100);
     const estimatedImgHeight = estimatedImgWidth * 0.75;
 
     // Calculate maximum possible position values
@@ -57,25 +60,23 @@ export const AboutImages: React.FC<AboutImagesProps> = ({
     const navbarHeight = 80;
     const usableHeight = window.innerHeight - navbarHeight;
 
-    // Define a restricted vertical area where images can appear
-    // Make images appear in the top 70% of the screen only
-    const topOffset = 100; // How high above the standard content the images can go
-    const minY = Math.min(topOffset, usableHeight * 0.3); // Allow images to go higher up
-
-    // Restrict maxY to be no more than 60% down the screen
-    // This prevents images from appearing too far down
-    const restrictedMaxY = Math.min(
-      usableHeight * 0.6 - estimatedImgHeight,
-      usableHeight - estimatedImgHeight
+    // Define vertical range, allowing some padding top/bottom
+    const topPadding = 20; // Minimal padding from the top edge (below navbar)
+    const bottomPadding = 20; // Minimal padding from the bottom edge
+    const minY = topPadding;
+    // Allow positioning down to the bottom, considering image height and padding
+    const maxY = Math.max(
+      usableHeight - estimatedImgHeight - bottomPadding,
+      minY
     );
-    const maxY = Math.max(restrictedMaxY, 0);
 
     // Generate random positions within boundaries
     const paddingX = 10;
-    const randomXPos = Math.random() * Math.max(maxX - paddingX, 0);
+    const safeMaxX = Math.max(maxX - paddingX * 2, 0); // Ensure padding on both sides
+    const randomXPos = Math.random() * safeMaxX + paddingX;
 
-    // For Y position, use the restricted range from top to middle area
-    const randomYPos = Math.random() * (maxY + minY) - minY;
+    // Correct random Y calculation for the range [minY, maxY]
+    const randomYPos = Math.random() * (maxY - minY) + minY;
 
     setMobileRandomX(randomXPos);
     setMobileRandomY(randomYPos);
@@ -121,6 +122,12 @@ export const AboutImages: React.FC<AboutImagesProps> = ({
     mobileRandomY,
   ]);
 
+  // Define size ranges
+  const desktopRange1 = { minVw: 5, maxVw: 68 };
+  const desktopRange2 = { minVw: 5, maxVw: 68 };
+  const desktopRange3 = { minVw: 5, maxVw: 75 };
+  const mobileRange = { minVw: 15, maxVw: 85 }; // Single range for rotating mobile images
+
   return (
     <>
       <AnimatedImage
@@ -137,8 +144,10 @@ export const AboutImages: React.FC<AboutImagesProps> = ({
         onHoverChange={isMobile ? () => {} : onHoverChange}
         imageSrc="/home2.jpeg"
         delay={firstImageDelay ? 0 : 1}
-        className="absolute w-1/5 z-30"
-        maxWidth={isMobile ? "50vw" : "25vw"}
+        className="absolute z-1" // Removed w-1/5
+        // Pass conditional size ranges
+        minVw={isMobile ? mobileRange.minVw : desktopRange1.minVw}
+        maxVw={isMobile ? mobileRange.maxVw : desktopRange1.maxVw}
       />
 
       <AnimatedImage
@@ -154,8 +163,10 @@ export const AboutImages: React.FC<AboutImagesProps> = ({
         imageNumber={2}
         onHoverChange={isMobile ? () => {} : onHoverChange}
         imageSrc="/home3.jpeg"
-        className="absolute w-1/5 z-30"
-        maxWidth={isMobile ? "50vw" : "25vw"}
+        className="absolute z-1" // Removed w-1/5
+        // Pass conditional size ranges
+        minVw={isMobile ? mobileRange.minVw : desktopRange2.minVw}
+        maxVw={isMobile ? mobileRange.maxVw : desktopRange2.maxVw}
       />
 
       <AnimatedImage
@@ -171,8 +182,10 @@ export const AboutImages: React.FC<AboutImagesProps> = ({
         imageNumber={3}
         onHoverChange={isMobile ? () => {} : onHoverChange}
         imageSrc="/home.jpeg"
-        className="absolute w-1/3 z-39"
-        maxWidth={isMobile ? "60vw" : "30vw"}
+        className="absolute z-1" // Removed w-1/3
+        // Pass conditional size ranges
+        minVw={isMobile ? mobileRange.minVw : desktopRange3.minVw}
+        maxVw={isMobile ? mobileRange.maxVw : desktopRange3.maxVw}
       />
     </>
   );

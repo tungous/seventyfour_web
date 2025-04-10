@@ -123,7 +123,7 @@ export default function ProjectCard({
         data-project-index={currentProjectIndex}
         initial={{
           opacity: 0.5,
-          filter: "blur(50px) brightness(2)",
+          filter: "blur(50px) brightness(1.5)",
         }}
         animate={{
           opacity: 1,
@@ -133,7 +133,7 @@ export default function ProjectCard({
         }}
         exit={{
           opacity: 0,
-          filter: "blur(100px) brightness(2)",
+          filter: "blur(100px) brightness(1.5)",
         }}
         transition={{ duration: 1.3, filter: { duration: 1.3 } }}
         className={`absolute min-h-screen z-2 w-full`}
@@ -144,9 +144,6 @@ export default function ProjectCard({
           fill
           alt="Project image background"
           className="object-cover z-2 cursor-pointer"
-          animate={{
-            filter: "blur(0px) brightness(1)",
-          }}
           transition={{
             filter: { duration: 0.3 },
           }}

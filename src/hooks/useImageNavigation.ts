@@ -108,8 +108,11 @@ export function useImageNavigation() {
   // Desktop random position generation
   useEffect(() => {
     const updateRandomPosition = () => {
-      const maxX = Math.max(window.innerWidth * 0.7, 0) + 100;
-      const maxY = Math.max(window.innerHeight * 0.5, 0) - 600;
+      // Keep maxX constrained somewhat to avoid edges
+      const maxX = Math.max(window.innerWidth * 0.7, 0);
+      // Allow Y positioning across most of the screen height, subtracting a buffer
+      const estimatedImageHeight = window.innerHeight * 0.3; // Estimate based on image size
+      const maxY = Math.max(window.innerHeight - estimatedImageHeight - 100, 0); // Subtract estimated height and some padding
 
       const newRandomX = Math.random() * maxX;
       const newRandomY = Math.random() * maxY;
