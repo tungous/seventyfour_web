@@ -45,21 +45,30 @@ export default function Footer({
   const creative2Ref = useRef<HTMLParagraphElement>(null);
   const creative3Ref = useRef<HTMLParagraphElement>(null);
 
-  // State to track if the browser is Safari
+  // State to track if the browser is Safari or Windows
   const [isSafari, setIsSafari] = useState(false);
+  const [isWindows, setIsWindows] = useState(false);
 
-  // Detect Safari on component mount (client-side only)
+  // Detect Safari/Windows on component mount (client-side only)
   useEffect(() => {
+    const platform = navigator.platform.toLowerCase();
     const ua = navigator.userAgent.toLowerCase();
-    // Check for "safari" but exclude "chrome" or "crios" (Chrome on iOS)
+
+    // Check for Windows
+    if (platform.indexOf("win") > -1) {
+      setIsWindows(true);
+    }
+
+    // Check for Safari (excluding Chrome/Chromium based browsers)
     if (
       ua.includes("safari") &&
       !ua.includes("chrome") &&
-      !ua.includes("crios")
+      !ua.includes("crios") &&
+      !ua.includes("chromium")
     ) {
       setIsSafari(true);
     }
-  }, []); // Empty dependency array ensures this runs only once on mount
+  }, []);
 
   useGSAP(
     () => {
@@ -73,8 +82,11 @@ export default function Footer({
 
       if (targets.length === 0) return; // Exit if no targets
 
-      // Set initial state: invisible and blurred
-      gsap.set(targets, { opacity: 0, filter: "blur(15px)" }); // Start blurred
+      // Set initial state: invisible and blurred (conditionally)
+      gsap.set(targets, {
+        opacity: 0,
+        filter: isSafari || isWindows ? "blur(0px)" : "blur(15px)", // Conditional initial blur
+      });
 
       // Use matchMedia for responsive ScrollTrigger settings
       ScrollTrigger.matchMedia({
@@ -82,13 +94,14 @@ export default function Footer({
         "(min-width: 768px)": function () {
           gsap.to(targets, {
             opacity: 1,
-            filter: "blur(0.5px)",
+            // Animate blur only if not Safari/Windows
+            filter: isSafari || isWindows ? "blur(0px)" : "blur(0.5px)",
             duration: 2,
             ease: "power1.out",
             stagger: 0.3,
             scrollTrigger: {
               trigger: footerRef.current,
-              start: "top bottom-=500", // Original start for desktop
+              start: "top bottom-=500",
               end: "-=0",
               toggleActions: "restart none none reverse",
             },
@@ -99,13 +112,14 @@ export default function Footer({
         "(max-width: 767px)": function () {
           gsap.to(targets, {
             opacity: 1,
-            filter: "blur(0.5px)",
+            // Animate blur only if not Safari/Windows
+            filter: isSafari || isWindows ? "blur(0px)" : "blur(0.5px)",
             duration: 1.2,
             ease: "power1.out",
             stagger: 0.3,
             scrollTrigger: {
               trigger: footerRef.current,
-              start: "top bottom-=200", // Adjusted start for mobile
+              start: "top bottom-=200",
               end: "-=0",
               toggleActions: "restart none none reverse",
             },
@@ -113,7 +127,7 @@ export default function Footer({
         },
       });
     },
-    { scope: footerRef } // Scope GSAP selectors to the footerRef container
+    { scope: footerRef, dependencies: [isSafari, isWindows] } // Add deps for conditional blur
   );
 
   if (!project) {
@@ -122,8 +136,8 @@ export default function Footer({
 
   return (
     <>
-      {/* Conditionally render SVG Filters only if NOT Safari */}
-      {!isSafari && <SvgFilters />}
+      {/* Conditionally render SVG Filters only if NOT Safari AND NOT Windows */}
+      {!isSafari && !isWindows && <SvgFilters />}
       <div
         ref={footerRef}
         className="relative lg:h-[800px]  h-[300px] w-full bg-[#FCFBF4] text-black lg:px-22 px-7"
@@ -131,22 +145,24 @@ export default function Footer({
       >
         <div
           className={`lg:h-[800px] h-[300px] flex flex-col justify-end text-left uppercase font-bold pb-11 ${
-            !isSafari ? "[filter:url(#threshold)]" : ""
+            // Apply filter only if NOT Safari AND NOT Windows
+            !isSafari && !isWindows ? "[filter:url(#threshold)]" : ""
           }`}
           style={{
+            // Apply text shadow ONLY on Safari/Windows
             textShadow: "0px 0px 6px rgba(0, 0, 0, 1)",
           }}
         >
-          <h2 ref={titleRef} className="lg:text-6xl text-3xl mb-4">
+          <h2 ref={titleRef} className="lg:text-6xl text-3xl lg:mb-4 mb-2">
             {project.title}
           </h2>
-          <p ref={creative1Ref} className="lg:text-xs text-[8px] mb-2">
+          <p ref={creative1Ref} className="lg:text-xs text-[10px] lg:mb-2 mb-1">
             {project.creative1}
           </p>
-          <p ref={creative2Ref} className="lg:text-xs text-[8px] mb-2">
+          <p ref={creative2Ref} className="lg:text-xs text-[10px] lg:mb-2 mb-1">
             {project.creative2}
           </p>
-          <p ref={creative3Ref} className="lg:text-xs text-[8px] mb-2">
+          <p ref={creative3Ref} className="lg:text-xs text-[10px] lg:mb-2 mb-1">
             {project.creative3}
           </p>
         </div>

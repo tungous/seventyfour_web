@@ -49,7 +49,6 @@ export const Project = ({
   useEffect(() => {
     if (isImagePushedDown || isHovered) {
       const wheelHandler = (e: WheelEvent) => {
-
         e.stopPropagation();
       };
 

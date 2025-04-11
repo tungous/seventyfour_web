@@ -11,11 +11,6 @@ export const projects: projectType[] = [
     backgroundImage: "/aizza.jpg",
   },
   {
-    name: "Project 2",
-    info: "Made with fist",
-    backgroundImage: "/cinematic2.jpg",
-  },
-  {
     name: "Seventyfour: Silver",
     info: "Jewelry Project",
     backgroundImage: "/seventyfour_silver.jpg",

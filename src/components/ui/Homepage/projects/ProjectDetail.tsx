@@ -32,29 +32,23 @@ const projectData = [
   },
   {
     id: 2,
-    title: "Project 2",
+    title: "SEVENTYFOUR: SILVER",
     description:
-      "An exploration of interactive experiences and user engagement.",
-    creative1: "PHOTOGRAPHER: ADAM KUZELKA",
+      "A handmade silver pendant for our closes friends, family and Skejterboi.",
+    creative1: "DESIGNER: LEO PHAM, T. TUNG MAI",
+    creative2: "VIDEO: T. TUNG MAI",
     location: "LOCATION: KAPLANOVA 2252/8, PRAHA 4",
     variant: "Project2" as const,
   },
   {
     id: 3,
-    title: "Project 3",
-    description:
-      "A showcase of cutting-edge technology and seamless integration.",
-    variant: "Project3" as const,
-  },
-  {
-    id: 4,
     title: "SEVENTYFOUR: BEGIN",
     description:
       "A journey through time, blending past and present in perfect harmony.",
     creative1: "DIRECTOR, DP, EDITOR: T. TUNG MAI",
     creative2: "DESIGNER: LEO PHAM",
     creative3: "SOUND: TOMAS NGUYEN",
-    variant: "Project4" as const,
+    variant: "Project3" as const,
   },
   {
     id: 5,
@@ -96,26 +90,69 @@ export const ProjectDetail: React.FC<ProjectDetailScrollProps> = ({
         {/* Project-specific content based on variant */}
         {project.variant === "Project1" && (
           <>
-            <div className="relative w-full ">
-              <DetailLayout.Image src="/bazo.jpg" alt="Project 1" />
+            <div className="relative w-full grid lg:grid-cols-2 grid-cols-1 grid-rows-1 gap-4">
+              <DetailLayout.Image
+                src="/aiiza_bazo_1.jpeg"
+                alt="Project 1"
+                aspectRatio="9/16"
+                className="h-[100vh]"
+              />
+              <DetailLayout.Image
+                src="/aiiza_david_1.jpeg"
+                alt="Project 1"
+                aspectRatio="9/16"
+                className="h-[100vh]"
+              />
               <div className="absolute inset-0 flex flex-col justify-center items-center p-8 lg:text-xs text-[8px] uppercase font-bold text-left mix-blend-difference">
-                <div className="max-w-md ">
+                <div>
+                  <p
+                    className="w-full"
+                    style={{ textShadow: "0px 0px 2px rgba(255,255,255,1)" }}
+                  ></p>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative  w-full grid grid-cols-1 grid-rows-1 gap-4">
+              <DetailLayout.Image
+                src="/aiiza_vertical.jpeg"
+                alt="Project 1"
+                aspectRatio="9/16"
+                className="max-h-[100vh]"
+              />
+
+              <div className="absolute inset-0 flex flex-col justify-center items-center p-8 lg:text-xs text-[8px] uppercase font-bold text-left mix-blend-difference">
+                <div>
                   <p
                     className="w-full"
                     style={{ textShadow: "0px 0px 2px rgba(255,255,255,1)" }}
                   >
-                    {project.title}
-                    <br />
-                    {project.description}
+                    AIIZA
                   </p>
                 </div>
               </div>
             </div>
-            <div className="relative w-full">
-              <DetailLayout.Image src="/nostalgia.gif" alt="Project 1" />
-            </div>
-            <div className="relative w-full">
-              <DetailLayout.Image src="/nostalgia.gif" alt="Project 1" />
+            <div className="relative w-full grid lg:grid-cols-2 grid-cols-1 grid-rows-1 gap-4">
+              <DetailLayout.Image
+                src="/aiiza_david_2.jpeg"
+                alt="Project 1"
+                aspectRatio="9/16"
+                className="h-[100vh]"
+              />
+              <DetailLayout.Image
+                src="/aiiza_bazo_2.jpeg"
+                alt="Project 1"
+                aspectRatio="9/16"
+                className="h-[100vh]"
+              />
+              <div className="absolute inset-0 flex flex-col justify-center items-center p-8 lg:text-xs text-[8px] uppercase font-bold text-left mix-blend-difference">
+                <div>
+                  <p
+                    className="w-full"
+                    style={{ textShadow: "0px 0px 2px rgba(255,255,255,1)" }}
+                  ></p>
+                </div>
+              </div>
             </div>
           </>
         )}
@@ -123,31 +160,32 @@ export const ProjectDetail: React.FC<ProjectDetailScrollProps> = ({
         {project.variant === "Project2" && (
           <>
             <div className="relative w-full">
-              <DetailLayout.Image src="/nostalgia.gif" alt="Project 2" />
-            </div>
-            <div className="relative w-full">
               <DetailLayout.Video
                 src="https://vimeo.com/958547140"
-                alt="Project 2"
+                alt="SEVENTYFOUR: SILVER"
               />
             </div>
-            <div className="relative w-full">
-              <DetailLayout.Image src="/nostalgia.gif" alt="Project 2" />
+            <div className="relative w-full grid grid-cols-1 grid-rows-1 gap-4">
+              <DetailLayout.Image
+                src="/silver_poster.png"
+                alt="SEVENTYFOUR: SILVER POSTER"
+                aspectRatio="9/16"
+                className="max-h-[100vh]"
+              />
+
+              <div className="absolute inset-0 flex flex-col justify-center items-center p-8 lg:text-xs text-[8px] uppercase font-bold text-left mix-blend-difference">
+                <div>
+                  <p
+                    className="w-full"
+                    style={{ textShadow: "0px 0px 2px rgba(255,255,255,1)" }}
+                  ></p>
+                </div>
+              </div>
             </div>
           </>
         )}
 
         {project.variant === "Project3" && (
-          <>
-            <DetailLayout.Image src="/cinematic2.jpg" alt="Project 3" />
-            <DetailLayout.Image src="/cinematic3.jpg" alt="Project 3" />
-            <DetailLayout.Image src="/home.jpeg" alt="Project 3" />
-            <DetailLayout.Image src="/home.jpeg" alt="Project 3" />
-            <DetailLayout.Image src="/home.jpeg" alt="Project 3" />
-          </>
-        )}
-
-        {project.variant === "Project4" && (
           <>
             <div className="relative w-full mb-10">
               <DetailLayout.Image
@@ -156,16 +194,16 @@ export const ProjectDetail: React.FC<ProjectDetailScrollProps> = ({
               />
 
               <div className="absolute inset-0 flex flex-col justify-center items-center p-8 mix-blend-difference lg:text-xs text-[8px] uppercase font-bold text-left">
-                <div className="max-w-md">
+                <div className="">
                   <p
                     className="w-full"
                     style={{ textShadow: "0px 0px 2px rgba(255,255,255,1)" }}
                   >
-                    DIRECTOR, DP, EDITOR: T. TUNG MAI
+                    {/* DIRECTOR, DP, EDITOR: T. TUNG MAI
                     <br />
                     DESIGNER: LEO PHAM
                     <br />
-                    SOUND: TOMAS NGUYEN
+                    SOUND: TOMAS NGUYEN */}
                   </p>
                 </div>
               </div>
@@ -188,22 +226,6 @@ export const ProjectDetail: React.FC<ProjectDetailScrollProps> = ({
                     className="text-justify"
                     style={{ textShadow: "0px 0px 2px rgba(255,255,255,1)" }}
                   >
-                    DIRECTOR, DP, EDITOR: T. TUNG MAI
-                    <br />
-                    DESIGNER: LEO PHAM
-                    <br />
-                    SOUND: TOMAS NGUYEN
-                    <br />
-                    <br />
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Aperiam nihil laboriosam nam sequi dolores nobis atque
-                    minima id optio. Cumque labore laudantium aliquid vel iusto
-                    quo deleniti, repellat ratione assumenda quasi quaerat,
-                    rerum exercitationem? Adipisci, assumenda eius sapiente
-                    impedit ratione dolorum quae ipsam minima nemo doloremque
-                    labore aspernatur consequuntur alias exercitationem. Quas
-                    quod mollitia hic adipisci consequatur iste aperiam id
-                    praesentium quasi quisquam.
                   </p>
                 </div>
               </div>

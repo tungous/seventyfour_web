@@ -121,22 +121,28 @@ export default function Hero() {
     gsap.ticker.lagSmoothing(0);
   }); // No dependencies needed for this basic setup
 
-  // Effect to manage body scroll (KEEP this as it handles mobile menu overlay too)
+  // Effect to manage body scroll
   useEffect(() => {
-    if (isImagePushedDown) {
-      document.body.style.overflow = "auto"; // Allow scroll for project details
+    if (isAboutClicked) {
+      // Highest priority: About is open, always hide scroll
+      document.body.style.overflow = "hidden";
+    } else if (isImagePushedDown) {
+      // Next priority: Project details are shown, allow scroll
+      document.body.style.overflow = "auto";
     } else if (isMobileMenuOpen) {
-      document.body.style.overflow = "hidden"; // Lock scroll for mobile menu only if details aren't shown
+      // Next priority: Mobile menu is open (and About/Details are not), hide scroll
+      document.body.style.overflow = "hidden";
     } else {
-      // Default state when neither mobile menu nor details are active
-      document.body.style.overflow = "hidden"; // Assuming main page shouldn't scroll
+      // Default state: No overlays active, hide scroll
+      document.body.style.overflow = "hidden";
     }
 
-    // Cleanup resets to a general default
+    // Cleanup function resets to a general default
     return () => {
       document.body.style.overflow = "unset";
     };
-  }, [isMobileMenuOpen, isImagePushedDown]);
+    // Add isAboutClicked to dependencies
+  }, [isAboutClicked, isMobileMenuOpen, isImagePushedDown]);
 
   // Effect to handle header visibility on scroll when a project is clicked
   useEffect(() => {

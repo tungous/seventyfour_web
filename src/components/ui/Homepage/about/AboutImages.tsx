@@ -82,9 +82,9 @@ export const AboutImages: React.FC<AboutImagesProps> = ({
     setMobileRandomY(randomYPos);
   }, [currentMobileImage]);
 
-  // Auto-rotate images on mobile
+  // Auto-rotate images on mobile - depends on isAboutClicked now
   useEffect(() => {
-    if (!isMobile || !isAboutClicked || isExiting) return;
+    if (!isMobile || !isAboutClicked || isExiting) return; // Use isAboutClicked
 
     // Initial random position
     generateMobileRandomPosition();
@@ -98,16 +98,7 @@ export const AboutImages: React.FC<AboutImagesProps> = ({
     return () => clearInterval(interval);
   }, [isMobile, isAboutClicked, isExiting, generateMobileRandomPosition]);
 
-  // Get visibility for mobile images
-  const getMobileVisibility = useCallback(
-    (imageNum: number) => {
-      if (!isMobile) return false;
-      return isAboutClicked && currentMobileImage === imageNum;
-    },
-    [isMobile, isAboutClicked, currentMobileImage]
-  );
-
-  // Debug log
+  // Debug log - depends on isAboutClicked now
   useEffect(() => {
     if (isMobile) {
       console.log(
@@ -116,7 +107,7 @@ export const AboutImages: React.FC<AboutImagesProps> = ({
     }
   }, [
     isMobile,
-    isAboutClicked,
+    isAboutClicked, // Use isAboutClicked
     currentMobileImage,
     mobileRandomX,
     mobileRandomY,
@@ -125,7 +116,7 @@ export const AboutImages: React.FC<AboutImagesProps> = ({
   // Define size ranges
   const desktopRange1 = { minVw: 5, maxVw: 68 };
   const desktopRange2 = { minVw: 5, maxVw: 68 };
-  const desktopRange3 = { minVw: 5, maxVw: 75 };
+  const desktopRange3 = { minVw: 55, maxVw: 75 };
   const mobileRange = { minVw: 15, maxVw: 85 }; // Single range for rotating mobile images
 
   return (
@@ -133,9 +124,8 @@ export const AboutImages: React.FC<AboutImagesProps> = ({
       <AnimatedImage
         isVisible={
           isMobile
-            ? getMobileVisibility(1) || (isExiting && firstImgVisible)
-            : (isAboutClicked && firstImgVisible) ||
-              (isExiting && firstImgVisible)
+            ? isAboutClicked && currentMobileImage === 1 // Simplified Mobile Logic
+            : isAboutClicked && firstImgVisible // Simplified Desktop Logic
         }
         isExiting={isExiting}
         randomX={isMobile ? mobileRandomX : randomX}
@@ -143,9 +133,8 @@ export const AboutImages: React.FC<AboutImagesProps> = ({
         imageNumber={1}
         onHoverChange={isMobile ? () => {} : onHoverChange}
         imageSrc="/home2.jpeg"
-        delay={firstImageDelay ? 0 : 1}
-        className="absolute z-1" // Removed w-1/5
-        // Pass conditional size ranges
+        delay={firstImageDelay ? 0 : 1} // Keep delay logic if needed for entry
+        className="absolute z-1"
         minVw={isMobile ? mobileRange.minVw : desktopRange1.minVw}
         maxVw={isMobile ? mobileRange.maxVw : desktopRange1.maxVw}
       />
@@ -153,9 +142,8 @@ export const AboutImages: React.FC<AboutImagesProps> = ({
       <AnimatedImage
         isVisible={
           isMobile
-            ? getMobileVisibility(2) || (isExiting && secondImgVisible)
-            : (isAboutClicked && secondImgVisible) ||
-              (isExiting && secondImgVisible)
+            ? isAboutClicked && currentMobileImage === 2 // Simplified Mobile Logic
+            : isAboutClicked && secondImgVisible // Simplified Desktop Logic
         }
         isExiting={isExiting}
         randomX={isMobile ? mobileRandomX : randomX}
@@ -163,8 +151,7 @@ export const AboutImages: React.FC<AboutImagesProps> = ({
         imageNumber={2}
         onHoverChange={isMobile ? () => {} : onHoverChange}
         imageSrc="/home3.jpeg"
-        className="absolute z-1" // Removed w-1/5
-        // Pass conditional size ranges
+        className="absolute z-1"
         minVw={isMobile ? mobileRange.minVw : desktopRange2.minVw}
         maxVw={isMobile ? mobileRange.maxVw : desktopRange2.maxVw}
       />
@@ -172,18 +159,16 @@ export const AboutImages: React.FC<AboutImagesProps> = ({
       <AnimatedImage
         isVisible={
           isMobile
-            ? getMobileVisibility(3) || (isExiting && thirdImgVisible)
-            : (isAboutClicked && thirdImgVisible) ||
-              (isExiting && thirdImgVisible)
+            ? isAboutClicked && currentMobileImage === 3 // Simplified Mobile Logic
+            : isAboutClicked && thirdImgVisible // Simplified Desktop Logic
         }
         isExiting={isExiting}
         randomX={isMobile ? mobileRandomX : randomX}
         randomY={isMobile ? mobileRandomY : randomY}
         imageNumber={3}
         onHoverChange={isMobile ? () => {} : onHoverChange}
-        imageSrc="/home.jpeg"
-        className="absolute z-1" // Removed w-1/3
-        // Pass conditional size ranges
+        imageSrc="/74-begin-gif.gif"
+        className="absolute z-1"
         minVw={isMobile ? mobileRange.minVw : desktopRange3.minVw}
         maxVw={isMobile ? mobileRange.maxVw : desktopRange3.maxVw}
       />

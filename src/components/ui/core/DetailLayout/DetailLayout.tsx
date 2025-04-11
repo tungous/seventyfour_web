@@ -31,6 +31,7 @@ interface MediaProps {
   fill?: boolean;
   sizes?: string;
   priority?: boolean;
+  aspectRatio?: "16/9" | "9/16";
 }
 
 interface TextProps {
@@ -39,12 +40,12 @@ interface TextProps {
 }
 
 const variants = {
-  Project1: "grid grid-cols-1 grid-rows-1 gap-4 w-full",
-  Project2: "grid grid-cols-1 grid-rows-1 gap-8 w-full",
-  Project3: "flex flex-col space-y-6 w-full",
-  Project4: "grid grid-cols-1 grid-rows-1 gap-4 w-full",
-  Project5: "flex flex-row space-x-8 w-full",
-  Project6: "grid grid-cols-2 gap-12 w-full",
+  Project1: "grid w-full",
+  Project2: "grid w-full",
+  Project3: "grid grid-cols-1 grid-rows-1 w-full",
+  Project4: "grid gap-4 w-full",
+  Project5: "flex w-full",
+  Project6: "grid w-full",
 };
 
 const DetailLayout = ({
@@ -168,17 +169,24 @@ const DetailImage = ({
   fill = true,
   sizes = "100vw",
   priority = true,
+  aspectRatio = "16/9",
 }: MediaProps) => {
+  const aspectRatioClass = {
+    "16/9": "aspect-[16/9]",
+    "9/16": "aspect-[9/16]",
+  }[aspectRatio];
+
+  const objectFitClass =
+    aspectRatio === "9/16" ? "object-contain" : "object-cover";
+
   return (
-    <div
-      className={cn("relative aspect-[16/9] w-full overflow-hidden", className)}
-    >
+    <div className={cn("relative w-full", aspectRatioClass, className)}>
       <Image
         src={src}
         alt={alt}
         fill={fill}
         sizes={sizes}
-        className="object-cover"
+        className={objectFitClass}
         priority={priority}
       />
       <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0px_6px_6px_black] lg:shadow-[inset_0_0px_15px_15px_black]" />
@@ -209,7 +217,7 @@ const Video = ({ src, className }: MediaProps) => {
       >
         <iframe
           src={`https://player.vimeo.com/video/${vimeoId}?autoplay=0&loop=1&title=0&byline=0&portrait=0`}
-          className="w-full h-full absolute top-0 left-0"
+          className="w-full h-full absolute top-0 left-0 py-10"
           frameBorder="0"
           allow="autoplay; fullscreen; picture-in-picture"
           allowFullScreen

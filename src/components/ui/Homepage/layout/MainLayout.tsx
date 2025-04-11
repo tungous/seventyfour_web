@@ -1,12 +1,35 @@
-import React, { useEffect } from "react";
-import { motion } from "motion/react";
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { AboutImages } from "@/components/ui/Homepage/about/AboutImages";
+import { AboutInfo } from "@/components/ui/Homepage/about/AboutInfo";
 import { LogoTitle } from "@/components/ui/Homepage/header/LogoTitle";
 import { Navigation } from "@/components/ui/Homepage/header/Navigation";
 import { projectType } from "@/components/ui/Homepage/projects/ProjectItems";
 import { creativeType } from "@/components/ui/Homepage/creatives/CreativeItems";
 import { cn } from "@/lib/utils";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// Define SvgFilters component here
+const SvgFilters: React.FC = () => (
+  <svg
+    id="filters"
+    className="fixed h-0 w-0"
+    preserveAspectRatio="xMidYMid slice"
+  >
+    <defs>
+      <filter id="threshold">
+        <feColorMatrix
+          in="SourceGraphic"
+          type="matrix"
+          values="1 0 0 0 0
+                  0 1 0 0 0
+                  0 0 1 0 0
+                  0 0 0 250 -140"
+        />
+      </filter>
+    </defs>
+  </svg>
+);
 
 interface MainLayoutProps {
   isAboutClicked: boolean;
@@ -67,6 +90,31 @@ export const MainLayout: React.FC<MainLayoutProps> = ({
   isHeaderVisible,
   isHeaderAnimatingOut,
 }) => {
+  // State to track if the browser is Safari or Windows
+  const [isSafari, setIsSafari] = useState(false);
+  const [isWindows, setIsWindows] = useState(false);
+
+  // Detect Safari/Windows on component mount (client-side only)
+  useEffect(() => {
+    const platform = navigator.platform.toLowerCase();
+    const ua = navigator.userAgent.toLowerCase();
+
+    // Check for Windows
+    if (platform.indexOf("win") > -1) {
+      setIsWindows(true);
+    }
+
+    // Check for Safari (excluding Chrome/Chromium based browsers)
+    if (
+      ua.includes("safari") &&
+      !ua.includes("chrome") &&
+      !ua.includes("crios") && // Chrome on iOS
+      !ua.includes("chromium") // General Chromium check
+    ) {
+      setIsSafari(true);
+    }
+  }, []);
+
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       console.log("Refreshing ScrollTrigger due to project index change...");
@@ -77,6 +125,9 @@ export const MainLayout: React.FC<MainLayoutProps> = ({
   }, [currentProjectIndex]);
   return (
     <>
+      {/* Conditionally render SVG Filters only if NOT Safari AND NOT Windows */}
+      {!isSafari && !isWindows && <SvgFilters />}
+
       <motion.div
         initial={{ backgroundColor: "#00000", opacity: 0 }}
         animate={{
@@ -102,8 +153,13 @@ export const MainLayout: React.FC<MainLayoutProps> = ({
           randomY={randomY}
           onHoverChange={onHoverChange}
         />
+        <AboutInfo
+          isVisible={isAboutClicked}
+          isSafari={isSafari}
+          isWindows={isWindows}
+          isExiting={isExiting}
+        />
       </div>
-       
 
       <div
         className={cn(
