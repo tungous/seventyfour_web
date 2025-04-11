@@ -141,7 +141,7 @@ export default function ProjectCard({
         {/* The image that will move down to reveal details */}
         <MotionImage
           src={backgroundImage}
-          quality={85}
+          quality={75}
           priority={true}
           fill
           alt="Project image background"

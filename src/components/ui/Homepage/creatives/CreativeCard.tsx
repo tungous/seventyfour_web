@@ -35,7 +35,7 @@ export default function CreativeCard({
       <Image
         src={backgroundImage}
         fill
-        quality={85}
+        quality={75}
         priority={true}
         alt="Creative image background"
         className="object-cover pointer-events-none"
