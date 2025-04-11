@@ -1118,7 +1118,7 @@ const ProjectContent = ({ children, className, variant })=>{
     }, this);
 };
 // Image component
-const DetailImage = ({ src, alt = "", className, fill = true, sizes = "100vw", priority = true, aspectRatio = "16/9" })=>{
+const DetailImage = ({ src, alt = "", className, fill = true, sizes = "100vw", priority = false, aspectRatio = "16/9" })=>{
     const aspectRatioClass = {
         "16/9": "aspect-[16/9]",
         "9/16": "aspect-[9/16]"

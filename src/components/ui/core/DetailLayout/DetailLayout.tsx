@@ -168,7 +168,7 @@ const DetailImage = ({
   className,
   fill = true,
   sizes = "100vw",
-  priority = true,
+  priority = false,
   aspectRatio = "16/9",
 }: MediaProps) => {
   const aspectRatioClass = {
