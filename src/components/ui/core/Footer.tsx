@@ -105,7 +105,7 @@ export default function Footer({
       if (backgroundTarget && project.backgroundImage) {
         gsap.set(backgroundTarget, {
           opacity: 1,
-          filter: "blur(60px) brightness(2)", // Start more blurred
+          filter: "blur(0px) brightness(1.5)",
         });
       }
 
@@ -236,7 +236,10 @@ export default function Footer({
           <h2 ref={titleRef} className="lg:text-6xl text-3xl lg:mb-4 mb-2">
             {project.title}
           </h2>
-          <p ref={descriptionRef} className="lg:text-xs text-[10px] lg:mb-2 mb-1">
+          <p
+            ref={descriptionRef}
+            className="lg:text-xs text-[10px] lg:mb-2 mb-1"
+          >
             {project.description}
           </p>
           <p ref={creative1Ref} className="lg:text-xs text-[10px] lg:mb-2 mb-1">
@@ -249,6 +252,7 @@ export default function Footer({
             {project.creative3}
           </p>
         </div>
+        <div className="absolute inset-0  pointer-events-none shadow-[inset_0_0px_6px_6px_black] lg:shadow-[inset_0_0px_15px_15px_black]" />
       </div>
     </>
   );

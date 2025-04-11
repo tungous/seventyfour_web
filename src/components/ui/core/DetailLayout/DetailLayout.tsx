@@ -99,7 +99,7 @@ const DetailLayout = ({
 
       {/* Main content container */}
       <div
-        className="relative  top-[calc(100vh)] flex flex-col justify-start items-center w-full z-2 min-h-screen pt-5 bg-black tracking-tight"
+        className="relative  top-[calc(100vh)] flex flex-col justify-start items-center w-full z-2 pt-5 bg-black tracking-tight"
         id="scrollable-project-details"
       >
         {React.Children.map(children, (child) =>
@@ -107,18 +107,6 @@ const DetailLayout = ({
             ? React.cloneElement(child, { variant })
             : child
         )}
-
-        {/* Moved Gradient overlay */}
-        <div
-          className="absolute lg:bottom-150 bottom-50 left-0 w-full z-1 lg:h-[200px] h-[100px]"
-          style={{
-            background:
-              "linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.6) 75%, rgba(0,0,0,0.8) 85%, rgba(0,0,0,1) 100%)",
-            pointerEvents: "none",
-            opacity: isPushedDown ? 1 : 0,
-            transition: "opacity 0.8s ease-in-out",
-          }}
-        />
       </div>
     </motion.div>
   );

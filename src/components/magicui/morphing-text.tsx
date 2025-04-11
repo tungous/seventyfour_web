@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useCallback } from "react";
 
 // A simple utility to join Tailwind classes
 function cn(...classes: string[]) {
@@ -57,6 +57,58 @@ export const MorphingText: React.FC<{
   const lastVisibleRef = useRef<boolean>(visible);
   const isFirstRenderRef = useRef<boolean>(true);
 
+  const animate = useCallback(
+    (timestampMs: number) => {
+      if (startTimeRef.current === null) {
+        // Apply offset only for fade-in, not for fade-out
+        startTimeRef.current = timestampMs - (visible ? 3600 : 0);
+
+        // For fade-out, ensure we start at full opacity
+        if (!visible && textRef.current) {
+          textRef.current.style.opacity = "100%";
+          textRef.current.style.filter = "blur(0px)";
+        }
+      }
+
+      // Convert ms → seconds
+      const elapsedSeconds = (timestampMs - startTimeRef.current) / 1000;
+      // Linear fraction from 0 -> 1
+      let fraction = elapsedSeconds / morphTime;
+      if (fraction > 1) {
+        fraction = 1;
+      }
+
+      // Apply cubic ease-out
+      const eased = cubicEaseOut(fraction);
+
+      if (textRef.current) {
+        if (visible) {
+          // Fading in: 0% -> 100% opacity
+          textRef.current.style.opacity = `${eased * 100}%`;
+          // Blur from 8px -> 0px
+          const blurAmount = 8 * (1 - eased);
+          textRef.current.style.filter = `blur(${blurAmount}px)`;
+        } else {
+          // Fading out: 100% -> 0% opacity
+          textRef.current.style.opacity = `${(1 - eased) * 100}%`;
+          // Blur from 0px -> 8px
+          const blurAmount = 8 * eased;
+          textRef.current.style.filter = `blur(${blurAmount}px)`;
+        }
+      }
+
+      if (fraction < 1) {
+        requestIdRef.current = requestAnimationFrame(animate);
+      } else {
+        // If fully faded out, make sure we're at 0 opacity
+        if (!visible && textRef.current) {
+          textRef.current.style.opacity = "0";
+        }
+      }
+    },
+    [morphTime, visible]
+  );
+
   useEffect(() => {
     // Skip animation on first render
     if (isFirstRenderRef.current) {
@@ -76,56 +128,7 @@ export const MorphingText: React.FC<{
 
       requestIdRef.current = requestAnimationFrame(animate);
     }
-  }, [visible, morphTime]);
-
-  const animate = (timestampMs: number) => {
-    if (startTimeRef.current === null) {
-      // Apply offset only for fade-in, not for fade-out
-      startTimeRef.current = timestampMs - (visible ? 3600 : 0);
-
-      // For fade-out, ensure we start at full opacity
-      if (!visible && textRef.current) {
-        textRef.current.style.opacity = "100%";
-        textRef.current.style.filter = "blur(0px)";
-      }
-    }
-
-    // Convert ms → seconds
-    const elapsedSeconds = (timestampMs - startTimeRef.current) / 1000;
-    // Linear fraction from 0 -> 1
-    let fraction = elapsedSeconds / morphTime;
-    if (fraction > 1) {
-      fraction = 1;
-    }
-
-    // Apply cubic ease-out
-    const eased = cubicEaseOut(fraction);
-
-    if (textRef.current) {
-      if (visible) {
-        // Fading in: 0% -> 100% opacity
-        textRef.current.style.opacity = `${eased * 100}%`;
-        // Blur from 8px -> 0px
-        const blurAmount = 8 * (1 - eased);
-        textRef.current.style.filter = `blur(${blurAmount}px)`;
-      } else {
-        // Fading out: 100% -> 0% opacity
-        textRef.current.style.opacity = `${(1 - eased) * 100}%`;
-        // Blur from 0px -> 8px
-        const blurAmount = 8 * eased;
-        textRef.current.style.filter = `blur(${blurAmount}px)`;
-      }
-    }
-
-    if (fraction < 1) {
-      requestIdRef.current = requestAnimationFrame(animate);
-    } else {
-      // If fully faded out, make sure we're at 0 opacity
-      if (!visible && textRef.current) {
-        textRef.current.style.opacity = "0";
-      }
-    }
-  };
+  }, [visible, morphTime, animate]);
 
   // Cleanup animation on unmount
   useEffect(() => {

@@ -83,7 +83,7 @@ export const AboutInfo: React.FC<AboutInfoProps> = ({
         },
       });
     }
-  }, [isVisible, isExiting, isSafari, isWindows]);
+  }, [isVisible, isExiting, isSafari, isWindows, isAnimatingOut]);
 
   return (
     <div

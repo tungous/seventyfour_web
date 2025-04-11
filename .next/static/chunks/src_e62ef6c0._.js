@@ -1206,27 +1206,12 @@ const DetailLayout = ({ children, isPushedDown, variant, onAnimationComplete })=
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "relative  top-[calc(100vh)] flex flex-col justify-start items-center w-full z-2 min-h-screen pt-5 bg-black tracking-tight",
+                className: "relative  top-[calc(100vh)] flex flex-col justify-start items-center w-full z-2 pt-5 bg-black tracking-tight",
                 id: "scrollable-project-details",
-                children: [
-                    __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].Children.map(children, (child)=>/*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].isValidElement(child) ? /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].cloneElement(child, {
-                            variant
-                        }) : child),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "absolute lg:bottom-150 bottom-50 left-0 w-full z-1 lg:h-[200px] h-[100px]",
-                        style: {
-                            background: "linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.6) 75%, rgba(0,0,0,0.8) 85%, rgba(0,0,0,1) 100%)",
-                            pointerEvents: "none",
-                            opacity: isPushedDown ? 1 : 0,
-                            transition: "opacity 0.8s ease-in-out"
-                        }
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/ui/core/DetailLayout/DetailLayout.tsx",
-                        lineNumber: 112,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
+                children: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].Children.map(children, (child)=>/*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].isValidElement(child) ? /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].cloneElement(child, {
+                        variant
+                    }) : child)
+            }, void 0, false, {
                 fileName: "[project]/src/components/ui/core/DetailLayout/DetailLayout.tsx",
                 lineNumber: 101,
                 columnNumber: 7
@@ -1269,7 +1254,7 @@ const ProjectContent = ({ children, className, variant })=>{
         children: children
     }, variant, false, {
         fileName: "[project]/src/components/ui/core/DetailLayout/DetailLayout.tsx",
-        lineNumber: 134,
+        lineNumber: 122,
         columnNumber: 5
     }, this);
 };
@@ -1293,20 +1278,20 @@ const DetailImage = ({ src, alt = "", className, fill = true, sizes = "100vw", p
                 priority: priority
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/core/DetailLayout/DetailLayout.tsx",
-                lineNumber: 184,
+                lineNumber: 172,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "absolute inset-0 pointer-events-none shadow-[inset_0_0px_6px_6px_black] lg:shadow-[inset_0_0px_15px_15px_black]"
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/core/DetailLayout/DetailLayout.tsx",
-                lineNumber: 192,
+                lineNumber: 180,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/ui/core/DetailLayout/DetailLayout.tsx",
-        lineNumber: 183,
+        lineNumber: 171,
         columnNumber: 5
     }, this);
 };
@@ -1335,12 +1320,12 @@ const Video = ({ src, className })=>{
                 allowFullScreen: true
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/core/DetailLayout/DetailLayout.tsx",
-                lineNumber: 218,
+                lineNumber: 206,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/components/ui/core/DetailLayout/DetailLayout.tsx",
-            lineNumber: 210,
+            lineNumber: 198,
             columnNumber: 7
         }, this);
     }
@@ -1357,12 +1342,12 @@ const Video = ({ src, className })=>{
             muted: true
         }, void 0, false, {
             fileName: "[project]/src/components/ui/core/DetailLayout/DetailLayout.tsx",
-            lineNumber: 235,
+            lineNumber: 223,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/ui/core/DetailLayout/DetailLayout.tsx",
-        lineNumber: 231,
+        lineNumber: 219,
         columnNumber: 5
     }, this);
 };
@@ -1375,7 +1360,7 @@ const Text = ({ children, className })=>{
         children: children
     }, void 0, false, {
         fileName: "[project]/src/components/ui/core/DetailLayout/DetailLayout.tsx",
-        lineNumber: 242,
+        lineNumber: 230,
         columnNumber: 10
     }, this);
 };
@@ -1499,7 +1484,7 @@ function Footer({ project, footerRef }) {
             if (backgroundTarget && project.backgroundImage) {
                 __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$gsap$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["gsap"].set(backgroundTarget, {
                     opacity: 1,
-                    filter: "blur(60px) brightness(2)"
+                    filter: "blur(0px) brightness(1.5)"
                 });
             }
             // Use matchMedia for responsive ScrollTrigger settings
@@ -1657,7 +1642,7 @@ function Footer({ project, footerRef }) {
                                 children: project.creative1
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ui/core/Footer.tsx",
-                                lineNumber: 242,
+                                lineNumber: 245,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1666,7 +1651,7 @@ function Footer({ project, footerRef }) {
                                 children: project.creative2
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ui/core/Footer.tsx",
-                                lineNumber: 245,
+                                lineNumber: 248,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1675,13 +1660,20 @@ function Footer({ project, footerRef }) {
                                 children: project.creative3
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ui/core/Footer.tsx",
-                                lineNumber: 248,
+                                lineNumber: 251,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/ui/core/Footer.tsx",
                         lineNumber: 225,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "absolute inset-0  pointer-events-none shadow-[inset_0_0px_6px_6px_black] lg:shadow-[inset_0_0px_15px_15px_black]"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/ui/core/Footer.tsx",
+                        lineNumber: 255,
                         columnNumber: 9
                     }, this)
                 ]
@@ -1807,7 +1799,7 @@ const ProjectDetail = ({ isPushedDown, currentProjectIndex, onAnimationComplete 
                                     className: "max-h-[100vh]"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                    lineNumber: 103,
+                                    lineNumber: 101,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1820,23 +1812,23 @@ const ProjectDetail = ({ isPushedDown, currentProjectIndex, onAnimationComplete 
                                             }
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                            lineNumber: 112,
+                                            lineNumber: 109,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                        lineNumber: 111,
+                                        lineNumber: 108,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                    lineNumber: 110,
+                                    lineNumber: 107,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                            lineNumber: 102,
+                            lineNumber: 100,
                             columnNumber: 13
                         }, this)
                     }, void 0, false),
@@ -1851,7 +1843,7 @@ const ProjectDetail = ({ isPushedDown, currentProjectIndex, onAnimationComplete 
                                     className: "max-h-[100vh]"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                    lineNumber: 124,
+                                    lineNumber: 121,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1864,23 +1856,23 @@ const ProjectDetail = ({ isPushedDown, currentProjectIndex, onAnimationComplete 
                                             }
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                            lineNumber: 133,
+                                            lineNumber: 129,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                        lineNumber: 132,
+                                        lineNumber: 128,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                    lineNumber: 131,
+                                    lineNumber: 127,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                            lineNumber: 123,
+                            lineNumber: 120,
                             columnNumber: 13
                         }, this)
                     }, void 0, false),
@@ -1896,7 +1888,7 @@ const ProjectDetail = ({ isPushedDown, currentProjectIndex, onAnimationComplete 
                                         className: "h-[100vh]"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                        lineNumber: 145,
+                                        lineNumber: 141,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$core$2f$DetailLayout$2f$DetailLayout$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].Image, {
@@ -1906,7 +1898,7 @@ const ProjectDetail = ({ isPushedDown, currentProjectIndex, onAnimationComplete 
                                         className: "h-[100vh]"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                        lineNumber: 151,
+                                        lineNumber: 147,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1919,23 +1911,23 @@ const ProjectDetail = ({ isPushedDown, currentProjectIndex, onAnimationComplete 
                                                 }
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                                lineNumber: 159,
+                                                lineNumber: 155,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                            lineNumber: 158,
+                                            lineNumber: 154,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                        lineNumber: 157,
+                                        lineNumber: 153,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                lineNumber: 144,
+                                lineNumber: 140,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1948,7 +1940,7 @@ const ProjectDetail = ({ isPushedDown, currentProjectIndex, onAnimationComplete 
                                         className: "max-h-[100vh]"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                        lineNumber: 168,
+                                        lineNumber: 164,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1962,23 +1954,23 @@ const ProjectDetail = ({ isPushedDown, currentProjectIndex, onAnimationComplete 
                                                 children: "AIIZA"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                                lineNumber: 177,
+                                                lineNumber: 173,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                            lineNumber: 176,
+                                            lineNumber: 172,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                        lineNumber: 175,
+                                        lineNumber: 171,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                lineNumber: 167,
+                                lineNumber: 163,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1991,7 +1983,7 @@ const ProjectDetail = ({ isPushedDown, currentProjectIndex, onAnimationComplete 
                                         className: "h-[100vh]"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                        lineNumber: 187,
+                                        lineNumber: 183,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$core$2f$DetailLayout$2f$DetailLayout$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].Image, {
@@ -2001,7 +1993,7 @@ const ProjectDetail = ({ isPushedDown, currentProjectIndex, onAnimationComplete 
                                         className: "h-[100vh]"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                        lineNumber: 193,
+                                        lineNumber: 189,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2014,23 +2006,23 @@ const ProjectDetail = ({ isPushedDown, currentProjectIndex, onAnimationComplete 
                                                 }
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                                lineNumber: 201,
+                                                lineNumber: 197,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                            lineNumber: 200,
+                                            lineNumber: 196,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                        lineNumber: 199,
+                                        lineNumber: 195,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                lineNumber: 186,
+                                lineNumber: 182,
                                 columnNumber: 13
                             }, this)
                         ]
@@ -2044,12 +2036,12 @@ const ProjectDetail = ({ isPushedDown, currentProjectIndex, onAnimationComplete 
                                     alt: "SEVENTYFOUR: SILVER"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                    lineNumber: 214,
+                                    lineNumber: 210,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                lineNumber: 213,
+                                lineNumber: 209,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2062,7 +2054,7 @@ const ProjectDetail = ({ isPushedDown, currentProjectIndex, onAnimationComplete 
                                         className: "max-h-[100vh]"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                        lineNumber: 220,
+                                        lineNumber: 216,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2075,23 +2067,23 @@ const ProjectDetail = ({ isPushedDown, currentProjectIndex, onAnimationComplete 
                                                 }
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                                lineNumber: 229,
+                                                lineNumber: 225,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                            lineNumber: 228,
+                                            lineNumber: 224,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                        lineNumber: 227,
+                                        lineNumber: 223,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                lineNumber: 219,
+                                lineNumber: 215,
                                 columnNumber: 13
                             }, this)
                         ]
@@ -2106,7 +2098,7 @@ const ProjectDetail = ({ isPushedDown, currentProjectIndex, onAnimationComplete 
                                         alt: "Project 1"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                        lineNumber: 242,
+                                        lineNumber: 238,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2120,23 +2112,23 @@ const ProjectDetail = ({ isPushedDown, currentProjectIndex, onAnimationComplete 
                                                 }
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                                lineNumber: 249,
+                                                lineNumber: 245,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                            lineNumber: 248,
+                                            lineNumber: 244,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                        lineNumber: 247,
+                                        lineNumber: 243,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                lineNumber: 241,
+                                lineNumber: 237,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2146,12 +2138,12 @@ const ProjectDetail = ({ isPushedDown, currentProjectIndex, onAnimationComplete 
                                     alt: "Project 1"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                    lineNumber: 263,
+                                    lineNumber: 259,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                lineNumber: 262,
+                                lineNumber: 258,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2162,7 +2154,7 @@ const ProjectDetail = ({ isPushedDown, currentProjectIndex, onAnimationComplete 
                                         alt: "Project 1"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                        lineNumber: 269,
+                                        lineNumber: 265,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2176,23 +2168,23 @@ const ProjectDetail = ({ isPushedDown, currentProjectIndex, onAnimationComplete 
                                                 }
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                                lineNumber: 276,
+                                                lineNumber: 272,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                            lineNumber: 275,
+                                            lineNumber: 271,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                        lineNumber: 274,
+                                        lineNumber: 270,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                                lineNumber: 268,
+                                lineNumber: 264,
                                 columnNumber: 13
                             }, this)
                         ]
@@ -2200,7 +2192,7 @@ const ProjectDetail = ({ isPushedDown, currentProjectIndex, onAnimationComplete 
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                lineNumber: 93,
+                lineNumber: 91,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$core$2f$Footer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -2208,13 +2200,13 @@ const ProjectDetail = ({ isPushedDown, currentProjectIndex, onAnimationComplete 
                 footerRef: footerRef
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-                lineNumber: 309,
+                lineNumber: 301,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/ui/Homepage/projects/ProjectDetail.tsx",
-        lineNumber: 87,
+        lineNumber: 85,
         columnNumber: 5
     }, this);
 };
@@ -2759,7 +2751,8 @@ const AboutInfo = ({ isVisible, isSafari, isWindows, isExiting })=>{
         isVisible,
         isExiting,
         isSafari,
-        isWindows
+        isWindows,
+        isAnimatingOut
     ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         ref: containerRef,
@@ -2891,6 +2884,54 @@ const MorphingText = ({ text, visible, morphTime = 8 })=>{
     const textRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     const lastVisibleRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(visible);
     const isFirstRenderRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(true);
+    const animate = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCallback"])({
+        "MorphingText.useCallback[animate]": (timestampMs)=>{
+            if (startTimeRef.current === null) {
+                // Apply offset only for fade-in, not for fade-out
+                startTimeRef.current = timestampMs - (visible ? 3600 : 0);
+                // For fade-out, ensure we start at full opacity
+                if (!visible && textRef.current) {
+                    textRef.current.style.opacity = "100%";
+                    textRef.current.style.filter = "blur(0px)";
+                }
+            }
+            // Convert ms → seconds
+            const elapsedSeconds = (timestampMs - startTimeRef.current) / 1000;
+            // Linear fraction from 0 -> 1
+            let fraction = elapsedSeconds / morphTime;
+            if (fraction > 1) {
+                fraction = 1;
+            }
+            // Apply cubic ease-out
+            const eased = cubicEaseOut(fraction);
+            if (textRef.current) {
+                if (visible) {
+                    // Fading in: 0% -> 100% opacity
+                    textRef.current.style.opacity = `${eased * 100}%`;
+                    // Blur from 8px -> 0px
+                    const blurAmount = 8 * (1 - eased);
+                    textRef.current.style.filter = `blur(${blurAmount}px)`;
+                } else {
+                    // Fading out: 100% -> 0% opacity
+                    textRef.current.style.opacity = `${(1 - eased) * 100}%`;
+                    // Blur from 0px -> 8px
+                    const blurAmount = 8 * eased;
+                    textRef.current.style.filter = `blur(${blurAmount}px)`;
+                }
+            }
+            if (fraction < 1) {
+                requestIdRef.current = requestAnimationFrame(animate);
+            } else {
+                // If fully faded out, make sure we're at 0 opacity
+                if (!visible && textRef.current) {
+                    textRef.current.style.opacity = "0";
+                }
+            }
+        }
+    }["MorphingText.useCallback[animate]"], [
+        morphTime,
+        visible
+    ]);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "MorphingText.useEffect": ()=>{
             // Skip animation on first render
@@ -2911,51 +2952,9 @@ const MorphingText = ({ text, visible, morphTime = 8 })=>{
         }
     }["MorphingText.useEffect"], [
         visible,
-        morphTime
+        morphTime,
+        animate
     ]);
-    const animate = (timestampMs)=>{
-        if (startTimeRef.current === null) {
-            // Apply offset only for fade-in, not for fade-out
-            startTimeRef.current = timestampMs - (visible ? 3600 : 0);
-            // For fade-out, ensure we start at full opacity
-            if (!visible && textRef.current) {
-                textRef.current.style.opacity = "100%";
-                textRef.current.style.filter = "blur(0px)";
-            }
-        }
-        // Convert ms → seconds
-        const elapsedSeconds = (timestampMs - startTimeRef.current) / 1000;
-        // Linear fraction from 0 -> 1
-        let fraction = elapsedSeconds / morphTime;
-        if (fraction > 1) {
-            fraction = 1;
-        }
-        // Apply cubic ease-out
-        const eased = cubicEaseOut(fraction);
-        if (textRef.current) {
-            if (visible) {
-                // Fading in: 0% -> 100% opacity
-                textRef.current.style.opacity = `${eased * 100}%`;
-                // Blur from 8px -> 0px
-                const blurAmount = 8 * (1 - eased);
-                textRef.current.style.filter = `blur(${blurAmount}px)`;
-            } else {
-                // Fading out: 100% -> 0% opacity
-                textRef.current.style.opacity = `${(1 - eased) * 100}%`;
-                // Blur from 0px -> 8px
-                const blurAmount = 8 * eased;
-                textRef.current.style.filter = `blur(${blurAmount}px)`;
-            }
-        }
-        if (fraction < 1) {
-            requestIdRef.current = requestAnimationFrame(animate);
-        } else {
-            // If fully faded out, make sure we're at 0 opacity
-            if (!visible && textRef.current) {
-                textRef.current.style.opacity = "0";
-            }
-        }
-    };
     // Cleanup animation on unmount
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "MorphingText.useEffect": ()=>{
@@ -2987,22 +2986,22 @@ const MorphingText = ({ text, visible, morphTime = 8 })=>{
                 children: text
             }, void 0, false, {
                 fileName: "[project]/src/components/magicui/morphing-text.tsx",
-                lineNumber: 156,
+                lineNumber: 159,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(SvgFilters, {}, void 0, false, {
                 fileName: "[project]/src/components/magicui/morphing-text.tsx",
-                lineNumber: 166,
+                lineNumber: 169,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/magicui/morphing-text.tsx",
-        lineNumber: 140,
+        lineNumber: 143,
         columnNumber: 5
     }, this);
 };
-_s(MorphingText, "o/XJ3Zm2FqQH8yxkBT9GD8Nx+zw=");
+_s(MorphingText, "llZvNxgekeTOwMZHrlFZ4spSvvI=");
 _c1 = MorphingText;
 var _c, _c1;
 __turbopack_context__.k.register(_c, "SvgFilters");

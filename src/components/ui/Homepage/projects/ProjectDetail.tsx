@@ -5,7 +5,6 @@ import DetailLayout from "@/components/ui/core/DetailLayout/DetailLayout";
 import Footer from "@/components/ui/core/Footer";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { describe } from "node:test";
 
 // Register ScrollTrigger if not done globally
 gsap.registerPlugin(ScrollTrigger);
@@ -22,7 +21,8 @@ const projectData = [
   {
     id: 1,
     title: "JUN",
-    description: "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+    description:
+      "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
     creative1: "GRAPHIC DESIGNER: LEO PHAM",
     creative2: "PHOTOGRAPHER: MINH VIET PHAM",
     creative3: "VIDEOGRAPHER: T. TUNG MAI",
@@ -32,8 +32,7 @@ const projectData = [
   {
     id: 2,
     title: "SK SLOVAN KUNRATICE",
-    description:
-      "",
+    description: "",
     creative1: "FILM BY: T. TUNG MAI",
     creative2: "CONCEPT: BAZO",
     variant: "Project2" as const,
@@ -42,8 +41,7 @@ const projectData = [
   {
     id: 3,
     title: "KOLAUDACKA",
-    description:
-      "",
+    description: "",
     creative1: "PHOTOGRAPHER: MINH VIET PHAM",
     creative2: "CREATIVE DIRECTOR: MINH VIET PHAM, BAZO, DAVID PHAM",
     creative3: "DJ: AIIZA BAZO, AIIZA PHAMINHO (DAVID PHAM)",
@@ -60,7 +58,7 @@ const projectData = [
     creative2: "FILM BY: T. TUNG MAI",
     location: "LOCATION: KAPLANOVA 2252/8, PRAHA 4",
     variant: "Project4" as const,
-    backgroundImage: "/seventyfour_silver.jpg", 
+    backgroundImage: "/seventyfour_silver.jpg",
   },
   {
     id: 4,
@@ -106,7 +104,6 @@ export const ProjectDetail: React.FC<ProjectDetailScrollProps> = ({
                 aspectRatio="16/9"
                 className="max-h-[100vh]"
               />
-
               <div className="absolute inset-0 flex flex-col justify-center items-center p-8 lg:text-xs text-[8px] uppercase font-bold text-left mix-blend-difference">
                 <div>
                   <p
@@ -127,7 +124,6 @@ export const ProjectDetail: React.FC<ProjectDetailScrollProps> = ({
                 aspectRatio="16/9"
                 className="max-h-[100vh]"
               />
-
               <div className="absolute inset-0 flex flex-col justify-center items-center p-8 lg:text-xs text-[8px] uppercase font-bold text-left mix-blend-difference">
                 <div>
                   <p
@@ -276,8 +272,7 @@ export const ProjectDetail: React.FC<ProjectDetailScrollProps> = ({
                   <p
                     className="text-justify"
                     style={{ textShadow: "0px 0px 2px rgba(255,255,255,1)" }}
-                  >
-                  </p>
+                  ></p>
                 </div>
               </div>
             </div>
@@ -303,9 +298,6 @@ export const ProjectDetail: React.FC<ProjectDetailScrollProps> = ({
           </>
         )}
       </DetailLayout.ProjectContent>
-      {/* Gradient overlay */}
-
-      {/* Remove motion.div wrapper, pass ref directly */}
       <Footer project={project} footerRef={footerRef} />
     </DetailLayout>
   );
