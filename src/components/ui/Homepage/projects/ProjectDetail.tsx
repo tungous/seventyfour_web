@@ -5,6 +5,7 @@ import DetailLayout from "@/components/ui/core/DetailLayout/DetailLayout";
 import Footer from "@/components/ui/core/Footer";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { describe } from "node:test";
 
 // Register ScrollTrigger if not done globally
 gsap.registerPlugin(ScrollTrigger);
@@ -20,49 +21,57 @@ interface ProjectDetailScrollProps {
 const projectData = [
   {
     id: 1,
+    title: "JUN",
+    description: "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+    creative1: "GRAPHIC DESIGNER: LEO PHAM",
+    creative2: "PHOTOGRAPHER: MINH VIET PHAM",
+    creative3: "VIDEOGRAPHER: T. TUNG MAI",
+    variant: "Project1" as const,
+    backgroundImage: "/jun_pobocka_2.jpg",
+  },
+  {
+    id: 2,
+    title: "SK SLOVAN KUNRATICE",
+    description:
+      "",
+    creative1: "FILM BY: T. TUNG MAI",
+    creative2: "CONCEPT: BAZO",
+    variant: "Project2" as const,
+    backgroundImage: "/sk_slovan_kunratice_1.jpg",
+  },
+  {
+    id: 3,
     title: "KOLAUDACKA",
     description:
-      "A beautiful and innovative project showcasing modern design principles.",
+      "",
     creative1: "PHOTOGRAPHER: MINH VIET PHAM",
     creative2: "CREATIVE DIRECTOR: MINH VIET PHAM, BAZO, DAVID PHAM",
     creative3: "DJ: AIIZA BAZO, AIIZA PHAMINHO (DAVID PHAM)",
     location: "LOCATION: KAPLANOVA 2252/8, PRAHA 4",
-    variant: "Project1" as const,
-    features: ["Feature 1", "Feature 2", "Feature 3"],
+    variant: "Project3" as const,
+    backgroundImage: "/aizza.jpg",
   },
   {
-    id: 2,
+    id: 4,
     title: "SEVENTYFOUR: SILVER",
     description:
       "A handmade silver pendant for our closes friends, family and Skejterboi.",
     creative1: "DESIGNER: LEO PHAM, T. TUNG MAI",
-    creative2: "VIDEO: T. TUNG MAI",
+    creative2: "FILM BY: T. TUNG MAI",
     location: "LOCATION: KAPLANOVA 2252/8, PRAHA 4",
-    variant: "Project2" as const,
+    variant: "Project4" as const,
+    backgroundImage: "/seventyfour_silver.jpg", 
   },
   {
-    id: 3,
+    id: 4,
     title: "SEVENTYFOUR: BEGIN",
     description:
       "A journey through time, blending past and present in perfect harmony.",
     creative1: "DIRECTOR, DP, EDITOR: T. TUNG MAI",
     creative2: "DESIGNER: LEO PHAM",
-    creative3: "SOUND: TOMAS NGUYEN",
-    variant: "Project3" as const,
-  },
-  {
-    id: 5,
-    title: "Project 5",
-    description:
-      "Pushing boundaries with innovative solutions and creative thinking.",
+    creative3: "SOUND BY: TOMAS NGUYEN",
     variant: "Project5" as const,
-  },
-  {
-    id: 6,
-    title: "Project 6",
-    description:
-      "A masterpiece of design and functionality working in perfect sync.",
-    variant: "Project6" as const,
+    backgroundImage: "/74-begin-gif.gif",
   },
 ];
 
@@ -89,6 +98,48 @@ export const ProjectDetail: React.FC<ProjectDetailScrollProps> = ({
 
         {/* Project-specific content based on variant */}
         {project.variant === "Project1" && (
+          <>
+            <div className="relative w-full grid grid-cols-1 grid-rows-1 gap-4">
+              <DetailLayout.Image
+                src="/jun_pobocka_1.jpg"
+                alt="JUN"
+                aspectRatio="16/9"
+                className="max-h-[100vh]"
+              />
+
+              <div className="absolute inset-0 flex flex-col justify-center items-center p-8 lg:text-xs text-[8px] uppercase font-bold text-left mix-blend-difference">
+                <div>
+                  <p
+                    className="w-full"
+                    style={{ textShadow: "0px 0px 2px rgba(255,255,255,1)" }}
+                  ></p>
+                </div>
+              </div>
+            </div>
+          </>
+        )}
+        {project.variant === "Project2" && (
+          <>
+            <div className="relative w-full grid grid-cols-1 grid-rows-1 gap-4">
+              <DetailLayout.Image
+                src="/sk_slovan_kunratice_2.jpg"
+                alt="SK SLOVAN KUNRATICE PHOTO 1"
+                aspectRatio="16/9"
+                className="max-h-[100vh]"
+              />
+
+              <div className="absolute inset-0 flex flex-col justify-center items-center p-8 lg:text-xs text-[8px] uppercase font-bold text-left mix-blend-difference">
+                <div>
+                  <p
+                    className="w-full"
+                    style={{ textShadow: "0px 0px 2px rgba(255,255,255,1)" }}
+                  ></p>
+                </div>
+              </div>
+            </div>
+          </>
+        )}
+        {project.variant === "Project3" && (
           <>
             <div className="relative w-full grid lg:grid-cols-2 grid-cols-1 grid-rows-1 gap-4">
               <DetailLayout.Image
@@ -157,7 +208,7 @@ export const ProjectDetail: React.FC<ProjectDetailScrollProps> = ({
           </>
         )}
 
-        {project.variant === "Project2" && (
+        {project.variant === "Project4" && (
           <>
             <div className="relative w-full">
               <DetailLayout.Video
@@ -185,7 +236,7 @@ export const ProjectDetail: React.FC<ProjectDetailScrollProps> = ({
           </>
         )}
 
-        {project.variant === "Project3" && (
+        {project.variant === "Project5" && (
           <>
             <div className="relative w-full mb-10">
               <DetailLayout.Image
@@ -249,21 +300,6 @@ export const ProjectDetail: React.FC<ProjectDetailScrollProps> = ({
                 </p>
               </div>
             </div> */}
-          </>
-        )}
-
-        {project.variant === "Project5" && (
-          <>
-            <DetailLayout.Image src="/viet.jpg" alt="Project 5" />
-            <DetailLayout.Video src="/viet2.jpg" alt="Project 5" />
-            <DetailLayout.Image src="/tung.jpg" alt="Project 5" />
-          </>
-        )}
-
-        {project.variant === "Project6" && (
-          <>
-            <DetailLayout.Image src="/quang_thanh.jpg" alt="Project 6" />
-            <DetailLayout.Image src="/leo.jpg" alt="Project 6" />
           </>
         )}
       </DetailLayout.ProjectContent>

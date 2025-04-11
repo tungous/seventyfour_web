@@ -500,6 +500,10 @@
     isolation: auto;
   }
 
+  .z-0 {
+    z-index: 0;
+  }
+
   .z-1 {
     z-index: 1;
   }
@@ -1197,6 +1201,14 @@
     background-color: var(--color-white);
   }
 
+  .bg-cover {
+    background-size: cover;
+  }
+
+  .bg-center {
+    background-position: center;
+  }
+
   .bg-repeat {
     background-repeat: repeat;
   }
@@ -1596,6 +1608,10 @@
 
   .mix-blend-difference {
     mix-blend-mode: difference;
+  }
+
+  .mix-blend-exclusion {
+    mix-blend-mode: exclusion;
   }
 
   .shadow {

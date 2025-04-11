@@ -34,6 +34,7 @@ export const Creative = ({
             currentCreativeIndex={currentCreativeIndex}
             backgroundImage={
               creatives[currentCreativeIndex % creatives.length].backgroundImage
+              
             }
             isBlurred={isBlurred}
           ></CreativeCard>

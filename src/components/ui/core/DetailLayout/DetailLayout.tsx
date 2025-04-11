@@ -42,9 +42,9 @@ interface TextProps {
 const variants = {
   Project1: "grid w-full",
   Project2: "grid w-full",
-  Project3: "grid grid-cols-1 grid-rows-1 w-full",
-  Project4: "grid gap-4 w-full",
-  Project5: "flex w-full",
+  Project3: "grid w-full",
+  Project4: "grid w-full",
+  Project5: "grid w-full",
   Project6: "grid w-full",
 };
 

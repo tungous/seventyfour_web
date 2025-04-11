@@ -6,6 +6,16 @@ export interface projectType {
 
 export const projects: projectType[] = [
   {
+    name: "JUN (WIP)",
+    info: "BRAND INDETITY\nPHOTOS\nVIDEO ",
+    backgroundImage: "/jun_pobocka_2.jpg",
+  },
+  {
+    name: "SK SLOVAN KUNRATICE (WIP)",
+    info: "DOCUMENT",
+    backgroundImage: "/sk_slovan_kunratice_1.jpg",
+  },
+  {
     name: "KOLAUDACKA",
     info: "PHOTOS ",
     backgroundImage: "/aizza.jpg",
